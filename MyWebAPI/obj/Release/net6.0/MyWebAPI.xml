@@ -1,0 +1,409 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MyWebAPI</name>
+    </assembly>
+    <members>
+        <member name="M:MyWebAPI.Controllers.AddressController.GetAddressByStudentCard(System.String)">
+            <summary>
+            Get a Student's address by StudentCard
+            </summary>
+            <param name="studentCard">Input Student Card to see **the address's info** of Student</param>
+            <returns></returns>
+            <remarks>
+            Retrieve **Student's address** by **Student Card** and can custom select *any student's address*.
+            
+            If you need to find a Address of Student but do not know the Student's Name,
+            you can search on the System through the **Student Card**
+            </remarks>
+            <response code="200">Information of Student's Address</response>
+            <response code="404">StudentCard Not Found!!</response>
+        </member>
+        <member name="M:MyWebAPI.Controllers.AddressController.CreateAddress(System.String,BusinessLogicLayer.DTO.AddressDTO)">
+            <summary>
+            Create a Student's Address by new StundentCard
+            </summary>
+            <param name="studentCard">Input Student Card to **create** new Student address's info.</param>
+            <param name="addressDTO"></param>
+            <returns></returns>
+            <remarks>
+            Create the specified _address_ to the organization by **Student Card**.
+            
+            
+            If the organization uses *Single Sign-On* (SSO) and is configured to block external (non-SSO) users from joining,,
+            you can only invite **StudentCard** from the domains associated with this orgnanization.
+            </remarks>
+            <response code="201">Student's Address created successfully</response>
+            <response code="400">Student Card domain is not among the registered SSO 
+            domains for this organization!!</response>
+        </member>
+        <member name="M:MyWebAPI.Controllers.AddressController.UpdateAddress(System.String,BusinessLogicLayer.DTO.AddressDTO)">
+            <summary>
+            Update a Student's Address by StundentCard
+            </summary>
+            <param name="studentCard">Input Student Card to **update** new Student address's info.</param>
+            <param name="addressDTO"></param>
+            <returns></returns>
+            <remarks>
+            Update the specified _address_ to the organization by **Student Card**.
+            </remarks>
+            <response code="204">Student's Address updated successfully</response>
+            <response code="400">Student Card domain is not among the registered SSO 
+            domains for this organization!!</response>
+            <response code="404">StudentCard Not Found!!</response>
+        </member>
+        <member name="M:MyWebAPI.Controllers.AddressController.DeleteAddress(System.String)">
+            <summary>
+            Delete a Student's Address by StundentCard
+            </summary>
+            <param name="studentCard">Input Student Card to **delete** Student address's info.</param>
+            <returns></returns>
+            <remarks>
+            **Note:** Removes the specified students's address from the class by **student card**.
+            
+            If the specified student was invited to the class but has not joined yet,
+            this cancels their invitation..
+            </remarks>
+            <response code="204">Student's Address deleted successfully</response>
+            <response code="404">StudentCard Not Found!!</response>
+        </member>
+        <member name="M:MyWebAPI.Controllers.CategoryController.GetAllCategories">
+            <summary>
+            Show list of Category
+            </summary>
+            <returns></returns>
+            <remarks>
+            Returns the lists of **Category** that have been assigned access control on the referenced resource.
+            </remarks>
+            <response code="200">Successfully returns a list of Category.</response>
+        </member>
+        <member name="M:MyWebAPI.Controllers.CategoryController.GetCategoryById(System.Int32)">
+            <summary>
+            Get a Category by CategoryId
+            </summary>
+            <param name="id">Input Category's Id to see **Category's info**</param>
+            <returns></returns>
+            <remarks>
+            Retrieve **Categories** by **CategoryId** and can custom select *any category*.
+            
+            If you need to find a Category but do not know the Category's Name,
+            you can search on the System through the **CatId**
+            </remarks>
+            <response code="200">Information of Category</response>
+            <response code="404">Category Id Not Found!!</response>
+        </member>
+        <member name="M:MyWebAPI.Controllers.CategoryController.CreateCategory(BusinessLogicLayer.DTO.CategoryDTO)">
+            <summary>
+            Create a Category
+            </summary>
+            <returns></returns>
+            <remarks>
+            Create a Category by input categoriesName.
+            
+            **Note:** There is no need to enter an id to create because the program will automatically create a new id after each new Post Category.
+            </remarks>
+            <response code="201">Successfully created a Category.</response>
+            <response code="400">Category domain is not among the registered SSO 
+            domains for this organization!!</response>
+        </member>
+        <member name="M:MyWebAPI.Controllers.CategoryController.UpdateCategory(System.Int32,BusinessLogicLayer.DTO.CategoryDTO)">
+            <summary>
+            Update a Category by CategoryId
+            </summary>
+            <param name="id">Input CategoryId to **update** Category's info.</param>
+            <param name="categoryDTO"></param>
+            <returns></returns>
+            <remarks>
+            Update the specified _category_ to the organization by **Category Id**.
+            </remarks>
+            <response code="204">Category's Info updated successfully</response>
+            <response code="400">CategoryId domain is not among the registered SSO 
+            domains for this organization!!</response>
+            <response code="404">CategoryId Not Found!!</response>
+        </member>
+        <member name="M:MyWebAPI.Controllers.CategoryController.DeleteCategory(System.Int32)">
+            <summary>
+            Delete a Category's Info by CategoryId
+            </summary>
+            <param name="id">Input CategoryId to **delete** Category's info.</param>
+            <returns></returns>
+            <remarks>
+            **Note:** Removes the specified Category from the líst by **CategoryId**.
+            
+            </remarks>
+            <response code="204">Category's Info deleted successfully</response>
+            <response code="404">CategoryId Not Found!!</response>
+        </member>
+        <member name="M:MyWebAPI.Controllers.ClassController.GetAllClasses">
+            <summary>
+            Show list of Class
+            </summary>
+            <returns></returns>
+            <remarks>
+            Returns the lists of **Class** that have been assigned access control on the referenced resource.
+            </remarks>
+            <response code="200">Successfully returns a list of Class.</response>
+        </member>
+        <member name="M:MyWebAPI.Controllers.ClassController.GetClassById(System.Int32)">
+            <summary>
+            Get a Class by ClassId
+            </summary>
+            <param name="id">Input ClassId to see **Class's info**</param>
+            <returns></returns>
+            <remarks>
+            Retrieve **Class** by **ClassId** and can custom select *any class*.
+            
+            If you need to find a Class but do not know the Class's Name,
+            you can search on the System through the **ClassId**
+            </remarks>
+            <response code="200">Information of Class</response>
+            <response code="404">Class Id Not Found!!</response>
+        </member>
+        <member name="M:MyWebAPI.Controllers.ClassController.CreateClass(BusinessLogicLayer.DTO.ClassDTO)">
+            <summary>
+            Create a Class
+            </summary>
+            <returns></returns>
+            <remarks>
+            Create a Class by input className.
+            
+            **Note:** There is no need to enter an id to create because the program will automatically create a new id after each new Post Class.
+            </remarks>
+            <response code="201">Successfully created a Class.</response>
+            <response code="400">Class domain is not among the registered SSO 
+            domains for this organization!!</response>
+        </member>
+        <member name="M:MyWebAPI.Controllers.ClassController.UpdateClass(System.Int32,BusinessLogicLayer.DTO.ClassDTO)">
+            <summary>
+            Update a Class by ClassId
+            </summary>
+            <param name="id">Input ClassId to **update** Class's info.</param>
+            <param name="classDTO"></param>
+            <returns></returns>
+            <remarks>
+            Update the specified _class_ to the organization by **Class Id**.
+            </remarks>
+            <response code="204">Class's Info updated successfully</response>
+            <response code="400">ClassId domain is not among the registered SSO 
+            domains for this organization!!</response>
+            <response code="404">ClassId Not Found!!</response>
+        </member>
+        <member name="M:MyWebAPI.Controllers.ClassController.DeleteClass(System.Int32)">
+            <summary>
+            Delete a Class's Info by ClassId
+            </summary>
+            <param name="id">Input ClassId to **delete** Class's info.</param>
+            <returns></returns>
+            <remarks>
+            **Note:** Removes the specified Class from the list by **ClassId**.
+            
+            </remarks>
+            <response code="204">Class's Info deleted successfully</response>
+            <response code="404">ClassId Not Found!!</response>
+        </member>
+        <member name="M:MyWebAPI.Controllers.CourseController.GetAllCourses">
+            <summary>
+            Show list of Course
+            </summary>
+            <returns></returns>
+            <remarks>
+            Returns the lists of **Course** that have been assigned access control on the referenced resource.
+            </remarks>
+            <response code="200">Successfully returns a list of Source.</response>
+        </member>
+        <member name="M:MyWebAPI.Controllers.CourseController.GetCourseById(System.Int32)">
+            <summary>
+            Get a Course by CourseId
+            </summary>
+            <param name="id">Input CourseId to see **Course's info**</param>
+            <returns></returns>
+            <remarks>
+            Retrieve **Course** by **CourseId** and can custom select *any Course*.
+            
+            If you need to find a Course but do not know the Course's Name,
+            you can search on the System through the **CourseId**
+            </remarks>
+            <response code="200">Information of Course</response>
+            <response code="404">CourseId Not Found!!</response>
+        </member>
+        <member name="M:MyWebAPI.Controllers.CourseController.CreateCourse(System.Int32,BusinessLogicLayer.DTO.CourseDTO)">
+            <summary>
+            Create a Course
+            </summary>
+            <returns></returns>
+            <remarks>
+            Create a Course by input courseName.
+            
+            **Note:** There is no need to enter an id to create because the program will automatically create a new id after each new Post Course.
+            </remarks>
+            <response code="201">Successfully created a Course.</response>
+            <response code="400">Course domain is not among the registered SSO 
+            domains for this organization!!</response>
+        </member>
+        <member name="M:MyWebAPI.Controllers.CourseController.UpdateCourse(System.Int32,BusinessLogicLayer.DTO.CourseDTO)">
+            <summary>
+            Update a Course by CourseId
+            </summary>
+            <param name="id">Input CourseId to **update** Course's info.</param>
+            <param name="courseDTO"></param>
+            <returns></returns>
+            <remarks>
+            Update the specified _course_ to the organization by **CourseId**.
+            </remarks>
+            <response code="204">Course's Info updated successfully</response>
+            <response code="400">CourseId domain is not among the registered SSO 
+            domains for this organization!!</response>
+            <response code="404">CourseId Not Found!!</response>
+        </member>
+        <member name="M:MyWebAPI.Controllers.CourseController.DeleteCourse(System.Int32)">
+            <summary>
+            Delete a Course's Info by CourseId
+            </summary>
+            <param name="id">Input CourseId to **delete** Course's info.</param>
+            <returns></returns>
+            <remarks>
+            **Note:** Removes the specified Course from the list by **CourseId**.
+            
+            </remarks>
+            <response code="204">Course's Info deleted successfully</response>
+            <response code="404">CourseId Not Found!!</response>
+        </member>
+        <member name="M:MyWebAPI.Controllers.StudentController.GetAllStudents">
+            <summary>
+            Show list of Student
+            </summary>
+            <returns></returns>
+            <remarks>
+            Returns the lists of **Student** that have been assigned access control on the referenced resource.
+            </remarks>
+            <response code="200">Successfully returns a list of Student.</response>
+        </member>
+        <member name="M:MyWebAPI.Controllers.StudentController.GetStudentByCard(System.String)">
+            <summary>
+            Get a Student by Student Card
+            </summary>
+            <param name="studentCard">Input Student Card to see **Student's info**</param>
+            <returns></returns>
+            <remarks>
+            Retrieve **Student** by **Student Card** and can custom select *any Student*.
+            
+            If you need to find a Student but do not know the Student's Name,
+            you can search on the System through the **Student Card**
+            </remarks>
+            <response code="200">Information of Student</response>
+            <response code="404">StudentCard Not Found!!</response>
+        </member>
+        <member name="M:MyWebAPI.Controllers.StudentController.CreateStudent(System.Int32,System.Int32,BusinessLogicLayer.DTO.StudentDTO)">
+             <summary>
+             Create a new Student
+             </summary>
+             <returns></returns>
+             <remarks>
+             Create a new Student by input the information like courseId and classesId.
+             
+             **Note:** There is no need to enter an id to create because the program will automatically create a new id after each new Post Student.
+             </remarks>
+            <param name="courseId">Input CourseId to **create** Student's info.</param>
+            <param name="classesId">Input ClassesId to **create** Student's info.</param>
+             <param name="studentCreate"></param>
+             <response code="201">Successfully created a Student.</response>
+             <response code="400">Student domain is not among the registered SSO 
+             domains for this organization!!</response>
+        </member>
+        <member name="M:MyWebAPI.Controllers.StudentController.UpdateStudent(System.String,BusinessLogicLayer.DTO.StudentDTO)">
+            <summary>
+            Update a Student by Student Card
+            </summary>
+            <param name="studentCard">Input StudentCard to **update** Student's info.</param>
+            <param name="studentDTO"></param>
+            <returns></returns>
+            <remarks>
+            Update the specified _student_ to the organization by **Student Card**.
+            </remarks>
+            <response code="204">Student's Info updated successfully</response>
+            <response code="400">Student Card domain is not among the registered SSO 
+            domains for this organization!!</response>
+            <response code="404">Student Card Not Found!!</response>
+        </member>
+        <member name="M:MyWebAPI.Controllers.StudentController.DeleteStudent(System.String)">
+            <summary>
+            Delete a Student's Info by Student Card
+            </summary>
+            <param name="studentCard">Input Student Card to **delete** Course's info.</param>
+            <returns></returns>
+            <remarks>
+            **Note:** Removes the specified Student from the list by **Student Card**.
+            
+            </remarks>
+            <response code="204">Student's Info deleted successfully</response>
+            <response code="404">Student Card Not Found!!</response>
+        </member>
+        <member name="M:MyWebAPI.Controllers.TeacherController.GetAllTeachers">
+            <summary>
+            Show list of Teacher
+            </summary>
+            <returns></returns>
+            <remarks>
+            Returns the lists of **Teacher** that have been assigned access control on the referenced resource.
+            </remarks>
+            <response code="200">Successfully returns a list of Teacher.</response>
+        </member>
+        <member name="M:MyWebAPI.Controllers.TeacherController.GetTeacher(System.Int32)">
+            <summary>
+            Get a Teacher by TeacherId
+            </summary>
+            <param name="id">Input Teacher Id to see **Teacher's info**</param>
+            <returns></returns>
+            <remarks>
+            Retrieve **Teacher** by **Teacher Id** and can custom select *any Teacher*.
+            
+            If you need to find a Teacher but do not know the Teacher's Name,
+            you can search on the System through the **Teacher Id**
+            </remarks>
+            <response code="200">Information of Teacher</response>
+            <response code="404">TeacherId Not Found!!</response>
+        </member>
+        <member name="M:MyWebAPI.Controllers.TeacherController.AddTeacher(BusinessLogicLayer.DTO.TeacherDTO)">
+            <summary>
+            Create a new Teacher
+            </summary>
+            <returns></returns>
+            <remarks>
+            Create a new Teacher by input the information like teacherName, email and phoneNo.
+            
+            **Note:** There is no need to enter an id to create because the program will automatically create a new id after each new Post Teacher.
+            </remarks>
+            <response code="201">Successfully created a Teacher.</response>
+            <response code="400">Teacher domain is not among the registered SSO 
+            domains for this organization!!</response>
+        </member>
+        <member name="M:MyWebAPI.Controllers.TeacherController.UpdateTeacher(System.Int32,BusinessLogicLayer.DTO.TeacherDTO)">
+            <summary>
+            Update a Teacher by TeacherId
+            </summary>
+            <param name="id">Input TeacherId to **update** Teacher's info.</param>
+            <param name="teacherDTO"></param>
+            <returns></returns>
+            <remarks>
+            Update the specified _teacher_ to the organization by **TeacherId**.
+            </remarks>
+            <response code="204">Teacher's Info updated successfully</response>
+            <response code="400">TeacherId domain is not among the registered SSO 
+            domains for this organization!!</response>
+            <response code="404">TeacherId Not Found!!</response>
+        </member>
+        <member name="M:MyWebAPI.Controllers.TeacherController.DeleteTeacher(System.Int32)">
+            <summary>
+            Delete a Teacher's Info by TeacherId
+            </summary>
+            <param name="id">Input TeacherId to **delete** Teacher's info.</param>
+            <returns></returns>
+            <remarks>
+            **Note:** Removes the specified Teacher from the list by **TeacherId**.
+            
+            </remarks>
+            <response code="204">Teacher's Info deleted successfully</response>
+            <response code="404">TeacherId Not Found!!</response>
+        </member>
+    </members>
+</doc>

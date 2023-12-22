@@ -1,0 +1,154 @@
+C:\Users\USER\Downloads\asm-final\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Downloads\asm-final\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.AssemblyInfoInputs.cache
+C:\Users\USER\Downloads\asm-final\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.AssemblyInfo.cs
+C:\Users\USER\Downloads\asm-final\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\USER\Downloads\asm-final\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.csproj.AssemblyReference.cache
+C:\Users\USER\Downloads\asm-final\MyWebAPI\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.deps.json
+C:\Users\USER\Downloads\asm-final\MyWebAPI\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.runtimeconfig.json
+C:\Users\USER\Downloads\asm-final\MyWebAPI\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.dll
+C:\Users\USER\Downloads\asm-final\MyWebAPI\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.pdb
+C:\Users\USER\Downloads\asm-final\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.dll
+C:\Users\USER\Downloads\asm-final\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\refint\BusinessLogicLayer.dll
+C:\Users\USER\Downloads\asm-final\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.pdb
+C:\Users\USER\Downloads\asm-final\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.genruntimeconfig.cache
+C:\Users\USER\Downloads\asm-final\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\ref\BusinessLogicLayer.dll
+C:\Users\nly36\Documents\workspace\mywebapi_net\MyWebAPI (2)\MyWebAPI\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.deps.json
+C:\Users\nly36\Documents\workspace\mywebapi_net\MyWebAPI (2)\MyWebAPI\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.runtimeconfig.json
+C:\Users\nly36\Documents\workspace\mywebapi_net\MyWebAPI (2)\MyWebAPI\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.dll
+C:\Users\nly36\Documents\workspace\mywebapi_net\MyWebAPI (2)\MyWebAPI\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.pdb
+C:\Users\nly36\Documents\workspace\mywebapi_net\MyWebAPI (2)\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.csproj.AssemblyReference.cache
+C:\Users\nly36\Documents\workspace\mywebapi_net\MyWebAPI (2)\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nly36\Documents\workspace\mywebapi_net\MyWebAPI (2)\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.AssemblyInfoInputs.cache
+C:\Users\nly36\Documents\workspace\mywebapi_net\MyWebAPI (2)\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.AssemblyInfo.cs
+C:\Users\nly36\Documents\workspace\mywebapi_net\MyWebAPI (2)\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\nly36\Documents\workspace\mywebapi_net\MyWebAPI (2)\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.dll
+C:\Users\nly36\Documents\workspace\mywebapi_net\MyWebAPI (2)\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\refint\BusinessLogicLayer.dll
+C:\Users\nly36\Documents\workspace\mywebapi_net\MyWebAPI (2)\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.pdb
+C:\Users\nly36\Documents\workspace\mywebapi_net\MyWebAPI (2)\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.genruntimeconfig.cache
+C:\Users\nly36\Documents\workspace\mywebapi_net\MyWebAPI (2)\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\ref\BusinessLogicLayer.dll
+C:\Users\USER\Downloads\Assignment\MyWebAPI (2)\MyWebAPI\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.deps.json
+C:\Users\USER\Downloads\Assignment\MyWebAPI (2)\MyWebAPI\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.runtimeconfig.json
+C:\Users\USER\Downloads\Assignment\MyWebAPI (2)\MyWebAPI\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.dll
+C:\Users\USER\Downloads\Assignment\MyWebAPI (2)\MyWebAPI\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.pdb
+C:\Users\USER\Downloads\Assignment\MyWebAPI (2)\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.csproj.AssemblyReference.cache
+C:\Users\USER\Downloads\Assignment\MyWebAPI (2)\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Downloads\Assignment\MyWebAPI (2)\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.AssemblyInfoInputs.cache
+C:\Users\USER\Downloads\Assignment\MyWebAPI (2)\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.AssemblyInfo.cs
+C:\Users\USER\Downloads\Assignment\MyWebAPI (2)\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\USER\Downloads\Assignment\MyWebAPI (2)\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.dll
+C:\Users\USER\Downloads\Assignment\MyWebAPI (2)\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\refint\BusinessLogicLayer.dll
+C:\Users\USER\Downloads\Assignment\MyWebAPI (2)\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.pdb
+C:\Users\USER\Downloads\Assignment\MyWebAPI (2)\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.genruntimeconfig.cache
+C:\Users\USER\Downloads\Assignment\MyWebAPI (2)\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\ref\BusinessLogicLayer.dll
+D:\Dowloads\VS\MockProject\MyWebAPI\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.deps.json
+D:\Dowloads\VS\MockProject\MyWebAPI\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.runtimeconfig.json
+D:\Dowloads\VS\MockProject\MyWebAPI\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.dll
+D:\Dowloads\VS\MockProject\MyWebAPI\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.pdb
+D:\Dowloads\VS\MockProject\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.csproj.AssemblyReference.cache
+D:\Dowloads\VS\MockProject\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dowloads\VS\MockProject\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.AssemblyInfoInputs.cache
+D:\Dowloads\VS\MockProject\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.AssemblyInfo.cs
+D:\Dowloads\VS\MockProject\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+D:\Dowloads\VS\MockProject\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.dll
+D:\Dowloads\VS\MockProject\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\refint\BusinessLogicLayer.dll
+D:\Dowloads\VS\MockProject\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.pdb
+D:\Dowloads\VS\MockProject\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.genruntimeconfig.cache
+D:\Dowloads\VS\MockProject\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\ref\BusinessLogicLayer.dll
+D:\Dowloads\VS\MockProject\MockProject\MyWebAPI\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.deps.json
+D:\Dowloads\VS\MockProject\MockProject\MyWebAPI\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.runtimeconfig.json
+D:\Dowloads\VS\MockProject\MockProject\MyWebAPI\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.dll
+D:\Dowloads\VS\MockProject\MockProject\MyWebAPI\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.pdb
+D:\Dowloads\VS\MockProject\MockProject\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.csproj.AssemblyReference.cache
+D:\Dowloads\VS\MockProject\MockProject\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dowloads\VS\MockProject\MockProject\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.AssemblyInfoInputs.cache
+D:\Dowloads\VS\MockProject\MockProject\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.AssemblyInfo.cs
+D:\Dowloads\VS\MockProject\MockProject\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+D:\Dowloads\VS\MockProject\MockProject\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.dll
+D:\Dowloads\VS\MockProject\MockProject\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\refint\BusinessLogicLayer.dll
+D:\Dowloads\VS\MockProject\MockProject\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.pdb
+D:\Dowloads\VS\MockProject\MockProject\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.genruntimeconfig.cache
+D:\Dowloads\VS\MockProject\MockProject\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\ref\BusinessLogicLayer.dll
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MockProject\MockProject\MyWebAPI\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.deps.json
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MockProject\MockProject\MyWebAPI\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.runtimeconfig.json
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MockProject\MockProject\MyWebAPI\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.dll
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MockProject\MockProject\MyWebAPI\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.pdb
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MockProject\MockProject\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.csproj.AssemblyReference.cache
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MockProject\MockProject\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MockProject\MockProject\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.AssemblyInfoInputs.cache
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MockProject\MockProject\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.AssemblyInfo.cs
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MockProject\MockProject\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MockProject\MockProject\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.dll
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MockProject\MockProject\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\refint\BusinessLogicLayer.dll
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MockProject\MockProject\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.pdb
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MockProject\MockProject\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.genruntimeconfig.cache
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MockProject\MockProject\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\ref\BusinessLogicLayer.dll
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.deps.json
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.runtimeconfig.json
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.dll
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.pdb
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.csproj.AssemblyReference.cache
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.AssemblyInfoInputs.cache
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.AssemblyInfo.cs
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.dll
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\refint\BusinessLogicLayer.dll
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.pdb
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.genruntimeconfig.cache
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\BusinessLogicLayer\obj\Debug\net6.0\ref\BusinessLogicLayer.dll
+D:\Dowloads\VS\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.deps.json
+D:\Dowloads\VS\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.runtimeconfig.json
+D:\Dowloads\VS\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.dll
+D:\Dowloads\VS\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.pdb
+D:\Dowloads\VS\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.csproj.AssemblyReference.cache
+D:\Dowloads\VS\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dowloads\VS\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.AssemblyInfoInputs.cache
+D:\Dowloads\VS\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.AssemblyInfo.cs
+D:\Dowloads\VS\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+D:\Dowloads\VS\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.dll
+D:\Dowloads\VS\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\obj\Debug\net6.0\refint\BusinessLogicLayer.dll
+D:\Dowloads\VS\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.pdb
+D:\Dowloads\VS\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.genruntimeconfig.cache
+D:\Dowloads\VS\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\obj\Debug\net6.0\ref\BusinessLogicLayer.dll
+C:\Users\USER\Downloads\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.deps.json
+C:\Users\USER\Downloads\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.runtimeconfig.json
+C:\Users\USER\Downloads\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.dll
+C:\Users\USER\Downloads\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.pdb
+C:\Users\USER\Downloads\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.csproj.AssemblyReference.cache
+C:\Users\USER\Downloads\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Downloads\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.AssemblyInfoInputs.cache
+C:\Users\USER\Downloads\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.AssemblyInfo.cs
+C:\Users\USER\Downloads\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\USER\Downloads\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.dll
+C:\Users\USER\Downloads\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\obj\Debug\net6.0\refint\BusinessLogicLayer.dll
+C:\Users\USER\Downloads\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.pdb
+C:\Users\USER\Downloads\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.genruntimeconfig.cache
+C:\Users\USER\Downloads\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\obj\Debug\net6.0\ref\BusinessLogicLayer.dll
+C:\Users\USER\Downloads\Assignment\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.deps.json
+C:\Users\USER\Downloads\Assignment\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.runtimeconfig.json
+C:\Users\USER\Downloads\Assignment\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.dll
+C:\Users\USER\Downloads\Assignment\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.pdb
+C:\Users\USER\Downloads\Assignment\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.csproj.AssemblyReference.cache
+C:\Users\USER\Downloads\Assignment\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Downloads\Assignment\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.AssemblyInfoInputs.cache
+C:\Users\USER\Downloads\Assignment\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.AssemblyInfo.cs
+C:\Users\USER\Downloads\Assignment\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\USER\Downloads\Assignment\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.dll
+C:\Users\USER\Downloads\Assignment\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\obj\Debug\net6.0\refint\BusinessLogicLayer.dll
+C:\Users\USER\Downloads\Assignment\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.pdb
+C:\Users\USER\Downloads\Assignment\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.genruntimeconfig.cache
+C:\Users\USER\Downloads\Assignment\student-management-api-project-main\student-management-api-project-main\BusinessLogicLayer\obj\Debug\net6.0\ref\BusinessLogicLayer.dll
+D:\Dowloads\VS\WebAPI-main\WebAPI-main\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.deps.json
+D:\Dowloads\VS\WebAPI-main\WebAPI-main\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.runtimeconfig.json
+D:\Dowloads\VS\WebAPI-main\WebAPI-main\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.dll
+D:\Dowloads\VS\WebAPI-main\WebAPI-main\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.pdb
+D:\Dowloads\VS\WebAPI-main\WebAPI-main\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.csproj.AssemblyReference.cache
+D:\Dowloads\VS\WebAPI-main\WebAPI-main\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dowloads\VS\WebAPI-main\WebAPI-main\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.AssemblyInfoInputs.cache
+D:\Dowloads\VS\WebAPI-main\WebAPI-main\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.AssemblyInfo.cs
+D:\Dowloads\VS\WebAPI-main\WebAPI-main\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+D:\Dowloads\VS\WebAPI-main\WebAPI-main\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.dll
+D:\Dowloads\VS\WebAPI-main\WebAPI-main\BusinessLogicLayer\obj\Debug\net6.0\refint\BusinessLogicLayer.dll
+D:\Dowloads\VS\WebAPI-main\WebAPI-main\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.pdb
+D:\Dowloads\VS\WebAPI-main\WebAPI-main\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.genruntimeconfig.cache
+D:\Dowloads\VS\WebAPI-main\WebAPI-main\BusinessLogicLayer\obj\Debug\net6.0\ref\BusinessLogicLayer.dll

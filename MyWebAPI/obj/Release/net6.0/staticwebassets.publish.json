@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "Hash": "hjwQ2abamQRX85D1VqUF1we3lcNsUml8M5hFybqTq/s=",
+  "Source": "MyWebAPI",
+  "BasePath": "_content/MyWebAPI",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "MyWebAPI\\wwwroot",
+      "Source": "MyWebAPI",
+      "ContentRoot": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\Mock\\MyWebAPI\\MyWebAPI\\wwwroot\\",
+      "BasePath": "_content/MyWebAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\Mock\\MyWebAPI\\MyWebAPI\\wwwroot\\css\\swagger-ui\\custom.css",
+      "SourceId": "MyWebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\Mock\\MyWebAPI\\MyWebAPI\\wwwroot\\",
+      "BasePath": "_content/MyWebAPI",
+      "RelativePath": "css/swagger-ui/custom.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\swagger-ui\\custom.css"
+    },
+    {
+      "Identity": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\Mock\\MyWebAPI\\MyWebAPI\\wwwroot\\images\\logo.png",
+      "SourceId": "MyWebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\Mock\\MyWebAPI\\MyWebAPI\\wwwroot\\",
+      "BasePath": "_content/MyWebAPI",
+      "RelativePath": "images/logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\Mock\\MyWebAPI\\MyWebAPI\\wwwroot\\images\\your-logo.png",
+      "SourceId": "MyWebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\Mock\\MyWebAPI\\MyWebAPI\\wwwroot\\",
+      "BasePath": "_content/MyWebAPI",
+      "RelativePath": "images/your-logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\your-logo.png"
+    }
+  ]
+}

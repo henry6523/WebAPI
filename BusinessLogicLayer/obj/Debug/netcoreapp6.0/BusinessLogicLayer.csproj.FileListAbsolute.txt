@@ -1,0 +1,5 @@
+C:\Users\USER\Downloads\asm-final\MyWebAPI\BusinessLogicLayer\obj\Debug\netcoreapp6.0\BusinessLogicLayer.csproj.AssemblyReference.cache
+C:\Users\USER\Downloads\asm-final\MyWebAPI\BusinessLogicLayer\obj\Debug\netcoreapp6.0\BusinessLogicLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Downloads\asm-final\MyWebAPI\BusinessLogicLayer\obj\Debug\netcoreapp6.0\BusinessLogicLayer.AssemblyInfoInputs.cache
+C:\Users\USER\Downloads\asm-final\MyWebAPI\BusinessLogicLayer\obj\Debug\netcoreapp6.0\BusinessLogicLayer.AssemblyInfo.cs
+C:\Users\USER\Downloads\asm-final\MyWebAPI\BusinessLogicLayer\obj\Debug\netcoreapp6.0\BusinessLogicLayer.csproj.CoreCompileInputs.cache

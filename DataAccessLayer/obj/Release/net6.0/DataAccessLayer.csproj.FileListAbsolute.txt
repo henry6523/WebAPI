@@ -1,0 +1,17 @@
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\DataAccessLayer\bin\Release\net6.0\DataAccessLayer.deps.json
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\DataAccessLayer\bin\Release\net6.0\DataAccessLayer.runtimeconfig.json
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\DataAccessLayer\bin\Release\net6.0\DataAccessLayer.dll
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\DataAccessLayer\bin\Release\net6.0\DataAccessLayer.pdb
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\DataAccessLayer\bin\Release\net6.0\BusinessLogicLayer.dll
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\DataAccessLayer\bin\Release\net6.0\BusinessLogicLayer.pdb
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\DataAccessLayer\obj\Release\net6.0\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\DataAccessLayer\obj\Release\net6.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\DataAccessLayer\obj\Release\net6.0\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\DataAccessLayer\obj\Release\net6.0\DataAccessLayer.AssemblyInfo.cs
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\DataAccessLayer\obj\Release\net6.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\DataAccessLayer\obj\Release\net6.0\DataAccessLayer.csproj.CopyComplete
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\DataAccessLayer\obj\Release\net6.0\DataAccessLayer.dll
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\DataAccessLayer\obj\Release\net6.0\refint\DataAccessLayer.dll
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\DataAccessLayer\obj\Release\net6.0\DataAccessLayer.pdb
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\DataAccessLayer\obj\Release\net6.0\DataAccessLayer.genruntimeconfig.cache
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\DataAccessLayer\obj\Release\net6.0\ref\DataAccessLayer.dll

@@ -1,0 +1,187 @@
+C:\Users\USER\Downloads\asm-final\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Downloads\asm-final\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\USER\Downloads\asm-final\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfo.cs
+C:\Users\USER\Downloads\asm-final\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\USER\Downloads\asm-final\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\USER\Downloads\asm-final\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.deps.json
+C:\Users\USER\Downloads\asm-final\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.runtimeconfig.json
+C:\Users\USER\Downloads\asm-final\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.dll
+C:\Users\USER\Downloads\asm-final\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.pdb
+C:\Users\USER\Downloads\asm-final\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.dll
+C:\Users\USER\Downloads\asm-final\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\refint\DataAccessLayer.dll
+C:\Users\USER\Downloads\asm-final\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.pdb
+C:\Users\USER\Downloads\asm-final\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.genruntimeconfig.cache
+C:\Users\USER\Downloads\asm-final\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\ref\DataAccessLayer.dll
+C:\Users\USER\Downloads\asm-final\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\BusinessLogicLayer.dll
+C:\Users\USER\Downloads\asm-final\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\BusinessLogicLayer.pdb
+C:\Users\USER\Downloads\asm-final\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.CopyComplete
+C:\Users\nly36\Documents\workspace\mywebapi_net\MyWebAPI (2)\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\nly36\Documents\workspace\mywebapi_net\MyWebAPI (2)\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nly36\Documents\workspace\mywebapi_net\MyWebAPI (2)\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\nly36\Documents\workspace\mywebapi_net\MyWebAPI (2)\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfo.cs
+C:\Users\nly36\Documents\workspace\mywebapi_net\MyWebAPI (2)\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\nly36\Documents\workspace\mywebapi_net\MyWebAPI (2)\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.dll
+C:\Users\nly36\Documents\workspace\mywebapi_net\MyWebAPI (2)\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\refint\DataAccessLayer.dll
+C:\Users\nly36\Documents\workspace\mywebapi_net\MyWebAPI (2)\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.pdb
+C:\Users\nly36\Documents\workspace\mywebapi_net\MyWebAPI (2)\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.deps.json
+C:\Users\nly36\Documents\workspace\mywebapi_net\MyWebAPI (2)\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.runtimeconfig.json
+C:\Users\nly36\Documents\workspace\mywebapi_net\MyWebAPI (2)\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.dll
+C:\Users\nly36\Documents\workspace\mywebapi_net\MyWebAPI (2)\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.pdb
+C:\Users\nly36\Documents\workspace\mywebapi_net\MyWebAPI (2)\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\BusinessLogicLayer.dll
+C:\Users\nly36\Documents\workspace\mywebapi_net\MyWebAPI (2)\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\BusinessLogicLayer.pdb
+C:\Users\nly36\Documents\workspace\mywebapi_net\MyWebAPI (2)\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.CopyComplete
+C:\Users\nly36\Documents\workspace\mywebapi_net\MyWebAPI (2)\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.genruntimeconfig.cache
+C:\Users\nly36\Documents\workspace\mywebapi_net\MyWebAPI (2)\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\ref\DataAccessLayer.dll
+C:\Users\USER\Downloads\Assignment\MyWebAPI (2)\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.deps.json
+C:\Users\USER\Downloads\Assignment\MyWebAPI (2)\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.runtimeconfig.json
+C:\Users\USER\Downloads\Assignment\MyWebAPI (2)\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.dll
+C:\Users\USER\Downloads\Assignment\MyWebAPI (2)\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.pdb
+C:\Users\USER\Downloads\Assignment\MyWebAPI (2)\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\BusinessLogicLayer.dll
+C:\Users\USER\Downloads\Assignment\MyWebAPI (2)\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\BusinessLogicLayer.pdb
+C:\Users\USER\Downloads\Assignment\MyWebAPI (2)\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\USER\Downloads\Assignment\MyWebAPI (2)\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Downloads\Assignment\MyWebAPI (2)\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\USER\Downloads\Assignment\MyWebAPI (2)\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfo.cs
+C:\Users\USER\Downloads\Assignment\MyWebAPI (2)\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\USER\Downloads\Assignment\MyWebAPI (2)\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.CopyComplete
+C:\Users\USER\Downloads\Assignment\MyWebAPI (2)\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.dll
+C:\Users\USER\Downloads\Assignment\MyWebAPI (2)\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\refint\DataAccessLayer.dll
+C:\Users\USER\Downloads\Assignment\MyWebAPI (2)\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.pdb
+C:\Users\USER\Downloads\Assignment\MyWebAPI (2)\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.genruntimeconfig.cache
+C:\Users\USER\Downloads\Assignment\MyWebAPI (2)\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\ref\DataAccessLayer.dll
+D:\Dowloads\VS\MockProject\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.deps.json
+D:\Dowloads\VS\MockProject\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.runtimeconfig.json
+D:\Dowloads\VS\MockProject\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.dll
+D:\Dowloads\VS\MockProject\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.pdb
+D:\Dowloads\VS\MockProject\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\BusinessLogicLayer.dll
+D:\Dowloads\VS\MockProject\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\BusinessLogicLayer.pdb
+D:\Dowloads\VS\MockProject\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.AssemblyReference.cache
+D:\Dowloads\VS\MockProject\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dowloads\VS\MockProject\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfoInputs.cache
+D:\Dowloads\VS\MockProject\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfo.cs
+D:\Dowloads\VS\MockProject\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\Dowloads\VS\MockProject\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.CopyComplete
+D:\Dowloads\VS\MockProject\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.dll
+D:\Dowloads\VS\MockProject\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\refint\DataAccessLayer.dll
+D:\Dowloads\VS\MockProject\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.pdb
+D:\Dowloads\VS\MockProject\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.genruntimeconfig.cache
+D:\Dowloads\VS\MockProject\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\ref\DataAccessLayer.dll
+D:\Dowloads\VS\MockProject\MockProject\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.deps.json
+D:\Dowloads\VS\MockProject\MockProject\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.runtimeconfig.json
+D:\Dowloads\VS\MockProject\MockProject\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.dll
+D:\Dowloads\VS\MockProject\MockProject\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.pdb
+D:\Dowloads\VS\MockProject\MockProject\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\BusinessLogicLayer.dll
+D:\Dowloads\VS\MockProject\MockProject\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\BusinessLogicLayer.pdb
+D:\Dowloads\VS\MockProject\MockProject\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.AssemblyReference.cache
+D:\Dowloads\VS\MockProject\MockProject\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dowloads\VS\MockProject\MockProject\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfoInputs.cache
+D:\Dowloads\VS\MockProject\MockProject\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfo.cs
+D:\Dowloads\VS\MockProject\MockProject\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\Dowloads\VS\MockProject\MockProject\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.CopyComplete
+D:\Dowloads\VS\MockProject\MockProject\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.dll
+D:\Dowloads\VS\MockProject\MockProject\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\refint\DataAccessLayer.dll
+D:\Dowloads\VS\MockProject\MockProject\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.pdb
+D:\Dowloads\VS\MockProject\MockProject\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.genruntimeconfig.cache
+D:\Dowloads\VS\MockProject\MockProject\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\ref\DataAccessLayer.dll
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MockProject\MockProject\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.deps.json
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MockProject\MockProject\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.runtimeconfig.json
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MockProject\MockProject\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.dll
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MockProject\MockProject\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.pdb
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MockProject\MockProject\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\BusinessLogicLayer.dll
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MockProject\MockProject\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\BusinessLogicLayer.pdb
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MockProject\MockProject\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MockProject\MockProject\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MockProject\MockProject\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MockProject\MockProject\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfo.cs
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MockProject\MockProject\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MockProject\MockProject\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.CopyComplete
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MockProject\MockProject\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.dll
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MockProject\MockProject\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\refint\DataAccessLayer.dll
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MockProject\MockProject\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.pdb
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MockProject\MockProject\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.genruntimeconfig.cache
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MockProject\MockProject\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\ref\DataAccessLayer.dll
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.deps.json
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.runtimeconfig.json
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.dll
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.pdb
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\BusinessLogicLayer.dll
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\DataAccessLayer\bin\Debug\net6.0\BusinessLogicLayer.pdb
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfo.cs
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.CopyComplete
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.dll
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\refint\DataAccessLayer.dll
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.pdb
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.genruntimeconfig.cache
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\DataAccessLayer\obj\Debug\net6.0\ref\DataAccessLayer.dll
+D:\Dowloads\VS\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.deps.json
+D:\Dowloads\VS\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.runtimeconfig.json
+D:\Dowloads\VS\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.dll
+D:\Dowloads\VS\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.pdb
+D:\Dowloads\VS\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\bin\Debug\net6.0\BusinessLogicLayer.dll
+D:\Dowloads\VS\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\bin\Debug\net6.0\BusinessLogicLayer.pdb
+D:\Dowloads\VS\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.AssemblyReference.cache
+D:\Dowloads\VS\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dowloads\VS\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfoInputs.cache
+D:\Dowloads\VS\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfo.cs
+D:\Dowloads\VS\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\Dowloads\VS\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.CopyComplete
+D:\Dowloads\VS\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.dll
+D:\Dowloads\VS\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\obj\Debug\net6.0\refint\DataAccessLayer.dll
+D:\Dowloads\VS\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.pdb
+D:\Dowloads\VS\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.genruntimeconfig.cache
+D:\Dowloads\VS\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\obj\Debug\net6.0\ref\DataAccessLayer.dll
+C:\Users\USER\Downloads\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.deps.json
+C:\Users\USER\Downloads\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.runtimeconfig.json
+C:\Users\USER\Downloads\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.dll
+C:\Users\USER\Downloads\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.pdb
+C:\Users\USER\Downloads\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\bin\Debug\net6.0\BusinessLogicLayer.dll
+C:\Users\USER\Downloads\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\bin\Debug\net6.0\BusinessLogicLayer.pdb
+C:\Users\USER\Downloads\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\USER\Downloads\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Downloads\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\USER\Downloads\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfo.cs
+C:\Users\USER\Downloads\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\USER\Downloads\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.CopyComplete
+C:\Users\USER\Downloads\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.dll
+C:\Users\USER\Downloads\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\obj\Debug\net6.0\refint\DataAccessLayer.dll
+C:\Users\USER\Downloads\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.pdb
+C:\Users\USER\Downloads\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.genruntimeconfig.cache
+C:\Users\USER\Downloads\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\obj\Debug\net6.0\ref\DataAccessLayer.dll
+C:\Users\USER\Downloads\Assignment\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.deps.json
+C:\Users\USER\Downloads\Assignment\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.runtimeconfig.json
+C:\Users\USER\Downloads\Assignment\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.dll
+C:\Users\USER\Downloads\Assignment\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.pdb
+C:\Users\USER\Downloads\Assignment\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\bin\Debug\net6.0\BusinessLogicLayer.dll
+C:\Users\USER\Downloads\Assignment\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\bin\Debug\net6.0\BusinessLogicLayer.pdb
+C:\Users\USER\Downloads\Assignment\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\USER\Downloads\Assignment\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Downloads\Assignment\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\USER\Downloads\Assignment\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfo.cs
+C:\Users\USER\Downloads\Assignment\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\USER\Downloads\Assignment\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.CopyComplete
+C:\Users\USER\Downloads\Assignment\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.dll
+C:\Users\USER\Downloads\Assignment\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\obj\Debug\net6.0\refint\DataAccessLayer.dll
+C:\Users\USER\Downloads\Assignment\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.pdb
+C:\Users\USER\Downloads\Assignment\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.genruntimeconfig.cache
+C:\Users\USER\Downloads\Assignment\student-management-api-project-main\student-management-api-project-main\DataAccessLayer\obj\Debug\net6.0\ref\DataAccessLayer.dll
+D:\Dowloads\VS\WebAPI-main\WebAPI-main\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.deps.json
+D:\Dowloads\VS\WebAPI-main\WebAPI-main\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.runtimeconfig.json
+D:\Dowloads\VS\WebAPI-main\WebAPI-main\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.dll
+D:\Dowloads\VS\WebAPI-main\WebAPI-main\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.pdb
+D:\Dowloads\VS\WebAPI-main\WebAPI-main\DataAccessLayer\bin\Debug\net6.0\BusinessLogicLayer.dll
+D:\Dowloads\VS\WebAPI-main\WebAPI-main\DataAccessLayer\bin\Debug\net6.0\BusinessLogicLayer.pdb
+D:\Dowloads\VS\WebAPI-main\WebAPI-main\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.AssemblyReference.cache
+D:\Dowloads\VS\WebAPI-main\WebAPI-main\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dowloads\VS\WebAPI-main\WebAPI-main\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfoInputs.cache
+D:\Dowloads\VS\WebAPI-main\WebAPI-main\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfo.cs
+D:\Dowloads\VS\WebAPI-main\WebAPI-main\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\Dowloads\VS\WebAPI-main\WebAPI-main\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.CopyComplete
+D:\Dowloads\VS\WebAPI-main\WebAPI-main\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.dll
+D:\Dowloads\VS\WebAPI-main\WebAPI-main\DataAccessLayer\obj\Debug\net6.0\refint\DataAccessLayer.dll
+D:\Dowloads\VS\WebAPI-main\WebAPI-main\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.pdb
+D:\Dowloads\VS\WebAPI-main\WebAPI-main\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.genruntimeconfig.cache
+D:\Dowloads\VS\WebAPI-main\WebAPI-main\DataAccessLayer\obj\Debug\net6.0\ref\DataAccessLayer.dll

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\MyWebAPI\MyWebAPI\bin\Release\net6.0\publish\</_PublishTargetUrl>
+    <History>True|2023-12-18T01:53:34.6561285Z;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=LyNguyen%3bDatabase=mywebapi%3bIntegrated Security=True%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

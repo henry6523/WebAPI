@@ -1,0 +1,5 @@
+C:\Users\USER\Downloads\asm-final\MyWebAPI\DataAccessLayer\obj\Debug\netcoreapp6.0\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\USER\Downloads\asm-final\MyWebAPI\DataAccessLayer\obj\Debug\netcoreapp6.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Downloads\asm-final\MyWebAPI\DataAccessLayer\obj\Debug\netcoreapp6.0\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\USER\Downloads\asm-final\MyWebAPI\DataAccessLayer\obj\Debug\netcoreapp6.0\DataAccessLayer.AssemblyInfo.cs
+C:\Users\USER\Downloads\asm-final\MyWebAPI\DataAccessLayer\obj\Debug\netcoreapp6.0\DataAccessLayer.csproj.CoreCompileInputs.cache
