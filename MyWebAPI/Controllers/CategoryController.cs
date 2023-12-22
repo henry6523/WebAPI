@@ -8,6 +8,7 @@ using DataAccessLayer.Models;
 using X.PagedList;
 using Microsoft.AspNetCore.Authorization;
 using DataAccessLayer.Repositories;
+using MyWebAPI.Services;
 
 
 namespace MyWebAPI.Controllers
@@ -19,11 +20,13 @@ namespace MyWebAPI.Controllers
 	{
 		private readonly ICategoryRepository _categoryRepository;
 		private readonly IMapper _mapper;
+        private readonly IResponseServiceRepository _responseServiceRepository;
 
-		public CategoryController(ICategoryRepository categoryRepository, IMapper mapper)
+		public CategoryController(ICategoryRepository categoryRepository, IMapper mapper, IResponseServiceRepository responseServiceRepository)
 		{
 			_categoryRepository = categoryRepository;
 			_mapper = mapper;
+            _responseServiceRepository = responseServiceRepository;
 		}
         public enum FilterType
         {
@@ -43,10 +46,16 @@ namespace MyWebAPI.Controllers
         /// <response code="200">Successfully returns a list of Category.</response>
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<CategoryDTO>))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [Authorize(Roles = "Reader")]
-		public IActionResult GetAllCategories(string filterValue = "",int? page = 0, int pageSize = 10)
-		{
+        public IActionResult GetAllCategories(string? filterValue, int? page = 0, int pageSize = 10)
+        {
             IEnumerable<DataAccessLayer.Models.Categories> categories = _categoryRepository.GetCategories();
+
+            if (page < 1)
+            {
+                return _responseServiceRepository.CustomBadRequestResponse("The page value cannot below 1", page);
+            }
 
             if (!string.IsNullOrEmpty(filterValue))
             {
@@ -54,10 +63,12 @@ namespace MyWebAPI.Controllers
             }
 
             var pagedCatagories = categories.ToPagedList(page ?? 0, pageSize);
+
+
             var categoryMap = _mapper.Map<IEnumerable<CategoryDTO>>(categories);
 
-			return Ok(categoryMap);
-		}
+            return _responseServiceRepository.CustomOkResponse("Data loaded successfully", categoryMap);
+        }
 
         /// <summary>
         /// Get a Category by CategoryId
@@ -75,18 +86,44 @@ namespace MyWebAPI.Controllers
         [HttpGet("{id}")]
         [Authorize(Roles = "Reader")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(CategoryDTO))]
-		[ProducesResponseType(StatusCodes.Status404NotFound)]
-		public IActionResult GetCategoryById(int id)
-		{
-			var category = _categoryRepository.GetCategory(id);
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public IActionResult GetCategoryById(int id)
+        {
 
-			if (category == null)
-				return NotFound();
+            var category = _categoryRepository.GetCategory(id);
 
-			var categoryMap = _mapper.Map<CategoryDTO>(category);
+            if (category == null)
+                return _responseServiceRepository.CustomNotFoundResponse("Category not found");
 
-			return Ok(categoryMap);
-		}
+            var categoryMap = _mapper.Map<CategoryDTO>(category);
+
+            return _responseServiceRepository.CustomOkResponse("Data loaded successfully", categoryMap);
+        }
+
+        private IActionResult CheckFieldLengthAndEmpty(string field, int maxLength, string fieldName)
+        {
+            if (string.IsNullOrEmpty(field))
+            {
+                return _responseServiceRepository.CustomBadRequestResponse("The characters you type in cannot be empty");
+            }
+
+            if (field.Length > maxLength)
+            {
+                return _responseServiceRepository.CustomBadRequestResponse($"The characters you type in for {fieldName} are over {maxLength}");
+            }
+
+            return null;
+        }
+
+        private IActionResult CheckIntField(int fieldValue, int maxLength, string fieldName)
+        {
+            if (fieldValue.ToString().Length > maxLength)
+            {
+                return _responseServiceRepository.CustomBadRequestResponse($"The characters for {fieldName} are over {maxLength}");
+            }
+
+            return null;
+        }
 
         /// <summary>
         /// Create a Category
@@ -101,17 +138,23 @@ namespace MyWebAPI.Controllers
         [HttpPost]
         [Authorize(Roles = "Writer")]
         [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(CategoryDTO))]
-		[ProducesResponseType(StatusCodes.Status400BadRequest)]
-		public IActionResult CreateCategory([FromBody] CategoryDTO categoryDTO)
-		{
-			var categoryEntity = _mapper.Map<Categories>(categoryDTO);
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public IActionResult CreateCategory([FromBody] CategoryDTO categoryDTO)
+        {
+            var categoryNameCheck = CheckFieldLengthAndEmpty(categoryDTO.CategoriesName, 100, "category name");
+            if (categoryNameCheck != null) return categoryNameCheck;
 
-			_categoryRepository.AddCategory(categoryEntity);
+            var idCheck = CheckIntField(categoryDTO.Id, 30, "Id");
+            if (idCheck != null) return idCheck;
 
-			categoryDTO.Id = categoryEntity.Id;
+            var categoryEntity = _mapper.Map<Categories>(categoryDTO);
 
-			return CreatedAtAction(nameof(GetCategoryById), new { id = categoryDTO.Id }, categoryDTO);
-		}
+            _categoryRepository.AddCategory(categoryEntity);
+
+            categoryDTO.Id = categoryEntity.Id;
+
+            return _responseServiceRepository.CustomCreatedResponse("Category created", categoryDTO);
+        }
 
         /// <summary>
         /// Update a Category by CategoryId
@@ -127,21 +170,21 @@ namespace MyWebAPI.Controllers
         /// domains for this System!!</response>
         /// <response code="404">CategoryId Not Found!!</response>
         [HttpPut("{id}")]
-		[Authorize(Roles = "Editor")]
-		[ProducesResponseType(StatusCodes.Status204NoContent)]
-		[ProducesResponseType(StatusCodes.Status400BadRequest)]
-		[ProducesResponseType(StatusCodes.Status404NotFound)]
-		public IActionResult UpdateCategory(int id, [FromBody] CategoryDTO categoryDTO)
-		{
-			var existingCategory = _categoryRepository.GetCategory(id);
+        [Authorize(Roles = "Editor")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public IActionResult UpdateCategory(int id, [FromBody] CategoryDTO categoryDTO)
+        {
 
-			if (existingCategory == null)
-				return NotFound();
+            var existingCategory = _categoryRepository.GetCategory(id);
 
-			_categoryRepository.UpdateCategory(id, categoryDTO);
+            if (existingCategory == null)
+                return _responseServiceRepository.CustomNotFoundResponse("Category not found", existingCategory);
 
-			return NoContent();
-		}
+            _categoryRepository.UpdateCategory(id, categoryDTO);
+
+            return _responseServiceRepository.CustomNoContentResponse("Category updated", categoryDTO);
+        }
 
         /// <summary>
         /// Delete a Category's Info by CategoryId
@@ -155,19 +198,20 @@ namespace MyWebAPI.Controllers
         /// <response code="204">Category's Info deleted successfully</response>
         /// <response code="404">CategoryId Not Found!!</response>
         [HttpDelete("{id}")]
-		[Authorize(Roles = "Editor")]
-		[ProducesResponseType(StatusCodes.Status204NoContent)]
-		[ProducesResponseType(StatusCodes.Status404NotFound)]
-		public IActionResult DeleteCategory(int id)
-		{
-			var existingCategory = _categoryRepository.GetCategory(id);
+        [Authorize(Roles = "Editor")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public IActionResult DeleteCategory(int id)
+        {
 
-			if (existingCategory == null)
-				return NotFound();
+            var existingCategory = _categoryRepository.GetCategory(id);
 
-			_categoryRepository.DeleteCategory(existingCategory);
+            if (existingCategory == null)
+                return _responseServiceRepository.CustomNotFoundResponse("Category not found", existingCategory);
 
-			return NoContent();
-		}
-	}
+            _categoryRepository.DeleteCategory(existingCategory);
+
+            return _responseServiceRepository.CustomNoContentResponse("Category deleted", existingCategory);
+        }
+    }
 }

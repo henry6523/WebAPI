@@ -2966,19 +2966,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\USER\\.nuget\\packages\\": {}
+    "C:\\Users\\thanh\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Assignment\\WebAPI-main\\WebAPI-main\\DataAccessLayer\\DataAccessLayer.csproj",
+      "projectUniqueName": "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\DataAccessLayer\\DataAccessLayer.csproj",
       "projectName": "DataAccessLayer",
-      "projectPath": "C:\\Assignment\\WebAPI-main\\WebAPI-main\\DataAccessLayer\\DataAccessLayer.csproj",
-      "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "C:\\Assignment\\WebAPI-main\\WebAPI-main\\DataAccessLayer\\obj\\",
+      "projectPath": "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\DataAccessLayer\\DataAccessLayer.csproj",
+      "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\DataAccessLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2992,8 +2992,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Assignment\\WebAPI-main\\WebAPI-main\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
-              "projectPath": "C:\\Assignment\\WebAPI-main\\WebAPI-main\\BusinessLogicLayer\\BusinessLogicLayer.csproj"
+            "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
+              "projectPath": "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\BusinessLogicLayer\\BusinessLogicLayer.csproj"
             }
           }
         }
@@ -3069,7 +3069,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

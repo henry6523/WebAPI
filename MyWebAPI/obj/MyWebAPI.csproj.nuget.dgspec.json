@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Assignment\\WebAPI-main\\WebAPI-main\\MyWebAPI\\MyWebAPI.csproj": {}
+    "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\MyWebAPI\\MyWebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Assignment\\WebAPI-main\\WebAPI-main\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
+    "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Assignment\\WebAPI-main\\WebAPI-main\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
+        "projectUniqueName": "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
         "projectName": "BusinessLogicLayer",
-        "projectPath": "C:\\Assignment\\WebAPI-main\\WebAPI-main\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
-        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Assignment\\WebAPI-main\\WebAPI-main\\BusinessLogicLayer\\obj\\",
+        "projectPath": "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
+        "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\BusinessLogicLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -101,21 +101,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Assignment\\WebAPI-main\\WebAPI-main\\DataAccessLayer\\DataAccessLayer.csproj": {
+    "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\DataAccessLayer\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Assignment\\WebAPI-main\\WebAPI-main\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\DataAccessLayer\\DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "C:\\Assignment\\WebAPI-main\\WebAPI-main\\DataAccessLayer\\DataAccessLayer.csproj",
-        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Assignment\\WebAPI-main\\WebAPI-main\\DataAccessLayer\\obj\\",
+        "projectPath": "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\DataAccessLayer\\DataAccessLayer.csproj",
+        "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -129,8 +129,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Assignment\\WebAPI-main\\WebAPI-main\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
-                "projectPath": "C:\\Assignment\\WebAPI-main\\WebAPI-main\\BusinessLogicLayer\\BusinessLogicLayer.csproj"
+              "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
+                "projectPath": "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\BusinessLogicLayer\\BusinessLogicLayer.csproj"
               }
             }
           }
@@ -206,21 +206,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Assignment\\WebAPI-main\\WebAPI-main\\MyWebAPI\\MyWebAPI.csproj": {
+    "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\MyWebAPI\\MyWebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Assignment\\WebAPI-main\\WebAPI-main\\MyWebAPI\\MyWebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\MyWebAPI\\MyWebAPI.csproj",
         "projectName": "MyWebAPI",
-        "projectPath": "C:\\Assignment\\WebAPI-main\\WebAPI-main\\MyWebAPI\\MyWebAPI.csproj",
-        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Assignment\\WebAPI-main\\WebAPI-main\\MyWebAPI\\obj\\",
+        "projectPath": "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\MyWebAPI\\MyWebAPI.csproj",
+        "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\MyWebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -234,11 +234,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Assignment\\WebAPI-main\\WebAPI-main\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
-                "projectPath": "C:\\Assignment\\WebAPI-main\\WebAPI-main\\BusinessLogicLayer\\BusinessLogicLayer.csproj"
+              "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
+                "projectPath": "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\BusinessLogicLayer\\BusinessLogicLayer.csproj"
               },
-              "C:\\Assignment\\WebAPI-main\\WebAPI-main\\DataAccessLayer\\DataAccessLayer.csproj": {
-                "projectPath": "C:\\Assignment\\WebAPI-main\\WebAPI-main\\DataAccessLayer\\DataAccessLayer.csproj"
+              "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\DataAccessLayer\\DataAccessLayer.csproj"
               }
             }
           }
@@ -320,15 +320,15 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-              "version": "[6.0.25, 6.0.25]"
+              "version": "[6.0.23, 6.0.23]"
             },
             {
               "name": "Microsoft.NETCore.App.Runtime.win-x64",
-              "version": "[6.0.25, 6.0.25]"
+              "version": "[6.0.23, 6.0.23]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-              "version": "[6.0.25, 6.0.25]"
+              "version": "[6.0.23, 6.0.23]"
             }
           ],
           "frameworkReferences": {
@@ -339,7 +339,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

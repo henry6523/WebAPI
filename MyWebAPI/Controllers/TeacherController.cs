@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 using X.PagedList;
+using MyWebAPI.Services;
 
 namespace MyWebAPI.Controllers
 {
@@ -20,12 +21,14 @@ namespace MyWebAPI.Controllers
 		private readonly ITeacherRepository _teacherRepository;
 		private readonly IMapper _mapper;
 		private readonly ILogger<TeacherController> _logger;
+        private readonly IResponseServiceRepository _responseServiceRepository;
 
-		public TeacherController(ITeacherRepository teacherRepository, IMapper mapper, ILogger<TeacherController> logger)
+		public TeacherController(ITeacherRepository teacherRepository, IMapper mapper, ILogger<TeacherController> logger, IResponseServiceRepository responseServiceRepository)
 		{
 			_teacherRepository = teacherRepository;
 			_mapper = mapper;
 			_logger = logger;
+            _responseServiceRepository = responseServiceRepository;
 		}
         public enum FilterType
         {
@@ -49,6 +52,11 @@ namespace MyWebAPI.Controllers
         public IActionResult GetAllTeachers(string filterValue = "", int? page = 0, int pageSize = 10)
         {
             IEnumerable<DataAccessLayer.Models.Teachers> teachers = _teacherRepository.GetTeachers();
+
+            if (page < 1)
+            {
+                return _responseServiceRepository.CustomBadRequestResponse("The page value cannot below 1", page);
+            }
 
             if (!string.IsNullOrEmpty(filterValue))
             {
@@ -84,13 +92,37 @@ namespace MyWebAPI.Controllers
 
 			if (teacher == null)
 			{
-				return NotFound();
+				return _responseServiceRepository.CustomNotFoundResponse("Teacher not found", teacher);
 			}
 
 			var teacherMap = _mapper.Map<TeacherDTO>(teacher);
 
-			return Ok(teacherMap);
+			return _responseServiceRepository.CustomOkResponse("Data loaded successfully", teacherMap);
 		}
+
+        private IActionResult CheckFieldLengthAndEmpty(string field, int maxLength, string fieldName)
+        {
+            if (string.IsNullOrEmpty(field))
+            {
+                return _responseServiceRepository.CustomBadRequestResponse("The characters you type in cannot be empty");
+            }
+
+            if (field.Length > maxLength)
+            {
+                return _responseServiceRepository.CustomBadRequestResponse($"The characters you type in for {fieldName} are over {maxLength}");
+            }
+
+            return null;
+        }
+        private IActionResult CheckIntField(int fieldValue, int maxLength, string fieldName)
+        {
+            if (fieldValue.ToString().Length > maxLength)
+            {
+                return _responseServiceRepository.CustomBadRequestResponse($"The characters for {fieldName} are over {maxLength}");
+            }
+
+            return null;
+        }
 
         /// <summary>
         /// Create a new Teacher
@@ -108,12 +140,19 @@ namespace MyWebAPI.Controllers
 		[ProducesResponseType(StatusCodes.Status400BadRequest)]
 		public IActionResult AddTeacher([FromBody] TeacherDTO teacherDTO)
 		{
-			if (!ModelState.IsValid)
-			{
-				return BadRequest(ModelState);
-			}
+            var idCheck = CheckIntField(teacherDTO.Id, 30, "id");
+            if (idCheck != null) return idCheck;
 
-			var teacherEntity = _mapper.Map<Teachers>(teacherDTO);
+            var teacherNameCheck = CheckFieldLengthAndEmpty(teacherDTO.TeacherName, 50, "teacher name");
+            if (teacherNameCheck != null) return teacherNameCheck;
+
+            var emailCheck = CheckFieldLengthAndEmpty(teacherDTO.Email, 50, "email");
+            if (emailCheck != null) return emailCheck;
+
+            var phoneNoCheck = CheckIntField(teacherDTO.PhoneNo, 30, "phone number");
+            if (phoneNoCheck != null) return phoneNoCheck;
+
+            var teacherEntity = _mapper.Map<Teachers>(teacherDTO);
 
 			_teacherRepository.AddTeacher(teacherEntity);
 
@@ -138,25 +177,20 @@ namespace MyWebAPI.Controllers
         [HttpPut("{id}")]
 		[Authorize(Roles = "Editor")]
 		[ProducesResponseType(StatusCodes.Status204NoContent)]
-		[ProducesResponseType(StatusCodes.Status400BadRequest)]
 		[ProducesResponseType(StatusCodes.Status404NotFound)]
 		public IActionResult UpdateTeacher(int id, [FromBody] TeacherDTO teacherDTO)
 		{
-			if (!ModelState.IsValid)
-			{
-				return BadRequest(ModelState);
-			}
 
 			var existingTeacher = _teacherRepository.GetTeacher(id);
 
 			if (existingTeacher == null)
 			{
-				return NotFound();
+				return _responseServiceRepository.CustomNotFoundResponse("Teacher not found", existingTeacher);
 			}
 
 			_teacherRepository.UpdateTeacher(id, teacherDTO);
 
-			return NoContent();
+			return _responseServiceRepository.CustomNoContentResponse("Teacher updated", teacherDTO);
 		}
 
         /// <summary>
@@ -180,12 +214,12 @@ namespace MyWebAPI.Controllers
 
 			if (teacherToDelete == null)
 			{
-				return NotFound();
+				return _responseServiceRepository.CustomNotFoundResponse("Teacher not found", teacherToDelete);
 			}
 
 			_teacherRepository.DeleteTeacher(teacherToDelete);
 
-			return NoContent();
+			return _responseServiceRepository.CustomNoContentResponse("Teacher deleted", teacherToDelete);
 		}
 
 	}

@@ -19,14 +19,14 @@ namespace DataAccessLayer.Repository
     {
         private readonly IAddressRepository _addressRepository;
         private readonly IMapper _mapper;
-        private readonly IResponseService _responseService;
+        private readonly IResponseServiceRepository _responseServiceRepository;
         private readonly IStudentRepository _studentRepository;
 
-        public AddressController(IAddressRepository addressRepository, IMapper mapper, IResponseService responseService, IStudentRepository studentRepository)
+        public AddressController(IAddressRepository addressRepository, IMapper mapper, IResponseServiceRepository responseServiceRepository, IStudentRepository studentRepository)
         {
             _addressRepository = addressRepository;
             _mapper = mapper;
-            _responseService = responseService;
+            _responseServiceRepository = responseServiceRepository;
             _studentRepository = studentRepository;
         }
 
@@ -50,13 +50,29 @@ namespace DataAccessLayer.Repository
 
         public IActionResult GetAddressByStudentCard(string studentCard)
         {
+
             var addressEntity = _addressRepository.GetAddressByStudentCard(studentCard);
 
             if (addressEntity == null)
-                return _responseService.CustomNotFoundResponse("Student's Address Not Found", ModelState);
+                return _responseServiceRepository.CustomNotFoundResponse("Student address not found", addressEntity);
 
             var addressMap = _mapper.Map<AddressDTO>(addressEntity);
-            return _responseService.CustomOkResponse("Data Loaded Successful!", addressMap);
+            return _responseServiceRepository.CustomOkResponse("Data Loaded Successful!", addressMap);
+        }
+
+        private IActionResult CheckFieldLengthAndEmpty(string field, int maxLength, string fieldName)
+        {
+            if (string.IsNullOrEmpty(field))
+            {
+                return _responseServiceRepository.CustomBadRequestResponse($"The {fieldName} cannot be empty");
+            }
+
+            if (field.Length > maxLength)
+            {
+                return _responseServiceRepository.CustomBadRequestResponse($"The characters you type in for {fieldName} are over {maxLength}");
+            }
+
+            return null;
         }
 
         /// <summary>
@@ -76,22 +92,30 @@ namespace DataAccessLayer.Repository
         /// <response code="400">Student Card domain is not among the registered SSO 
         /// domains for this System!!</response>
         [HttpPost("{studentCard}")]
-		[Authorize(Roles = "Writer")]
-		[ProducesResponseType(StatusCodes.Status201Created, Type = typeof(AddressDTO))]
+        [Authorize(Roles = "Writer")]
+        [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(AddressDTO))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult CreateAddress(string studentCard, [FromBody] AddressDTO addressDTO)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+
+            var address1Check = CheckFieldLengthAndEmpty(addressDTO.Address_1, 100, "Address 1");
+            if (address1Check != null) return address1Check;
+
+            var address2Check = CheckFieldLengthAndEmpty(addressDTO.Address_2, 100, "Address 2");
+            if (address2Check != null) return address2Check;
+
+            var cityCheck = CheckFieldLengthAndEmpty(addressDTO.City, 30, "City");
+            if (cityCheck != null) return cityCheck;
+
+            var zipCodeCheck = CheckFieldLengthAndEmpty(addressDTO.ZipCode, 30, "Zip Code");
+            if (zipCodeCheck != null) return zipCodeCheck;
 
             var addressEntity = _mapper.Map<Addresses>(addressDTO);
 
             _addressRepository.AddAddress(studentCard, addressEntity);
 
             var createdAddressMap = _mapper.Map<AddressDTO>(addressEntity);
-            return CreatedAtAction(nameof(GetAddressByStudentCard), new { studentCard }, createdAddressMap);
+            return _responseServiceRepository.CustomCreatedResponse("Student address created", createdAddressMap);
         }
 
         /// <summary>
@@ -108,24 +132,20 @@ namespace DataAccessLayer.Repository
         /// domains for this System!!</response>
         /// <response code="404">StudentCard Not Found!!</response>
         [HttpPut("{studentCard}")]
-		[Authorize(Roles = "Editor")]
-		[ProducesResponseType(StatusCodes.Status204NoContent)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [Authorize(Roles = "Editor")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult UpdateAddress(string studentCard, [FromBody] AddressDTO addressDTO)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
             var existingAddress = _addressRepository.GetAddressByStudentCard(studentCard);
 
             if (existingAddress == null)
-                return NotFound();
+                return _responseServiceRepository.CustomNotFoundResponse("Student address not found", existingAddress);
 
             _mapper.Map(addressDTO, existingAddress);
             _addressRepository.UpdateAddress(existingAddress);
 
-            return NoContent();
+            return _responseServiceRepository.CustomNoContentResponse("Student address deleted", existingAddress);
         }
 
         /// <summary>
@@ -141,19 +161,20 @@ namespace DataAccessLayer.Repository
 		/// <response code="204">Student's Address deleted successfully</response>
         /// <response code="404">StudentCard Not Found!!</response>
         [HttpDelete("{studentCard}")]
-		[Authorize(Roles = "Editor")]
-		[ProducesResponseType(StatusCodes.Status204NoContent)]
+        [Authorize(Roles = "Editor")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult DeleteAddress(string studentCard)
         {
+
             var existingAddress = _addressRepository.GetAddressByStudentCard(studentCard);
 
             if (existingAddress == null)
-                return NotFound();
+                return _responseServiceRepository.CustomNotFoundResponse("Student address not found");
 
             _addressRepository.DeleteAddress(existingAddress);
 
-            return NoContent();
+            return _responseServiceRepository.CustomNoContentResponse("Student address deleted", existingAddress);
         }
     }
 }

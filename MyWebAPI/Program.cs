@@ -16,6 +16,7 @@ using Microsoft.Extensions.Options;
 using DataAccessLayer.Repositories;
 using DataAccessLayer.Models;
 using Microsoft.AspNetCore.Identity;
+using MyWebAPI.Services;
 
 namespace MyWebAPI
 {
@@ -150,6 +151,7 @@ namespace MyWebAPI
 			builder.Services.AddScoped<ITeacherRepository, TeacherRepository>();
             builder.Services.AddScoped<IUserRepository, UserRepository>();
             builder.Services.AddScoped<IAccountRepository, AccountRepository>();
+            builder.Services.AddScoped<IResponseServiceRepository, ResponseServiceRepository>();
 
 			builder.Services.AddDbContext<DataContext>(options =>
 			{

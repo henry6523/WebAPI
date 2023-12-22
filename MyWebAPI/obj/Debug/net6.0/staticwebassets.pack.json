@@ -1,15 +1,15 @@
 {
   "Files": [
     {
-      "Id": "D:\\Dowloads\\VS\\WebAPI-main\\WebAPI-main\\MyWebAPI\\wwwroot\\css\\swagger-ui\\custom.css",
+      "Id": "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\MyWebAPI\\wwwroot\\css\\swagger-ui\\custom.css",
       "PackagePath": "staticwebassets\\css\\swagger-ui\\custom.css"
     },
     {
-      "Id": "D:\\Dowloads\\VS\\WebAPI-main\\WebAPI-main\\MyWebAPI\\wwwroot\\images\\logo.png",
+      "Id": "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\MyWebAPI\\wwwroot\\images\\logo.png",
       "PackagePath": "staticwebassets\\images\\logo.png"
     },
     {
-      "Id": "D:\\Dowloads\\VS\\WebAPI-main\\WebAPI-main\\MyWebAPI\\wwwroot\\images\\your-logo.png",
+      "Id": "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\MyWebAPI\\wwwroot\\images\\your-logo.png",
       "PackagePath": "staticwebassets\\images\\your-logo.png"
     },
     {
