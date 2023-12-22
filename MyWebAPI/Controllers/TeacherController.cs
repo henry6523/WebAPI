@@ -44,11 +44,11 @@ namespace MyWebAPI.Controllers
         /// <param name="page">Index starting from 0 to designate the page for retrieval.</param>
 		/// <param name="pageSize">Number of results per page to return</param>
         /// <remarks>
-        /// Returns the lists of **Teacher** that have been assigned access control on the referenced resource.
+        /// Returns the list of **Teacher** that have been assigned access control on the referenced resource.
         /// </remarks>
         /// <response code="200">Successfully returns a list of Teacher.</response>
         [HttpGet]
-		[Authorize(Roles = "Reader, Admin")]
+		[Authorize(Roles = "Reader")]
 		[ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<TeacherDTO>))]
         public IActionResult GetAllTeachers(string? filterValue = "", int? page = 0, int pageSize = 10)
         {
@@ -84,7 +84,7 @@ namespace MyWebAPI.Controllers
         /// <response code="200">Information of Teacher</response>
         /// <response code="404">TeacherId Not Found!!</response>
         [HttpGet("{id}")]
-		[Authorize(Roles = "Reader, Admin")]
+		[Authorize(Roles = "Reader")]
 		[ProducesResponseType(StatusCodes.Status200OK, Type = typeof(TeacherDTO))]
 		[ProducesResponseType(StatusCodes.Status404NotFound)]
 		public IActionResult GetTeacher(int id)
@@ -134,9 +134,9 @@ namespace MyWebAPI.Controllers
         /// </remarks>
         /// <response code="201">Successfully created a Teacher.</response>
         /// <response code="400">Teacher domain is not among the registered SSO 
-        /// domains for this organization!!</response>
+        /// domains for this System!!</response>
         [HttpPost]
-		[Authorize(Roles = "Writer, Admin")]
+		[Authorize(Roles = "Writer")]
 		[ProducesResponseType(StatusCodes.Status201Created, Type = typeof(TeacherDTO))]
 		[ProducesResponseType(StatusCodes.Status400BadRequest)]
 		public IActionResult AddTeacher([FromBody] CreateTeacherDTO createTeacherDTO)
@@ -171,14 +171,14 @@ namespace MyWebAPI.Controllers
         /// <param name="createTeacherDTO"></param>
         /// <returns></returns>
         /// <remarks>
-        /// Update the specified _teacher_ to the organization by **TeacherId**.
+        /// Update the specified _teacher_ to the System by **TeacherId**.
         /// </remarks>
         /// <response code="204">Teacher's Info updated successfully</response>
         /// <response code="400">TeacherId domain is not among the registered SSO 
-        /// domains for this organization!!</response>
+        /// domains for this System!!</response>
         /// <response code="404">TeacherId Not Found!!</response>
         [HttpPut("{id}")]
-		[Authorize(Roles = "Editor, Admin")]
+		[Authorize(Roles = "Editor")]
 		[ProducesResponseType(StatusCodes.Status204NoContent)]
 		[ProducesResponseType(StatusCodes.Status404NotFound)]
 		public IActionResult UpdateTeacher(int id, [FromBody] CreateTeacherDTO createTeacherDTO)
@@ -220,7 +220,7 @@ namespace MyWebAPI.Controllers
         /// <response code="204">Teacher's Info deleted successfully</response>
         /// <response code="404">TeacherId Not Found!!</response>
         [HttpDelete("{id}")]
-		[Authorize(Roles = "Editor, Admin")]
+		[Authorize(Roles = "Editor")]
 		[ProducesResponseType(StatusCodes.Status204NoContent)]
 		[ProducesResponseType(StatusCodes.Status404NotFound)]
 		public IActionResult DeleteTeacher(int id)

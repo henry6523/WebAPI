@@ -33,7 +33,7 @@
             <param name="page">Index starting from 0 to designate the page for retrieval.</param>
             <param name="pageSize">Number of results per page to return.</param>
             <remarks>
-            Returns the lists of **Category** that have been assigned access control on the referenced resource.
+            Returns the list of **Category** that have been assigned access control on the referenced resource.
             </remarks>
             <response code="200">Successfully returns a list of Category.</response>
         </member>
@@ -86,7 +86,7 @@
             <param name="id">Input CategoryId to **delete** Category's info.</param>
             <returns></returns>
             <remarks>
-            **Note:** Removes the specified Category from the líst by **CategoryId**.
+            **Note:** Removes the specified Category from the list by **CategoryId**.
             
             </remarks>
             <response code="204">Category's Info deleted successfully</response>
@@ -101,7 +101,7 @@
             <param name="page">Index starting from 0 to designate the page for retrieval.</param>
             <param name="pageSize">Number of results per page to return</param>
             <remarks>
-            Returns the lists of **Class** that have been assigned access control on the referenced resource.
+            Returns the list of **Class** that have been assigned access control on the referenced resource.
             </remarks>
             <response code="200">Successfully returns a list of Class.</response>
         </member>
@@ -140,7 +140,7 @@
             <param name="createClassDTO"></param>
             <returns></returns>
             <remarks>
-            Update the specified _class_ to the organization by **Class Id**.
+            Update the specified _class_ to the System by **Class Id**.
             </remarks>
             <response code="204">Class's Info updated successfully</response>
             <response code="400">ClassId domain is not among the registered SSO 
@@ -169,7 +169,7 @@
             <param name="page">Index starting from 0 to designate the page for retrieval.</param>
             <param name="pageSize">Number of results per page to return</param>
             <remarks>
-            Returns the lists of **Course** that have been assigned access control on the referenced resource.
+            Returns the list of **Course** that have been assigned access control on the referenced resource.
             </remarks>
             <response code="200">Successfully returns a list of Source.</response>
         </member>
@@ -198,7 +198,7 @@
             </remarks>
             <response code="201">Successfully created a Course.</response>
             <response code="400">Course domain is not among the registered SSO 
-            domains for this organization!!</response>
+            domains for this System!!</response>
         </member>
         <member name="M:MyWebAPI.Controllers.CourseController.UpdateCourse(System.Int32,BusinessLogicLayer.DTO.CreateCourseDTO)">
             <summary>
@@ -208,11 +208,11 @@
             <param name="createCourseDTO"></param>
             <returns></returns>
             <remarks>
-            Update the specified _course_ to the organization by **CourseId**.
+            Update the specified _course_ to the System by **CourseId**.
             </remarks>
             <response code="204">Course's Info updated successfully</response>
             <response code="400">CourseId domain is not among the registered SSO 
-            domains for this organization!!</response>
+            domains for this System!!</response>
             <response code="404">CourseId Not Found!!</response>
         </member>
         <member name="M:MyWebAPI.Controllers.CourseController.DeleteCourse(System.Int32)">
@@ -238,7 +238,7 @@
             <param name="pageSize">Number of results per page to return</param>
             <returns></returns>
             <remarks>
-            Returns the lists of **Student** that have been assigned access control on the referenced resource.
+            Returns the list of **Student** that have been assigned access control on the referenced resource.
             </remarks>
             <response code="200">Successfully returns a list of Student.</response>
         </member>
@@ -270,7 +270,7 @@
              <param name="studentCreate"></param>
              <response code="201">Successfully created a Student.</response>
              <response code="400">Student domain is not among the registered SSO 
-             domains for this organization!!</response>
+             domains for this System!!</response>
         </member>
         <member name="M:MyWebAPI.Controllers.StudentController.UpdateStudent(System.String,BusinessLogicLayer.DTO.StudentDTO)">
             <summary>
@@ -280,11 +280,11 @@
             <param name="studentDTO"></param>
             <returns></returns>
             <remarks>
-            Update the specified _student_ to the organization by **Student Card**.
+            Update the specified _student_ to the System by **Student Card**.
             </remarks>
             <response code="204">Student's Info updated successfully</response>
             <response code="400">Student Card domain is not among the registered SSO 
-            domains for this organization!!</response>
+            domains for this System!!</response>
             <response code="404">Student Card Not Found!!</response>
         </member>
         <member name="M:MyWebAPI.Controllers.StudentController.DeleteStudent(System.String)">
@@ -309,7 +309,7 @@
             <param name="page">Index starting from 0 to designate the page for retrieval.</param>
             <param name="pageSize">Number of results per page to return</param>
             <remarks>
-            Returns the lists of **Teacher** that have been assigned access control on the referenced resource.
+            Returns the list of **Teacher** that have been assigned access control on the referenced resource.
             </remarks>
             <response code="200">Successfully returns a list of Teacher.</response>
         </member>
@@ -338,7 +338,7 @@
             </remarks>
             <response code="201">Successfully created a Teacher.</response>
             <response code="400">Teacher domain is not among the registered SSO 
-            domains for this organization!!</response>
+            domains for this System!!</response>
         </member>
         <member name="M:MyWebAPI.Controllers.TeacherController.UpdateTeacher(System.Int32,BusinessLogicLayer.DTO.CreateTeacherDTO)">
             <summary>
@@ -348,11 +348,11 @@
             <param name="createTeacherDTO"></param>
             <returns></returns>
             <remarks>
-            Update the specified _teacher_ to the organization by **TeacherId**.
+            Update the specified _teacher_ to the System by **TeacherId**.
             </remarks>
             <response code="204">Teacher's Info updated successfully</response>
             <response code="400">TeacherId domain is not among the registered SSO 
-            domains for this organization!!</response>
+            domains for this System!!</response>
             <response code="404">TeacherId Not Found!!</response>
         </member>
         <member name="M:MyWebAPI.Controllers.TeacherController.DeleteTeacher(System.Int32)">
@@ -384,7 +384,7 @@
             </summary>
             <returns></returns>
             <remarks>
-            Returns the lists of **Roles** that have been assigned access control on the referenced resource.
+            Returns the list of **Roles** that have been assigned access control on the referenced resource.
             </remarks>
             <response code="200">Successfully returns a list of User Roles.</response>
         </member>
@@ -396,7 +396,7 @@
             <remarks>
             Add Roles into System
             </remarks>
-            <response code="200">Successfully add a Role into an User.</response>
+            <response code="200">Successfully add a role into System.</response>
         </member>
         <member name="M:MyWebAPI.Controllers.UsersController.AssignRole(BusinessLogicLayer.DTO.EditRoleDTO)">
             <summary>
@@ -404,7 +404,7 @@
             </summary>
             <returns></returns>
             <remarks>
-            Assign role into a User
+            Assign role into an User
             </remarks>
             <response code="200">Successfully assign role into an User.</response>
         </member>
@@ -414,7 +414,7 @@
             </summary>
             <returns></returns>
             <remarks>
-            Deleting roles.
+            Delete role from an User.
             </remarks>
             <response code="200">Successfully deleted User's Role</response>
         </member>
@@ -441,7 +441,7 @@
             <param name="addressDTO"></param>
             <returns></returns>
             <remarks>
-            Create the specified _address_ to the organization by **Student Card**.
+            Create the specified _address_ to the System by **Student Card**.
             
             
             **Note**: If the System uses *Single Sign-On* (SSO) and is configured to block external (non-SSO) users from joining,

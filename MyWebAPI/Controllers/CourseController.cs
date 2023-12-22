@@ -41,11 +41,11 @@ namespace MyWebAPI.Controllers
         /// <param name="page">Index starting from 0 to designate the page for retrieval.</param>
 		/// <param name="pageSize">Number of results per page to return</param>
         /// <remarks>
-        /// Returns the lists of **Course** that have been assigned access control on the referenced resource.
+        /// Returns the list of **Course** that have been assigned access control on the referenced resource.
         /// </remarks>
         /// <response code="200">Successfully returns a list of Source.</response>
         [HttpGet]
-        [Authorize(Roles = "Reader, Admin")]
+        [Authorize(Roles = "Reader")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<CourseDTO>))]
         public IActionResult GetAllCourses(string? filterValue = "", int? page = 0, int pageSize = 10)
         {
@@ -81,7 +81,7 @@ namespace MyWebAPI.Controllers
         /// <response code="200">Information of Course</response>
         /// <response code="404">CourseId Not Found!!</response>
         [HttpGet("{id}")]
-        [Authorize(Roles = "Reader, Admin")]
+        [Authorize(Roles = "Reader")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(CourseDTO))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult GetCourseById(int id)
@@ -129,9 +129,9 @@ namespace MyWebAPI.Controllers
         /// </remarks>
         /// <response code="201">Successfully created a Course.</response>
         /// <response code="400">Course domain is not among the registered SSO 
-        /// domains for this organization!!</response>
+        /// domains for this System!!</response>
         [HttpPost]
-        [Authorize(Roles = "Writer, Admin")]
+        [Authorize(Roles = "Writer")]
         [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(CourseDTO))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult CreateCourse([FromQuery] int CategoryId, [FromBody] CreateCourseDTO courseDTO)
@@ -160,14 +160,14 @@ namespace MyWebAPI.Controllers
         /// <param name="createCourseDTO"></param>
         /// <returns></returns>
         /// <remarks>
-        /// Update the specified _course_ to the organization by **CourseId**.
+        /// Update the specified _course_ to the System by **CourseId**.
         /// </remarks>
         /// <response code="204">Course's Info updated successfully</response>
         /// <response code="400">CourseId domain is not among the registered SSO 
-        /// domains for this organization!!</response>
+        /// domains for this System!!</response>
         /// <response code="404">CourseId Not Found!!</response>
         [HttpPut("{id}")]
-		[Authorize(Roles = "Editor, Admin")]
+		[Authorize(Roles = "Editor")]
 		[ProducesResponseType(StatusCodes.Status204NoContent)]
 		[ProducesResponseType(StatusCodes.Status404NotFound)]
 		public IActionResult UpdateCourse(int id, [FromBody] CreateCourseDTO createCourseDTO)
@@ -204,7 +204,7 @@ namespace MyWebAPI.Controllers
         /// <response code="204">Course's Info deleted successfully</response>
         /// <response code="404">CourseId Not Found!!</response>
         [HttpDelete("{id}")]
-		[Authorize(Roles = "Editor, Admin")]
+		[Authorize(Roles = "Editor")]
 		[ProducesResponseType(StatusCodes.Status204NoContent)]
 		[ProducesResponseType(StatusCodes.Status404NotFound)]
 		public IActionResult DeleteCourse(int id)

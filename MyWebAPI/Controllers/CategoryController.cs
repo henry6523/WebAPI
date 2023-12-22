@@ -41,13 +41,13 @@ namespace MyWebAPI.Controllers
         /// <param name="page">Index starting from 0 to designate the page for retrieval.</param>
 		/// <param name="pageSize">Number of results per page to return.</param>
         /// <remarks>
-        /// Returns the lists of **Category** that have been assigned access control on the referenced resource.
+        /// Returns the list of **Category** that have been assigned access control on the referenced resource.
         /// </remarks>
         /// <response code="200">Successfully returns a list of Category.</response>
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<CategoryDTO>))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = "Reader, Admin")]
+        [Authorize(Roles = "Reader")]
         public IActionResult GetAllCategories(string? filterValue, int? page = 0, int pageSize = 10)
         {
             IEnumerable<DataAccessLayer.Models.Categories> categories = _categoryRepository.GetCategories();
@@ -84,7 +84,7 @@ namespace MyWebAPI.Controllers
         /// <response code="200">Information of Category</response>
         /// <response code="404">Category Id Not Found!!</response>
         [HttpGet("{id}")]
-        [Authorize(Roles = "Reader, Admin")]
+        [Authorize(Roles = "Reader")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(CategoryDTO))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult GetCategoryById(int id)
@@ -136,7 +136,7 @@ namespace MyWebAPI.Controllers
 		/// <response code="400">Category domain is not among the registered SSO 
 		/// domains for this System!!</response>
         [HttpPost]
-        [Authorize(Roles = "Writer, Admin")]
+        [Authorize(Roles = "Writer")]
         [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(CategoryDTO))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult CreateCategory([FromBody] CreateCategoryDTO createCategoryDTO)
@@ -173,7 +173,7 @@ namespace MyWebAPI.Controllers
         /// domains for this System!!</response>
         /// <response code="404">CategoryId Not Found!!</response>
         [HttpPut("{id}")]
-        [Authorize(Roles = "Editor, Admin")]
+        [Authorize(Roles = "Editor")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult UpdateCategory(int id, [FromBody] CreateCategoryDTO createCategoryDTO)
@@ -204,13 +204,13 @@ namespace MyWebAPI.Controllers
         /// <param name="id">Input CategoryId to **delete** Category's info.</param>
         /// <returns></returns>
         /// <remarks>
-        /// **Note:** Removes the specified Category from the líst by **CategoryId**.
+        /// **Note:** Removes the specified Category from the list by **CategoryId**.
         /// 
         /// </remarks>
         /// <response code="204">Category's Info deleted successfully</response>
         /// <response code="404">CategoryId Not Found!!</response>
         [HttpDelete("{id}")]
-        [Authorize(Roles = "Editor, Admin")]
+        [Authorize(Roles = "Editor")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult DeleteCategory(int id)

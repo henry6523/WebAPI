@@ -14,7 +14,7 @@ namespace MyWebAPI.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    [Authorize(Roles = "Admin")]
+    [Authorize]
     public class UsersController : ControllerBase
     {
         private readonly DataContext _context;
@@ -39,7 +39,8 @@ namespace MyWebAPI.Controllers
         /// </remarks>
         /// <response code="200">Successfully returns a list of User.</response>
         [HttpGet]
-		public async Task<ActionResult<List<GetUsers>>> GetListUsers()
+        [Authorize(Roles = "Reader")]
+        public async Task<ActionResult<List<GetUsers>>> GetListUsers()
         {
             var queryable = _context.Users.AsQueryable();
             return await queryable
@@ -51,11 +52,12 @@ namespace MyWebAPI.Controllers
         /// </summary>
         /// <returns></returns>
         /// <remarks>
-        /// Returns the lists of **Roles** that have been assigned access control on the referenced resource.
+        /// Returns the list of **Roles** that have been assigned access control on the referenced resource.
         /// </remarks>
         /// <response code="200">Successfully returns a list of User Roles.</response>
         [HttpGet("Roles")]
-		public async Task<ActionResult<List<RoleDTO>>> Get()
+        [Authorize(Roles = "Reader")]
+        public async Task<ActionResult<List<RoleDTO>>> Get()
         {
             return await _context.Roles
                 .Select(x => new RoleDTO { Name = x.Name }).ToListAsync();
@@ -68,9 +70,10 @@ namespace MyWebAPI.Controllers
         /// <remarks>
         /// Add Roles into System
         /// </remarks>
-        /// <response code="200">Successfully add a Role into an User.</response>
+        /// <response code="200">Successfully add a role into System.</response>
         [HttpPost("AddRole")]
-		public IActionResult AddRole([FromBody] RoleDTO roleDto)
+        [Authorize(Roles = "Writer")]
+        public IActionResult AddRole([FromBody] RoleDTO roleDto)
         {
             var role = new Roles { Name = roleDto.Name };
             _context.Roles.Add(role);
@@ -83,11 +86,12 @@ namespace MyWebAPI.Controllers
         /// </summary>
         /// <returns></returns>
         /// <remarks>
-        /// Assign role into a User
+        /// Assign role into an User
         /// </remarks>
         /// <response code="200">Successfully assign role into an User.</response>
         [HttpPost("AssignRole")]
-		public async Task<IActionResult> AssignRole([FromBody] EditRoleDTO editRoleDTO)
+        [Authorize(Roles = "Writer")]
+        public async Task<IActionResult> AssignRole([FromBody] EditRoleDTO editRoleDTO)
         {
             try
             {
@@ -121,11 +125,12 @@ namespace MyWebAPI.Controllers
         /// </summary>
         /// <returns></returns>
         /// <remarks>
-        /// Deleting roles.
+        /// Delete role from an User.
         /// </remarks>
         /// <response code="200">Successfully deleted User's Role</response>
-        [HttpPost("RemoveRole")]
-		public async Task<ActionResult> RemoveRole(EditRoleDTO editRoleDTO)
+        [HttpDelete("RemoveRole")]
+        [Authorize(Roles = "Editor")]
+        public async Task<ActionResult> RemoveRole(EditRoleDTO editRoleDTO)
         {
             try
             {

@@ -40,11 +40,11 @@ namespace MyWebAPI.Controllers
         /// <param name="page">Index starting from 0 to designate the page for retrieval.</param>
 		/// <param name="pageSize">Number of results per page to return</param>
         /// <remarks>
-        /// Returns the lists of **Class** that have been assigned access control on the referenced resource.
+        /// Returns the list of **Class** that have been assigned access control on the referenced resource.
         /// </remarks>
         /// <response code="200">Successfully returns a list of Class.</response>
         [HttpGet]
-        [Authorize(Roles = "Reader, Admin")]
+        [Authorize(Roles = "Reader")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<ClassDTO>))]
         public IActionResult GetAllClasses(string? filterValue = "", int? page = 0, int pageSize = 10)
         {
@@ -75,7 +75,7 @@ namespace MyWebAPI.Controllers
         /// <response code="200">Information of Class</response>
         /// <response code="404">Class Id Not Found!!</response>
         [HttpGet("{id}")]
-        [Authorize(Roles = "Reader, Admin")]
+        [Authorize(Roles = "Reader")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(ClassDTO))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult GetClassById(int id)
@@ -126,7 +126,7 @@ namespace MyWebAPI.Controllers
         /// <response code="400">Class domain is not among the registered SSO 
         /// domains for this System!!</response>
         [HttpPost]
-        [Authorize(Roles = "Writer, Admin")]
+        [Authorize(Roles = "Writer")]
         [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(ClassDTO))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult CreateClass([FromBody] CreateClassDTO classDTO)
@@ -155,14 +155,14 @@ namespace MyWebAPI.Controllers
         /// <param name="createClassDTO"></param>
         /// <returns></returns>
         /// <remarks>
-        /// Update the specified _class_ to the organization by **Class Id**.
+        /// Update the specified _class_ to the System by **Class Id**.
         /// </remarks>
         /// <response code="204">Class's Info updated successfully</response>
         /// <response code="400">ClassId domain is not among the registered SSO 
         /// domains for this System!!</response>
         /// <response code="404">ClassId Not Found!!</response>
         [HttpPut("{id}")]
-        [Authorize(Roles = "Editor, Admin")]
+        [Authorize(Roles = "Editor")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult UpdateClass(int id, [FromBody] CreateClassDTO createClassDTO)
@@ -201,7 +201,7 @@ namespace MyWebAPI.Controllers
         /// <response code="204">Class's Info deleted successfully</response>
         /// <response code="404">ClassId Not Found!!</response>
         [HttpDelete("{id}")]
-        [Authorize(Roles = "Editor, Admin")]
+        [Authorize(Roles = "Editor")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult DeleteClass(int id)
