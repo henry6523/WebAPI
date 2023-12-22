@@ -32,7 +32,7 @@ namespace DataAccessLayer.Repositories
             _context.SaveChanges();
         }
 
-        public void UpdateClass(int id, ClassDTO classDTO)
+        public void UpdateClass(int id, CreateClassDTO classDTO)
         {
             var existingClass = _context.Classes.FirstOrDefault(c => c.Id == id);
 

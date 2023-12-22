@@ -32,7 +32,7 @@ namespace DataAccessLayer.Repositories
             _context.SaveChanges();
         }
 
-        public void UpdateTeacher(int id, TeacherDTO teacherDTO)
+        public void UpdateTeacher(int id, CreateTeacherDTO createTeacherDTO)
         {
             var existingTeacher = _context.Teachers.FirstOrDefault(t => t.Id == id);
 
@@ -41,9 +41,9 @@ namespace DataAccessLayer.Repositories
                 return;
             }
 
-            existingTeacher.TeacherName = teacherDTO.TeacherName;
-            existingTeacher.Email = teacherDTO.Email;
-            existingTeacher.PhoneNo = teacherDTO.PhoneNo;
+            existingTeacher.TeacherName = createTeacherDTO.TeacherName;
+            existingTeacher.Email = createTeacherDTO.Email;
+            existingTeacher.PhoneNo = createTeacherDTO.PhoneNo;
 
             _context.SaveChanges();
         }

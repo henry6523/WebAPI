@@ -9,7 +9,7 @@ namespace DataAccessLayer.Interfaces
 		Categories GetCategory(int id);
 		ICollection<Categories> GetCategories();
 		void AddCategory(Categories categoryCreate);
-		void UpdateCategory(int id, CategoryDTO categoryDTO);
+		void UpdateCategory(int id, CreateCategoryDTO createCategoryDTO);
 		void DeleteCategory(Categories categoryDelete);
 	}
 }

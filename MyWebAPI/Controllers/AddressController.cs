@@ -44,7 +44,7 @@ namespace DataAccessLayer.Repository
         /// <response code="200">Data Loaded Successful!</response>
         /// <response code="404">Student's Address Not Found</response>
         [HttpGet("{studentCard}")]
-        [Authorize(Roles = "Reader")]
+        [Authorize(Roles = "Reader, Admin")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(AddressDTO))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
 
@@ -92,7 +92,7 @@ namespace DataAccessLayer.Repository
         /// <response code="400">Student Card domain is not among the registered SSO 
         /// domains for this System!!</response>
         [HttpPost("{studentCard}")]
-        [Authorize(Roles = "Writer")]
+        [Authorize(Roles = "Writer, Admin")]
         [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(AddressDTO))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult CreateAddress(string studentCard, [FromBody] AddressDTO addressDTO)
@@ -132,7 +132,7 @@ namespace DataAccessLayer.Repository
         /// domains for this System!!</response>
         /// <response code="404">StudentCard Not Found!!</response>
         [HttpPut("{studentCard}")]
-        [Authorize(Roles = "Editor")]
+        [Authorize(Roles = "Editor, Admin")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult UpdateAddress(string studentCard, [FromBody] AddressDTO addressDTO)
@@ -161,7 +161,7 @@ namespace DataAccessLayer.Repository
 		/// <response code="204">Student's Address deleted successfully</response>
         /// <response code="404">StudentCard Not Found!!</response>
         [HttpDelete("{studentCard}")]
-        [Authorize(Roles = "Editor")]
+        [Authorize(Roles = "Editor, Admin")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult DeleteAddress(string studentCard)

@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 using X.PagedList;
 using MyWebAPI.Services;
+using DataAccessLayer.Repositories;
 
 namespace MyWebAPI.Controllers
 {
@@ -47,9 +48,9 @@ namespace MyWebAPI.Controllers
         /// </remarks>
         /// <response code="200">Successfully returns a list of Teacher.</response>
         [HttpGet]
-		[Authorize(Roles = "Reader")]
+		[Authorize(Roles = "Reader, Admin")]
 		[ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<TeacherDTO>))]
-        public IActionResult GetAllTeachers(string filterValue = "", int? page = 0, int pageSize = 10)
+        public IActionResult GetAllTeachers(string? filterValue = "", int? page = 0, int pageSize = 10)
         {
             IEnumerable<DataAccessLayer.Models.Teachers> teachers = _teacherRepository.GetTeachers();
 
@@ -83,7 +84,7 @@ namespace MyWebAPI.Controllers
         /// <response code="200">Information of Teacher</response>
         /// <response code="404">TeacherId Not Found!!</response>
         [HttpGet("{id}")]
-		[Authorize(Roles = "Reader")]
+		[Authorize(Roles = "Reader, Admin")]
 		[ProducesResponseType(StatusCodes.Status200OK, Type = typeof(TeacherDTO))]
 		[ProducesResponseType(StatusCodes.Status404NotFound)]
 		public IActionResult GetTeacher(int id)
@@ -135,37 +136,39 @@ namespace MyWebAPI.Controllers
         /// <response code="400">Teacher domain is not among the registered SSO 
         /// domains for this organization!!</response>
         [HttpPost]
-		[Authorize(Roles = "Writer")]
+		[Authorize(Roles = "Writer, Admin")]
 		[ProducesResponseType(StatusCodes.Status201Created, Type = typeof(TeacherDTO))]
 		[ProducesResponseType(StatusCodes.Status400BadRequest)]
-		public IActionResult AddTeacher([FromBody] TeacherDTO teacherDTO)
+		public IActionResult AddTeacher([FromBody] CreateTeacherDTO createTeacherDTO)
 		{
-            var idCheck = CheckIntField(teacherDTO.Id, 30, "id");
+            var teacherEntity = _mapper.Map<Teachers>(createTeacherDTO);
+            var createdTeacherDTO = _mapper.Map<TeacherDTO>(teacherEntity);
+
+            var idCheck = CheckIntField(createdTeacherDTO.Id, 30, "id");
             if (idCheck != null) return idCheck;
 
-            var teacherNameCheck = CheckFieldLengthAndEmpty(teacherDTO.TeacherName, 50, "teacher name");
+            var teacherNameCheck = CheckFieldLengthAndEmpty(createTeacherDTO.TeacherName, 50, "teacher name");
             if (teacherNameCheck != null) return teacherNameCheck;
 
-            var emailCheck = CheckFieldLengthAndEmpty(teacherDTO.Email, 50, "email");
+            var emailCheck = CheckFieldLengthAndEmpty(createTeacherDTO.Email, 50, "email");
             if (emailCheck != null) return emailCheck;
 
-            var phoneNoCheck = CheckIntField(teacherDTO.PhoneNo, 30, "phone number");
+            var phoneNoCheck = CheckIntField(createTeacherDTO.PhoneNo, 30, "phone number");
             if (phoneNoCheck != null) return phoneNoCheck;
 
-            var teacherEntity = _mapper.Map<Teachers>(teacherDTO);
 
 			_teacherRepository.AddTeacher(teacherEntity);
 
-			var createdteacherMap = _mapper.Map<TeacherDTO>(teacherEntity);
+            createdTeacherDTO.Id = teacherEntity.Id;
 
-			return CreatedAtAction(nameof(GetTeacher), new { id = createdteacherMap.Id }, createdteacherMap);
+            return CreatedAtAction(nameof(GetTeacher), new { id = createdTeacherDTO.Id }, createdTeacherDTO);
 		}
 
         /// <summary>
         /// Update a Teacher by TeacherId
         /// </summary>
         /// <param name="id">Input TeacherId to **update** Teacher's info.</param>
-        /// <param name="teacherDTO"></param>
+        /// <param name="createTeacherDTO"></param>
         /// <returns></returns>
         /// <remarks>
         /// Update the specified _teacher_ to the organization by **TeacherId**.
@@ -175,10 +178,10 @@ namespace MyWebAPI.Controllers
         /// domains for this organization!!</response>
         /// <response code="404">TeacherId Not Found!!</response>
         [HttpPut("{id}")]
-		[Authorize(Roles = "Editor")]
+		[Authorize(Roles = "Editor, Admin")]
 		[ProducesResponseType(StatusCodes.Status204NoContent)]
 		[ProducesResponseType(StatusCodes.Status404NotFound)]
-		public IActionResult UpdateTeacher(int id, [FromBody] TeacherDTO teacherDTO)
+		public IActionResult UpdateTeacher(int id, [FromBody] CreateTeacherDTO createTeacherDTO)
 		{
 
 			var existingTeacher = _teacherRepository.GetTeacher(id);
@@ -188,9 +191,21 @@ namespace MyWebAPI.Controllers
 				return _responseServiceRepository.CustomNotFoundResponse("Teacher not found", existingTeacher);
 			}
 
-			_teacherRepository.UpdateTeacher(id, teacherDTO);
+			_teacherRepository.UpdateTeacher(id, createTeacherDTO);
 
-			return _responseServiceRepository.CustomNoContentResponse("Teacher updated", teacherDTO);
+            var updatedTeacher = _teacherRepository.GetTeacher(id);
+
+            // Map the updated category to CategoryDTO
+            var updataTeacherDTO = new TeacherDTO
+            {
+                Id = updatedTeacher.Id,
+                TeacherName = updatedTeacher.TeacherName,
+                Email = updatedTeacher.Email,
+                PhoneNo = updatedTeacher.PhoneNo,
+
+            };
+
+            return NoContent();
 		}
 
         /// <summary>
@@ -205,7 +220,7 @@ namespace MyWebAPI.Controllers
         /// <response code="204">Teacher's Info deleted successfully</response>
         /// <response code="404">TeacherId Not Found!!</response>
         [HttpDelete("{id}")]
-		[Authorize(Roles = "Editor")]
+		[Authorize(Roles = "Editor, Admin")]
 		[ProducesResponseType(StatusCodes.Status204NoContent)]
 		[ProducesResponseType(StatusCodes.Status404NotFound)]
 		public IActionResult DeleteTeacher(int id)
@@ -219,7 +234,7 @@ namespace MyWebAPI.Controllers
 
 			_teacherRepository.DeleteTeacher(teacherToDelete);
 
-			return _responseServiceRepository.CustomNoContentResponse("Teacher deleted", teacherToDelete);
+			return NoContent();
 		}
 
 	}

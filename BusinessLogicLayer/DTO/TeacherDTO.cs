@@ -11,6 +11,12 @@ namespace BusinessLogicLayer.DTO
 		public string Email { get; set; }
 		public int PhoneNo { get; set; }
 	}
+    public class CreateTeacherDTO
+    {
+        public string TeacherName { get; set; }
+        public string Email { get; set; }
+        public int PhoneNo { get; set; }
+    }
     public class TeacherSchemaFilter : ISchemaFilter
     {
         public void Apply(OpenApiSchema schema, SchemaFilterContext context)

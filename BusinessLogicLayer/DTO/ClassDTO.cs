@@ -9,6 +9,11 @@ namespace BusinessLogicLayer.DTO
 
 		public string ClassName { get; set; }
 	}
+
+    public class CreateClassDTO
+    {
+        public string ClassName { get; set; }
+    }
     public class ClassSchemaFilter : ISchemaFilter
     {
         public void Apply(OpenApiSchema schema, SchemaFilterContext context)

@@ -9,7 +9,7 @@ namespace DataAccessLayer.Interfaces
 		Courses GetCourse(int id);
 		ICollection<Courses> GetCourses();
 		void AddCourse(int categoryId, Courses courseCreate);
-		void UpdateCourse(int id, CourseDTO courseDTO);
+		void UpdateCourse(int id, CreateCourseDTO createCourseDTO);
 		void DeleteCourse(Courses courseDelete);
-	}
+    }
 }

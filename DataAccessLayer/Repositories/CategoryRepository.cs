@@ -32,7 +32,7 @@ namespace DataAccessLayer.Repositories
             _context.SaveChanges();
         }
 
-        public void UpdateCategory(int id, CategoryDTO categoryDTO)
+        public void UpdateCategory(int id, CreateCategoryDTO createCategoryDTO)
         {
             var existingCategory = _context.Categories.FirstOrDefault(c => c.Id == id);
 
@@ -41,7 +41,7 @@ namespace DataAccessLayer.Repositories
                 return;
             }
 
-            existingCategory.CategoriesName = categoryDTO.CategoriesName;
+            existingCategory.CategoriesName = createCategoryDTO.CategoriesName;
 
             _context.SaveChanges();
         }

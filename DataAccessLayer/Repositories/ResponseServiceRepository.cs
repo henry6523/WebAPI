@@ -63,7 +63,7 @@ namespace MyWebAPI.Services
                 message = message,
                 data = data
             };
-            return new ObjectResult(responseObj) { StatusCode = 204 };
+            return new NoContentResult();
 
         }
     }

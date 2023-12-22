@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\MyWebAPI\\MyWebAPI.csproj": {}
+    "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysourceV2\\MyWebAPI\\MyWebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
+    "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysourceV2\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
+        "projectUniqueName": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysourceV2\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
         "projectName": "BusinessLogicLayer",
-        "projectPath": "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
-        "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\BusinessLogicLayer\\obj\\",
+        "projectPath": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysourceV2\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
+        "packagesPath": "C:\\Users\\nly36\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysourceV2\\BusinessLogicLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nly36\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -105,17 +105,17 @@
         }
       }
     },
-    "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\DataAccessLayer\\DataAccessLayer.csproj": {
+    "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysourceV2\\DataAccessLayer\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysourceV2\\DataAccessLayer\\DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\DataAccessLayer\\DataAccessLayer.csproj",
-        "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\DataAccessLayer\\obj\\",
+        "projectPath": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysourceV2\\DataAccessLayer\\DataAccessLayer.csproj",
+        "packagesPath": "C:\\Users\\nly36\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysourceV2\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nly36\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -129,8 +129,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
-                "projectPath": "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\BusinessLogicLayer\\BusinessLogicLayer.csproj"
+              "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysourceV2\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
+                "projectPath": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysourceV2\\BusinessLogicLayer\\BusinessLogicLayer.csproj"
               }
             }
           }
@@ -210,17 +210,17 @@
         }
       }
     },
-    "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\MyWebAPI\\MyWebAPI.csproj": {
+    "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysourceV2\\MyWebAPI\\MyWebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\MyWebAPI\\MyWebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysourceV2\\MyWebAPI\\MyWebAPI.csproj",
         "projectName": "MyWebAPI",
-        "projectPath": "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\MyWebAPI\\MyWebAPI.csproj",
-        "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\MyWebAPI\\obj\\",
+        "projectPath": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysourceV2\\MyWebAPI\\MyWebAPI.csproj",
+        "packagesPath": "C:\\Users\\nly36\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysourceV2\\MyWebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nly36\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -234,11 +234,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
-                "projectPath": "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\BusinessLogicLayer\\BusinessLogicLayer.csproj"
+              "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysourceV2\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
+                "projectPath": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysourceV2\\BusinessLogicLayer\\BusinessLogicLayer.csproj"
               },
-              "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\DataAccessLayer\\DataAccessLayer.csproj": {
-                "projectPath": "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\DataAccessLayer\\DataAccessLayer.csproj"
+              "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysourceV2\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysourceV2\\DataAccessLayer\\DataAccessLayer.csproj"
               }
             }
           }

@@ -14,7 +14,7 @@ namespace MyWebAPI.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public class UsersController : ControllerBase
     {
         private readonly DataContext _context;
@@ -39,7 +39,6 @@ namespace MyWebAPI.Controllers
         /// </remarks>
         /// <response code="200">Successfully returns a list of User.</response>
         [HttpGet]
-		[Authorize(Roles = "Reader")]
 		public async Task<ActionResult<List<GetUsers>>> GetListUsers()
         {
             var queryable = _context.Users.AsQueryable();
@@ -56,7 +55,6 @@ namespace MyWebAPI.Controllers
         /// </remarks>
         /// <response code="200">Successfully returns a list of User Roles.</response>
         [HttpGet("Roles")]
-		[Authorize(Roles = "Reader")]
 		public async Task<ActionResult<List<RoleDTO>>> Get()
         {
             return await _context.Roles
@@ -72,7 +70,6 @@ namespace MyWebAPI.Controllers
         /// </remarks>
         /// <response code="200">Successfully add a Role into an User.</response>
         [HttpPost("AddRole")]
-		[Authorize(Roles = "Writer")]
 		public IActionResult AddRole([FromBody] RoleDTO roleDto)
         {
             var role = new Roles { Name = roleDto.Name };
@@ -90,7 +87,6 @@ namespace MyWebAPI.Controllers
         /// </remarks>
         /// <response code="200">Successfully assign role into an User.</response>
         [HttpPost("AssignRole")]
-		[Authorize(Roles = "Writer")]
 		public async Task<IActionResult> AssignRole([FromBody] EditRoleDTO editRoleDTO)
         {
             try
@@ -129,7 +125,6 @@ namespace MyWebAPI.Controllers
         /// </remarks>
         /// <response code="200">Successfully deleted User's Role</response>
         [HttpPost("RemoveRole")]
-		[Authorize(Roles = "Editor")]
 		public async Task<ActionResult> RemoveRole(EditRoleDTO editRoleDTO)
         {
             try

@@ -47,7 +47,7 @@ namespace MyWebAPI.Controllers
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<CategoryDTO>))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = "Reader")]
+        [Authorize(Roles = "Reader, Admin")]
         public IActionResult GetAllCategories(string? filterValue, int? page = 0, int pageSize = 10)
         {
             IEnumerable<DataAccessLayer.Models.Categories> categories = _categoryRepository.GetCategories();
@@ -84,7 +84,7 @@ namespace MyWebAPI.Controllers
         /// <response code="200">Information of Category</response>
         /// <response code="404">Category Id Not Found!!</response>
         [HttpGet("{id}")]
-        [Authorize(Roles = "Reader")]
+        [Authorize(Roles = "Reader, Admin")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(CategoryDTO))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult GetCategoryById(int id)
@@ -136,31 +136,34 @@ namespace MyWebAPI.Controllers
 		/// <response code="400">Category domain is not among the registered SSO 
 		/// domains for this System!!</response>
         [HttpPost]
-        [Authorize(Roles = "Writer")]
+        [Authorize(Roles = "Writer, Admin")]
         [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(CategoryDTO))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult CreateCategory([FromBody] CategoryDTO categoryDTO)
+        public IActionResult CreateCategory([FromBody] CreateCategoryDTO createCategoryDTO)
         {
-            var categoryNameCheck = CheckFieldLengthAndEmpty(categoryDTO.CategoriesName, 100, "category name");
+            var categoryEntity = _mapper.Map<Categories>(createCategoryDTO);
+            var createdCategoryDTO = _mapper.Map<CategoryDTO>(categoryEntity);
+
+            var categoryNameCheck = CheckFieldLengthAndEmpty(createCategoryDTO.CategoriesName, 100, "category name");
             if (categoryNameCheck != null) return categoryNameCheck;
 
-            var idCheck = CheckIntField(categoryDTO.Id, 30, "Id");
+            var idCheck = CheckIntField(createdCategoryDTO.Id, 30, "Id");
             if (idCheck != null) return idCheck;
 
-            var categoryEntity = _mapper.Map<Categories>(categoryDTO);
 
             _categoryRepository.AddCategory(categoryEntity);
 
-            categoryDTO.Id = categoryEntity.Id;
+            createdCategoryDTO.Id = categoryEntity.Id;
 
-            return _responseServiceRepository.CustomCreatedResponse("Category created", categoryDTO);
+
+            return _responseServiceRepository.CustomCreatedResponse("Category created", createdCategoryDTO);
         }
 
         /// <summary>
         /// Update a Category by CategoryId
         /// </summary>
         /// <param name="id">Input CategoryId to **update** Category's info.</param>
-        /// <param name="categoryDTO"></param>
+        /// <param name="createCategoryDTO"></param>
         /// <returns></returns>
         /// <remarks>
         /// Update the specified _category_ to the System by **Category Id**.
@@ -170,20 +173,29 @@ namespace MyWebAPI.Controllers
         /// domains for this System!!</response>
         /// <response code="404">CategoryId Not Found!!</response>
         [HttpPut("{id}")]
-        [Authorize(Roles = "Editor")]
+        [Authorize(Roles = "Editor, Admin")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public IActionResult UpdateCategory(int id, [FromBody] CategoryDTO categoryDTO)
+        public IActionResult UpdateCategory(int id, [FromBody] CreateCategoryDTO createCategoryDTO)
         {
-
             var existingCategory = _categoryRepository.GetCategory(id);
 
             if (existingCategory == null)
                 return _responseServiceRepository.CustomNotFoundResponse("Category not found", existingCategory);
 
-            _categoryRepository.UpdateCategory(id, categoryDTO);
+            _categoryRepository.UpdateCategory(id, createCategoryDTO);
 
-            return _responseServiceRepository.CustomNoContentResponse("Category updated", categoryDTO);
+            // Get the updated category
+            var updatedCategory = _categoryRepository.GetCategory(id);
+
+            // Map the updated category to CategoryDTO
+            var updatedCategoryDTO = new CategoryDTO
+            {
+                Id = updatedCategory.Id,
+                CategoriesName = updatedCategory.CategoriesName
+            };
+
+            return NoContent();
         }
 
         /// <summary>
@@ -198,7 +210,7 @@ namespace MyWebAPI.Controllers
         /// <response code="204">Category's Info deleted successfully</response>
         /// <response code="404">CategoryId Not Found!!</response>
         [HttpDelete("{id}")]
-        [Authorize(Roles = "Editor")]
+        [Authorize(Roles = "Editor, Admin")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult DeleteCategory(int id)
@@ -211,7 +223,7 @@ namespace MyWebAPI.Controllers
 
             _categoryRepository.DeleteCategory(existingCategory);
 
-            return _responseServiceRepository.CustomNoContentResponse("Category deleted", existingCategory);
+            return NoContent();
         }
     }
 }

@@ -44,9 +44,9 @@ namespace MyWebAPI.Controllers
         /// </remarks>
         /// <response code="200">Successfully returns a list of Class.</response>
         [HttpGet]
-        [Authorize(Roles = "Reader")]
+        [Authorize(Roles = "Reader, Admin")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<ClassDTO>))]
-        public IActionResult GetAllClasses(string filterValue = "", int? page = 0, int pageSize = 10)
+        public IActionResult GetAllClasses(string? filterValue = "", int? page = 0, int pageSize = 10)
         {
             IEnumerable<DataAccessLayer.Models.Classes> classes = _classRepository.GetClasses();
 
@@ -75,7 +75,7 @@ namespace MyWebAPI.Controllers
         /// <response code="200">Information of Class</response>
         /// <response code="404">Class Id Not Found!!</response>
         [HttpGet("{id}")]
-        [Authorize(Roles = "Reader")]
+        [Authorize(Roles = "Reader, Admin")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(ClassDTO))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult GetClassById(int id)
@@ -126,31 +126,33 @@ namespace MyWebAPI.Controllers
         /// <response code="400">Class domain is not among the registered SSO 
         /// domains for this System!!</response>
         [HttpPost]
-        [Authorize(Roles = "Writer")]
+        [Authorize(Roles = "Writer, Admin")]
         [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(ClassDTO))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult CreateClass([FromBody] ClassDTO classDTO)
+        public IActionResult CreateClass([FromBody] CreateClassDTO classDTO)
         {
+            var classEntity = _mapper.Map<Classes>(classDTO);
+            var createClassDTO = _mapper.Map<ClassDTO>(classEntity);
+
             var classNameCheck = CheckFieldLengthAndEmpty(classDTO.ClassName, 100, "class name");
             if (classNameCheck != null) return classNameCheck;
 
-            var idCheck = CheckIntField(classDTO.Id, 30, "Id");
+            var idCheck = CheckIntField(createClassDTO.Id, 30, "Id");
             if (idCheck != null) return idCheck;
 
-            var classEntity = _mapper.Map<Classes>(classDTO);
 
             _classRepository.AddClass(classEntity);
 
-            classDTO.Id = classEntity.Id;
+            createClassDTO.Id = classEntity.Id;
 
-            return _responseServiceRepository.CustomCreatedResponse("Class created", classDTO);
+            return _responseServiceRepository.CustomCreatedResponse("Class created", createClassDTO);
         }
 
         /// <summary>
         /// Update a Class by ClassId
         /// </summary>
         /// <param name="id">Input ClassId to **update** Class's info.</param>
-        /// <param name="classDTO"></param>
+        /// <param name="createClassDTO"></param>
         /// <returns></returns>
         /// <remarks>
         /// Update the specified _class_ to the organization by **Class Id**.
@@ -163,7 +165,7 @@ namespace MyWebAPI.Controllers
         [Authorize(Roles = "Editor, Admin")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public IActionResult UpdateClass(int id, [FromBody] ClassDTO classDTO)
+        public IActionResult UpdateClass(int id, [FromBody] CreateClassDTO createClassDTO)
         {
 
             var existingClass = _classRepository.GetClass(id);
@@ -173,9 +175,18 @@ namespace MyWebAPI.Controllers
                 return _responseServiceRepository.CustomNotFoundResponse("Class not found", existingClass);
             }
 
-            _classRepository.UpdateClass(id, classDTO);
+            _classRepository.UpdateClass(id, createClassDTO);
 
-            return _responseServiceRepository.CustomNoContentResponse("Class updated", classDTO);
+            var updatedClass = _classRepository.GetClass(id);
+
+            // Map the updated category to CategoryDTO
+            var updataClassDTO = new ClassDTO
+            {
+                Id = updatedClass.Id,
+                ClassName = updatedClass.ClassName
+            };
+
+            return NoContent();
         }
 
         /// <summary>
@@ -202,7 +213,7 @@ namespace MyWebAPI.Controllers
 
             _classRepository.DeleteClass(existingClass);
 
-            return _responseServiceRepository.CustomNoContentResponse("Class deleted", existingClass);
+            return NoContent();
         }
     }
 }

@@ -34,7 +34,7 @@ namespace DataAccessLayer.Repositories
             _context.SaveChanges();
         }
 
-        public void UpdateCourse(int id, CourseDTO courseDTO)
+        public void UpdateCourse(int id, CreateCourseDTO createCourseDTO)
         {
             var existingCourse = _context.Courses.FirstOrDefault(c => c.Id == id);
 
@@ -43,7 +43,7 @@ namespace DataAccessLayer.Repositories
                 return;
             }
 
-            existingCourse.CourseName = courseDTO.CourseName;
+            existingCourse.CourseName = createCourseDTO.CourseName;
 
             _context.SaveChanges();
         }

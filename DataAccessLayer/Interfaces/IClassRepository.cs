@@ -9,7 +9,7 @@ namespace DataAccessLayer.Interfaces
 		Classes GetClass(int id);
 		ICollection<Classes> GetClasses();
 		void AddClass(Classes classCreate);
-		void UpdateClass(int id, ClassDTO classDTO);
+		void UpdateClass(int id, CreateClassDTO createClassDTO);
 		void DeleteClass(Classes classDelete);
 	}
 }

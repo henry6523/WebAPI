@@ -13,7 +13,6 @@ namespace BusinessLogicLayer.DTO
         public int BirthDate { get; set; }
         public int PhoneNo { get; set; }
 
-
     }
     public class StudentSchemaFilter : ISchemaFilter
     {

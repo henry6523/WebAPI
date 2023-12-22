@@ -45,7 +45,7 @@ namespace MyWebAPI.Controllers
         /// </remarks>
         /// <response code="200">Successfully returns a list of Source.</response>
         [HttpGet]
-        [Authorize(Roles = "Reader")]
+        [Authorize(Roles = "Reader, Admin")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<CourseDTO>))]
         public IActionResult GetAllCourses(string? filterValue = "", int? page = 0, int pageSize = 10)
         {
@@ -81,7 +81,7 @@ namespace MyWebAPI.Controllers
         /// <response code="200">Information of Course</response>
         /// <response code="404">CourseId Not Found!!</response>
         [HttpGet("{id}")]
-        [Authorize(Roles = "Reader")]
+        [Authorize(Roles = "Reader, Admin")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(CourseDTO))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult GetCourseById(int id)
@@ -131,33 +131,33 @@ namespace MyWebAPI.Controllers
         /// <response code="400">Course domain is not among the registered SSO 
         /// domains for this organization!!</response>
         [HttpPost]
-        [Authorize(Roles = "Writer")]
+        [Authorize(Roles = "Writer, Admin")]
         [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(CourseDTO))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult CreateCourse([FromQuery] int CategoryId, [FromBody] CourseDTO courseDTO)
+        public IActionResult CreateCourse([FromQuery] int CategoryId, [FromBody] CreateCourseDTO courseDTO)
         {
-
+            var courseEntity = _mapper.Map<Courses>(courseDTO);
+            var createdCourseDTO = _mapper.Map<CourseDTO>(courseEntity);
 
             var courseNameCheck = CheckFieldLengthAndEmpty(courseDTO.CourseName, 30, "course name");
             if (courseNameCheck != null) return courseNameCheck;
 
-            var idCheck = CheckIntField(courseDTO.Id, 30, "Id");
+            var idCheck = CheckIntField(createdCourseDTO.Id, 30, "Id");
             if (idCheck != null) return idCheck;
 
-            var courseEntity = _mapper.Map<Courses>(courseDTO);
 
             _courseRepository.AddCourse(CategoryId, courseEntity);
 
-            courseDTO.Id = courseEntity.Id;
+            createdCourseDTO.Id = courseEntity.Id;
 
-            return _responseServiceRepository.CustomCreatedResponse("Course created", courseDTO);
+            return _responseServiceRepository.CustomCreatedResponse("Course created", createdCourseDTO);
         }
 
         /// <summary>
         /// Update a Course by CourseId
         /// </summary>
         /// <param name="id">Input CourseId to **update** Course's info.</param>
-        /// <param name="courseDTO"></param>
+        /// <param name="createCourseDTO"></param>
         /// <returns></returns>
         /// <remarks>
         /// Update the specified _course_ to the organization by **CourseId**.
@@ -167,10 +167,10 @@ namespace MyWebAPI.Controllers
         /// domains for this organization!!</response>
         /// <response code="404">CourseId Not Found!!</response>
         [HttpPut("{id}")]
-		[Authorize(Roles = "Editor")]
+		[Authorize(Roles = "Editor, Admin")]
 		[ProducesResponseType(StatusCodes.Status204NoContent)]
 		[ProducesResponseType(StatusCodes.Status404NotFound)]
-		public IActionResult UpdateCourse(int id, [FromBody] CourseDTO courseDTO)
+		public IActionResult UpdateCourse(int id, [FromBody] CreateCourseDTO createCourseDTO)
 		{
 
 			var existingCourse = _courseRepository.GetCourse(id);
@@ -178,9 +178,18 @@ namespace MyWebAPI.Controllers
 			if (existingCourse == null)
 				return _responseServiceRepository.CustomNotFoundResponse("Course not found", existingCourse);
 
-			_courseRepository.UpdateCourse(id, courseDTO);
+			_courseRepository.UpdateCourse(id, createCourseDTO);
 
-			return _responseServiceRepository.CustomNoContentResponse("Course updated", courseDTO);
+            var updatedCourse = _courseRepository.GetCourse(id);
+
+            // Map the updated category to CategoryDTO
+            var updataCourseDTO = new ClassDTO
+            {
+                Id = updatedCourse.Id,
+                ClassName = updatedCourse.CourseName
+            };
+
+            return NoContent();
 		}
 
         /// <summary>
@@ -195,7 +204,7 @@ namespace MyWebAPI.Controllers
         /// <response code="204">Course's Info deleted successfully</response>
         /// <response code="404">CourseId Not Found!!</response>
         [HttpDelete("{id}")]
-		[Authorize(Roles = "Editor")]
+		[Authorize(Roles = "Editor, Admin")]
 		[ProducesResponseType(StatusCodes.Status204NoContent)]
 		[ProducesResponseType(StatusCodes.Status404NotFound)]
 		public IActionResult DeleteCourse(int id)
@@ -207,7 +216,7 @@ namespace MyWebAPI.Controllers
 
 			_courseRepository.DeleteCourse(existingCourse);
 
-			return _responseServiceRepository.CustomNoContentResponse("Course deleted", existingCourse);
+			return NoContent();
 		}
 	}
 }

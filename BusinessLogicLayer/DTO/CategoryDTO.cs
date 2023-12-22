@@ -14,6 +14,11 @@ namespace BusinessLogicLayer.DTO
         public int Id { get; set; }
         public string CategoriesName { get; set; }
 	}
+
+    public class CreateCategoryDTO
+    {
+        public string CategoriesName { get; set; }
+    }
     public class CategorySchemaFilter : ISchemaFilter
     {
         public void Apply(OpenApiSchema schema, SchemaFilterContext context)

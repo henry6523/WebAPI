@@ -52,7 +52,7 @@
             <response code="200">Information of Category</response>
             <response code="404">Category Id Not Found!!</response>
         </member>
-        <member name="M:MyWebAPI.Controllers.CategoryController.CreateCategory(BusinessLogicLayer.DTO.CategoryDTO)">
+        <member name="M:MyWebAPI.Controllers.CategoryController.CreateCategory(BusinessLogicLayer.DTO.CreateCategoryDTO)">
             <summary>
             Create a Category
             </summary>
@@ -64,12 +64,12 @@
             <response code="400">Category domain is not among the registered SSO 
             domains for this System!!</response>
         </member>
-        <member name="M:MyWebAPI.Controllers.CategoryController.UpdateCategory(System.Int32,BusinessLogicLayer.DTO.CategoryDTO)">
+        <member name="M:MyWebAPI.Controllers.CategoryController.UpdateCategory(System.Int32,BusinessLogicLayer.DTO.CreateCategoryDTO)">
             <summary>
             Update a Category by CategoryId
             </summary>
             <param name="id">Input CategoryId to **update** Category's info.</param>
-            <param name="categoryDTO"></param>
+            <param name="createCategoryDTO"></param>
             <returns></returns>
             <remarks>
             Update the specified _category_ to the System by **Category Id**.
@@ -120,7 +120,7 @@
             <response code="200">Information of Class</response>
             <response code="404">Class Id Not Found!!</response>
         </member>
-        <member name="M:MyWebAPI.Controllers.ClassController.CreateClass(BusinessLogicLayer.DTO.ClassDTO)">
+        <member name="M:MyWebAPI.Controllers.ClassController.CreateClass(BusinessLogicLayer.DTO.CreateClassDTO)">
             <summary>
             Create a Class
             </summary>
@@ -132,12 +132,12 @@
             <response code="400">Class domain is not among the registered SSO 
             domains for this System!!</response>
         </member>
-        <member name="M:MyWebAPI.Controllers.ClassController.UpdateClass(System.Int32,BusinessLogicLayer.DTO.ClassDTO)">
+        <member name="M:MyWebAPI.Controllers.ClassController.UpdateClass(System.Int32,BusinessLogicLayer.DTO.CreateClassDTO)">
             <summary>
             Update a Class by ClassId
             </summary>
             <param name="id">Input ClassId to **update** Class's info.</param>
-            <param name="classDTO"></param>
+            <param name="createClassDTO"></param>
             <returns></returns>
             <remarks>
             Update the specified _class_ to the organization by **Class Id**.
@@ -188,7 +188,7 @@
             <response code="200">Information of Course</response>
             <response code="404">CourseId Not Found!!</response>
         </member>
-        <member name="M:MyWebAPI.Controllers.CourseController.CreateCourse(System.Int32,BusinessLogicLayer.DTO.CourseDTO)">
+        <member name="M:MyWebAPI.Controllers.CourseController.CreateCourse(System.Int32,BusinessLogicLayer.DTO.CreateCourseDTO)">
             <summary>
             Create a Course
             </summary>
@@ -200,12 +200,12 @@
             <response code="400">Course domain is not among the registered SSO 
             domains for this organization!!</response>
         </member>
-        <member name="M:MyWebAPI.Controllers.CourseController.UpdateCourse(System.Int32,BusinessLogicLayer.DTO.CourseDTO)">
+        <member name="M:MyWebAPI.Controllers.CourseController.UpdateCourse(System.Int32,BusinessLogicLayer.DTO.CreateCourseDTO)">
             <summary>
             Update a Course by CourseId
             </summary>
             <param name="id">Input CourseId to **update** Course's info.</param>
-            <param name="courseDTO"></param>
+            <param name="createCourseDTO"></param>
             <returns></returns>
             <remarks>
             Update the specified _course_ to the organization by **CourseId**.
@@ -328,7 +328,7 @@
             <response code="200">Information of Teacher</response>
             <response code="404">TeacherId Not Found!!</response>
         </member>
-        <member name="M:MyWebAPI.Controllers.TeacherController.AddTeacher(BusinessLogicLayer.DTO.TeacherDTO)">
+        <member name="M:MyWebAPI.Controllers.TeacherController.AddTeacher(BusinessLogicLayer.DTO.CreateTeacherDTO)">
             <summary>
             Create a new Teacher
             </summary>
@@ -340,12 +340,12 @@
             <response code="400">Teacher domain is not among the registered SSO 
             domains for this organization!!</response>
         </member>
-        <member name="M:MyWebAPI.Controllers.TeacherController.UpdateTeacher(System.Int32,BusinessLogicLayer.DTO.TeacherDTO)">
+        <member name="M:MyWebAPI.Controllers.TeacherController.UpdateTeacher(System.Int32,BusinessLogicLayer.DTO.CreateTeacherDTO)">
             <summary>
             Update a Teacher by TeacherId
             </summary>
             <param name="id">Input TeacherId to **update** Teacher's info.</param>
-            <param name="teacherDTO"></param>
+            <param name="createTeacherDTO"></param>
             <returns></returns>
             <remarks>
             Update the specified _teacher_ to the organization by **TeacherId**.

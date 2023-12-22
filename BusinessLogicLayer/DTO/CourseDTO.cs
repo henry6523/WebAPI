@@ -11,6 +11,10 @@ namespace BusinessLogicLayer.DTO
 		public string CourseName { get; set; }
 
 	}
+    public class CreateCourseDTO
+    {
+        public string CourseName { get; set; }
+    }
     public class CourseSchemaFilter : ISchemaFilter
     {
         public void Apply(OpenApiSchema schema, SchemaFilterContext context)

@@ -49,7 +49,7 @@ namespace MyWebAPI.Controllers
         /// </remarks>
         /// <response code="200">Successfully returns a list of Student.</response>
         [HttpGet]
-		[Authorize(Roles = "Reader")]
+		[Authorize(Roles = "Reader, Admin")]
 		[ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<StudentDTO>))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult GetAllStudents(string? filterValue = "", FilterType filterBy = FilterType.StudentName, int? page = 0, int pageSize = 10)
@@ -93,7 +93,7 @@ namespace MyWebAPI.Controllers
         /// <response code="200">Information of Student</response>
         /// <response code="404">StudentCard Not Found!!</response>
         [HttpGet("{studentCard}")]
-		[Authorize(Roles = "Reader")]
+		[Authorize(Roles = "Reader, Admin")]
 		[ProducesResponseType(StatusCodes.Status200OK, Type = typeof(StudentDTO))]
 		[ProducesResponseType(StatusCodes.Status404NotFound)]
 		public IActionResult GetStudentByCard(string studentCard)
@@ -146,7 +146,7 @@ namespace MyWebAPI.Controllers
         /// <response code="400">Student domain is not among the registered SSO 
         /// domains for this organization!!</response>
         [HttpPost]
-        [Authorize(Roles = "Writer")]
+        [Authorize(Roles = "Writer, Admin")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult CreateStudent([FromQuery] int courseId, [FromQuery] int classesId, [FromBody] StudentDTO studentDTO)
@@ -191,7 +191,7 @@ namespace MyWebAPI.Controllers
         /// domains for this organization!!</response>
         /// <response code="404">Student Card Not Found!!</response>
         [HttpPut("{studentCard}")]
-		[Authorize(Roles = "Editor")]
+		[Authorize(Roles = "Editor, Admin")]
 		[ProducesResponseType(StatusCodes.Status204NoContent)]
 		[ProducesResponseType(StatusCodes.Status404NotFound)]
 		public IActionResult UpdateStudent(string studentCard, [FromBody] StudentDTO studentDTO)
@@ -206,7 +206,7 @@ namespace MyWebAPI.Controllers
 
 			_studentRepository.UpdateStudent(existingStudent);
 
-			return _responseServiceRepository.CustomNoContentResponse("Student updated", existingStudent);
+			return NoContent();
 		}
 
         /// <summary>
@@ -221,7 +221,7 @@ namespace MyWebAPI.Controllers
         /// <response code="204">Student's Info deleted successfully</response>
         /// <response code="404">Student Card Not Found!!</response>
         [HttpDelete("{studentCard}")]
-		[Authorize(Roles = "Editor")]
+		[Authorize(Roles = "Editor, Admin")]
 		[ProducesResponseType(StatusCodes.Status204NoContent)]
 		[ProducesResponseType(StatusCodes.Status404NotFound)]
 		public IActionResult DeleteStudent(string studentCard)
@@ -233,7 +233,7 @@ namespace MyWebAPI.Controllers
 
 			_studentRepository.DeleteStudent(existingStudent);
 
-			return _responseServiceRepository.CustomNoContentResponse("Student deleted", existingStudent);
+			return NoContent();
 		}
 	}
 }

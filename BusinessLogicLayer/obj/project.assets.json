@@ -2940,19 +2940,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\thanh\\.nuget\\packages\\": {}
+    "C:\\Users\\nly36\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
+      "projectUniqueName": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysourceV2\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
       "projectName": "BusinessLogicLayer",
-      "projectPath": "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
-      "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\thanh\\Downloads\\gitrepo\\webapi\\henry6523\\WebAPI\\BusinessLogicLayer\\obj\\",
+      "projectPath": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysourceV2\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
+      "packagesPath": "C:\\Users\\nly36\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysourceV2\\BusinessLogicLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nly36\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

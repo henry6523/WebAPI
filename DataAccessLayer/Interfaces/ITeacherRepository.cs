@@ -9,7 +9,7 @@ namespace DataAccessLayer.Interfaces
 		Teachers GetTeacher(int id);
 		ICollection<Teachers> GetTeachers();
 		void AddTeacher(Teachers teacherCreate);
-		void UpdateTeacher(int id, TeacherDTO teacherDTO);
+		void UpdateTeacher(int id, CreateTeacherDTO createTeacherDTO);
 		void DeleteTeacher(Teachers teacherDelete);
 	}
 }
