@@ -11,6 +11,8 @@ using System;
 using System.ComponentModel;
 using System.Reflection;
 using MyWebAPI.Services;
+using DataAccessLayer.Helpers;
+using System.ComponentModel.DataAnnotations;
 
 namespace MyWebAPI.Controllers
 {
@@ -24,7 +26,12 @@ namespace MyWebAPI.Controllers
 		private readonly IMapper _mapper;
         private readonly IResponseServiceRepository _responseServiceRepository;
 
-		public StudentController(IStudentRepository studentRepository, IClassRepository classRepository, IMapper mapper, IResponseServiceRepository responseServiceRepository)
+		public StudentController(
+            IStudentRepository studentRepository, 
+            IClassRepository classRepository, 
+            IMapper mapper, 
+            IResponseServiceRepository responseServiceRepository
+            )
 		{
 			_studentRepository = studentRepository;
 			_classRepository = classRepository;
@@ -108,29 +115,6 @@ namespace MyWebAPI.Controllers
 			return _responseServiceRepository.CustomOkResponse("Data loaded successfully", studentMap);
 		}
 
-        private IActionResult CheckFieldLengthAndEmpty(string field, int maxLength, string fieldName)
-        {
-            if (string.IsNullOrEmpty(field))
-            {
-                return _responseServiceRepository.CustomBadRequestResponse("The characters you type in cannot be empty");
-            }
-
-            if (field.Length > maxLength)
-            {
-                return _responseServiceRepository.CustomBadRequestResponse($"The characters you type in for {fieldName} are over {maxLength}");
-            }
-
-            return null;
-        }
-        private IActionResult CheckIntField(int fieldValue, int maxLength, string fieldName)
-        {
-            if (fieldValue.ToString().Length > maxLength)
-            {
-                return _responseServiceRepository.CustomBadRequestResponse($"The characters for {fieldName} are over {maxLength}");
-            }
-
-            return null;
-        }
 
         /// <summary>
         /// Create a new Student
@@ -141,7 +125,7 @@ namespace MyWebAPI.Controllers
         /// </remarks>
         ///<param name="courseId">Input CourseId to **create** Student's info.</param>
         ///<param name="classesId">Input ClassesId to **create** Student's info.</param>
-        /// <param name="studentCreate"></param>
+        /// <param name="studentDTO"></param>
         /// <response code="201">Successfully created a Student.</response>
         /// <response code="400">Student domain is not among the registered SSO 
         /// domains for this System!!</response>
@@ -149,32 +133,17 @@ namespace MyWebAPI.Controllers
         [Authorize(Roles = "Writer")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult CreateStudent([FromQuery] int courseId, [FromQuery] int classesId, [FromBody] StudentDTO studentDTO)
+        public IActionResult CreateStudent(int courseId,int classesId, [FromBody] StudentDTO studentDTO)
         {
-            var studentCardCheck = CheckFieldLengthAndEmpty(studentDTO.StudentCard, 30, "student card");
-            if (studentCardCheck != null) return studentCardCheck;
-
-            var studentNameCheck = CheckFieldLengthAndEmpty(studentDTO.StudentName, 30, "student name");
-            if (studentNameCheck != null) return studentNameCheck;
-
-            var emailCheck = CheckFieldLengthAndEmpty(studentDTO.Email, 50, "email");
-            if (emailCheck != null) return emailCheck;
-
-            var birthDateCheck = CheckIntField(studentDTO.BirthDate, 30, "birth date");
-            if (birthDateCheck != null) return birthDateCheck;
-
-            var phoneNoCheck = CheckIntField(studentDTO.PhoneNo, 30, "phone number");
-            if (phoneNoCheck != null) return phoneNoCheck;
+            var studentEntity = _mapper.Map<Students>(studentDTO);
 
             _studentRepository.GetStudentTrimToUpper(studentDTO);
-
-            var studentEntity = _mapper.Map<Students>(studentDTO);
 
             studentEntity.Classes = _classRepository.GetClass(classesId);
 
             _studentRepository.AddStudent(courseId, studentEntity);
 
-            return _responseServiceRepository.CustomOkResponse("Student created", studentEntity);
+            return _responseServiceRepository.CustomOkResponse("Student created", studentDTO);
         }
 
         /// <summary>

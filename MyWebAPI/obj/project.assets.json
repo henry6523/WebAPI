@@ -4188,24 +4188,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\nly36\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Dowloads\\VS\\WebAPI-master\\MOCK\\MyWebAPI\\MyWebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysource\\MyWebAPI\\MyWebAPI.csproj",
       "projectName": "MyWebAPI",
-      "projectPath": "D:\\Dowloads\\VS\\WebAPI-master\\MOCK\\MyWebAPI\\MyWebAPI.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "D:\\Dowloads\\VS\\WebAPI-master\\MOCK\\MyWebAPI\\obj\\",
+      "projectPath": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysource\\MyWebAPI\\MyWebAPI.csproj",
+      "packagesPath": "C:\\Users\\nly36\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysource\\MyWebAPI\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\nly36\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4219,11 +4214,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Dowloads\\VS\\WebAPI-master\\MOCK\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
-              "projectPath": "D:\\Dowloads\\VS\\WebAPI-master\\MOCK\\BusinessLogicLayer\\BusinessLogicLayer.csproj"
+            "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysource\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
+              "projectPath": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysource\\BusinessLogicLayer\\BusinessLogicLayer.csproj"
             },
-            "D:\\Dowloads\\VS\\WebAPI-master\\MOCK\\DataAccessLayer\\DataAccessLayer.csproj": {
-              "projectPath": "D:\\Dowloads\\VS\\WebAPI-master\\MOCK\\DataAccessLayer\\DataAccessLayer.csproj"
+            "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysource\\DataAccessLayer\\DataAccessLayer.csproj": {
+              "projectPath": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysource\\DataAccessLayer\\DataAccessLayer.csproj"
             }
           }
         }
@@ -4305,15 +4300,15 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-            "version": "[6.0.25, 6.0.25]"
+            "version": "[6.0.23, 6.0.23]"
           },
           {
             "name": "Microsoft.NETCore.App.Runtime.win-x64",
-            "version": "[6.0.25, 6.0.25]"
+            "version": "[6.0.23, 6.0.23]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-            "version": "[6.0.25, 6.0.25]"
+            "version": "[6.0.23, 6.0.23]"
           }
         ],
         "frameworkReferences": {
@@ -4324,7 +4319,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

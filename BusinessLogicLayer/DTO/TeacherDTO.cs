@@ -13,8 +13,16 @@ namespace BusinessLogicLayer.DTO
 	}
     public class CreateTeacherDTO
     {
+        [Required(ErrorMessage = "Teacher name is required.")]
+        [StringLength(50, ErrorMessage = "Teacher name cannot exceed 50 characters.")]
         public string TeacherName { get; set; }
+
+        [Required(ErrorMessage = "Email is required.")]
+        [EmailAddress(ErrorMessage = "Invalid email address.")]
         public string Email { get; set; }
+
+        [Required(ErrorMessage = "Phone number is required.")]
+        [RegularExpression(@"^\d{10}$", ErrorMessage = "Invalid phone number. It must be a 10-digit number.")]
         public int PhoneNo { get; set; }
     }
     public class TeacherSchemaFilter : ISchemaFilter

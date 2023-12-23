@@ -21,17 +21,6 @@ namespace MyWebAPI.Services
             return new NotFoundObjectResult(responseObj);
         }
 
-        public IActionResult CustomBadRequestResponse(string message, object data = null)
-        {
-            var responseObj = new
-            {
-                status = 400,
-                message = message,
-                data = data
-            };
-            return new BadRequestObjectResult(responseObj);
-        }
-
         public IActionResult CustomOkResponse(string message, object data = null)
         {
             var successResponse = new
@@ -65,6 +54,17 @@ namespace MyWebAPI.Services
             };
             return new NoContentResult();
 
+        }
+
+        public IActionResult CustomBadRequestResponse(string message, object data = null)
+        {
+            var responseObj = new
+            {
+                status = 400,
+                message = message,
+                data = data
+            };
+            return new BadRequestObjectResult(responseObj);
         }
     }
 }

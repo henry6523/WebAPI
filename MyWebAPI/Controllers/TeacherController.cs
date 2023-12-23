@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using X.PagedList;
 using MyWebAPI.Services;
 using DataAccessLayer.Repositories;
+using DataAccessLayer.Helpers;
 
 namespace MyWebAPI.Controllers
 {
@@ -24,7 +25,12 @@ namespace MyWebAPI.Controllers
 		private readonly ILogger<TeacherController> _logger;
         private readonly IResponseServiceRepository _responseServiceRepository;
 
-		public TeacherController(ITeacherRepository teacherRepository, IMapper mapper, ILogger<TeacherController> logger, IResponseServiceRepository responseServiceRepository)
+		public TeacherController(
+            ITeacherRepository teacherRepository, 
+            IMapper mapper, 
+            ILogger<TeacherController> logger, 
+            IResponseServiceRepository responseServiceRepository
+            )
 		{
 			_teacherRepository = teacherRepository;
 			_mapper = mapper;
@@ -101,30 +107,6 @@ namespace MyWebAPI.Controllers
 			return _responseServiceRepository.CustomOkResponse("Data loaded successfully", teacherMap);
 		}
 
-        private IActionResult CheckFieldLengthAndEmpty(string field, int maxLength, string fieldName)
-        {
-            if (string.IsNullOrEmpty(field))
-            {
-                return _responseServiceRepository.CustomBadRequestResponse("The characters you type in cannot be empty");
-            }
-
-            if (field.Length > maxLength)
-            {
-                return _responseServiceRepository.CustomBadRequestResponse($"The characters you type in for {fieldName} are over {maxLength}");
-            }
-
-            return null;
-        }
-        private IActionResult CheckIntField(int fieldValue, int maxLength, string fieldName)
-        {
-            if (fieldValue.ToString().Length > maxLength)
-            {
-                return _responseServiceRepository.CustomBadRequestResponse($"The characters for {fieldName} are over {maxLength}");
-            }
-
-            return null;
-        }
-
         /// <summary>
         /// Create a new Teacher
         /// </summary>
@@ -143,19 +125,6 @@ namespace MyWebAPI.Controllers
 		{
             var teacherEntity = _mapper.Map<Teachers>(createTeacherDTO);
             var createdTeacherDTO = _mapper.Map<TeacherDTO>(teacherEntity);
-
-            var idCheck = CheckIntField(createdTeacherDTO.Id, 30, "id");
-            if (idCheck != null) return idCheck;
-
-            var teacherNameCheck = CheckFieldLengthAndEmpty(createTeacherDTO.TeacherName, 50, "teacher name");
-            if (teacherNameCheck != null) return teacherNameCheck;
-
-            var emailCheck = CheckFieldLengthAndEmpty(createTeacherDTO.Email, 50, "email");
-            if (emailCheck != null) return emailCheck;
-
-            var phoneNoCheck = CheckIntField(createTeacherDTO.PhoneNo, 30, "phone number");
-            if (phoneNoCheck != null) return phoneNoCheck;
-
 
 			_teacherRepository.AddTeacher(teacherEntity);
 

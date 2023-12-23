@@ -267,7 +267,7 @@
              </remarks>
             <param name="courseId">Input CourseId to **create** Student's info.</param>
             <param name="classesId">Input ClassesId to **create** Student's info.</param>
-             <param name="studentCreate"></param>
+             <param name="studentDTO"></param>
              <response code="201">Successfully created a Student.</response>
              <response code="400">Student domain is not among the registered SSO 
              domains for this System!!</response>

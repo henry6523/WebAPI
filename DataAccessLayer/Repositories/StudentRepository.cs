@@ -41,6 +41,7 @@ namespace DataAccessLayer.Repositories
                 Students = student,
                 Courses = studentCourseEntity,
             };
+
             _context.Add(studentCourse);
 
 

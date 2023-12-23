@@ -10,6 +10,8 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using X.PagedList;
 using MyWebAPI.Services;
+using DataAccessLayer.Helpers;
+using System.ComponentModel.DataAnnotations;
 
 namespace MyWebAPI.Controllers
 {
@@ -19,12 +21,19 @@ namespace MyWebAPI.Controllers
     public class CourseController : ControllerBase
 	{
 		private readonly ICourseRepository _courseRepository;
+        private readonly ICategoryRepository _categoryRepository;
 		private readonly IMapper _mapper;
         private readonly IResponseServiceRepository _responseServiceRepository;
 
-		public CourseController(ICourseRepository courseRepository, IMapper mapper, IResponseServiceRepository responseServiceRepository)
+		public CourseController(
+            ICourseRepository courseRepository, 
+            ICategoryRepository categoryRepository, 
+            IMapper mapper, 
+            IResponseServiceRepository responseServiceRepository
+            )
 		{
 			_courseRepository = courseRepository;
+            _categoryRepository = categoryRepository;
 			_mapper = mapper;
             _responseServiceRepository = responseServiceRepository;
 		}
@@ -96,30 +105,6 @@ namespace MyWebAPI.Controllers
             return _responseServiceRepository.CustomOkResponse("Data loaded successfully", courseDTO);
         }
 
-        private IActionResult CheckFieldLengthAndEmpty(string field, int maxLength, string fieldName)
-        {
-            if (string.IsNullOrEmpty(field))
-            {
-                return _responseServiceRepository.CustomBadRequestResponse("The characters you type in cannot be empty");
-            }
-
-            if (field.Length > maxLength)
-            {
-                return _responseServiceRepository.CustomBadRequestResponse($"The characters you type in for {fieldName} are over {maxLength}");
-            }
-
-            return null;
-        }
-        private IActionResult CheckIntField(int fieldValue, int maxLength, string fieldName)
-        {
-            if (fieldValue.ToString().Length > maxLength)
-            {
-                return _responseServiceRepository.CustomBadRequestResponse($"The characters for {fieldName} are over {maxLength}");
-            }
-
-            return null;
-        }
-
         /// <summary>
         /// Create a Course
         /// </summary>
@@ -134,17 +119,10 @@ namespace MyWebAPI.Controllers
         [Authorize(Roles = "Writer")]
         [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(CourseDTO))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult CreateCourse([FromQuery] int CategoryId, [FromBody] CreateCourseDTO courseDTO)
+        public IActionResult CreateCourse([FromQuery][Required] int CategoryId, [FromBody] CreateCourseDTO createCourseDTO)
         {
-            var courseEntity = _mapper.Map<Courses>(courseDTO);
+            var courseEntity = _mapper.Map<Courses>(createCourseDTO);
             var createdCourseDTO = _mapper.Map<CourseDTO>(courseEntity);
-
-            var courseNameCheck = CheckFieldLengthAndEmpty(courseDTO.CourseName, 30, "course name");
-            if (courseNameCheck != null) return courseNameCheck;
-
-            var idCheck = CheckIntField(createdCourseDTO.Id, 30, "Id");
-            if (idCheck != null) return idCheck;
-
 
             _courseRepository.AddCourse(CategoryId, courseEntity);
 

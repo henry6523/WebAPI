@@ -10,7 +10,8 @@ namespace DataAccessLayer.Helpers
 		{
 
 			CreateMap<StudentDTO, Students>().ReverseMap(); 
-			CreateMap<TeacherDTO, Teachers>().ReverseMap(); 
+			CreateMap<Students, StudentDTO>().ReverseMap();
+            CreateMap<TeacherDTO, Teachers>().ReverseMap(); 
 			CreateMap<CourseDTO, Courses>().ReverseMap();   
 			CreateMap<ClassDTO, Classes>().ReverseMap();    
 			CreateMap<CategoryDTO, Categories>().ReverseMap();

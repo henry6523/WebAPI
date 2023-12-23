@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Text.Json.Serialization;
+using System.ComponentModel.DataAnnotations;
 
 namespace BusinessLogicLayer.DTO
 {
@@ -17,6 +18,8 @@ namespace BusinessLogicLayer.DTO
 
     public class CreateCategoryDTO
     {
+        [Required(ErrorMessage = "Category name is required.")]
+        [StringLength(50, ErrorMessage = "Category name cannot exceed 50 characters.")]
         public string CategoriesName { get; set; }
     }
     public class CategorySchemaFilter : ISchemaFilter

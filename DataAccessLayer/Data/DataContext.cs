@@ -1,4 +1,5 @@
-﻿using DataAccessLayer.Models;
+﻿using BusinessLogicLayer.DTO;
+using DataAccessLayer.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Net;
 
@@ -27,6 +28,9 @@ namespace DataAccessLayer.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Students>()
+                   .Property(x => x.BirthDate)
+                   .HasColumnType("date");
 
             modelBuilder.Entity<StudentCourses>()
                 .HasKey(sc => new { sc.StudentId, sc.CourseId });

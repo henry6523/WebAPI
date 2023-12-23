@@ -13,6 +13,8 @@ namespace BusinessLogicLayer.DTO
 	}
     public class CreateCourseDTO
     {
+        [Required(ErrorMessage = "Course name is required.")]
+        [StringLength(50, ErrorMessage = "Course name cannot exceed 50 characters.")]
         public string CourseName { get; set; }
     }
     public class CourseSchemaFilter : ISchemaFilter

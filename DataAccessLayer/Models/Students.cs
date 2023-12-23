@@ -10,7 +10,8 @@ namespace DataAccessLayer.Models
         public string StudentCard { get; set; }
         public string StudentName { get; set; }
         public string Email { get; set; }
-        public int BirthDate { get; set; }
+        [Column(TypeName = "date")]
+        public DateTime BirthDate { get; set; }
         public int PhoneNo { get; set; }
         public Addresses Address { get; set; }
         public Classes Classes { get; set; }

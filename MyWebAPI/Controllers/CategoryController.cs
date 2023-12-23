@@ -9,7 +9,7 @@ using X.PagedList;
 using Microsoft.AspNetCore.Authorization;
 using DataAccessLayer.Repositories;
 using MyWebAPI.Services;
-
+using DataAccessLayer.Helpers;
 
 namespace MyWebAPI.Controllers
 {
@@ -22,7 +22,11 @@ namespace MyWebAPI.Controllers
 		private readonly IMapper _mapper;
         private readonly IResponseServiceRepository _responseServiceRepository;
 
-		public CategoryController(ICategoryRepository categoryRepository, IMapper mapper, IResponseServiceRepository responseServiceRepository)
+		public CategoryController(
+            ICategoryRepository categoryRepository, 
+            IMapper mapper, 
+            IResponseServiceRepository responseServiceRepository
+            )
 		{
 			_categoryRepository = categoryRepository;
 			_mapper = mapper;
@@ -100,31 +104,6 @@ namespace MyWebAPI.Controllers
             return _responseServiceRepository.CustomOkResponse("Data loaded successfully", categoryMap);
         }
 
-        private IActionResult CheckFieldLengthAndEmpty(string field, int maxLength, string fieldName)
-        {
-            if (string.IsNullOrEmpty(field))
-            {
-                return _responseServiceRepository.CustomBadRequestResponse("The characters you type in cannot be empty");
-            }
-
-            if (field.Length > maxLength)
-            {
-                return _responseServiceRepository.CustomBadRequestResponse($"The characters you type in for {fieldName} are over {maxLength}");
-            }
-
-            return null;
-        }
-
-        private IActionResult CheckIntField(int fieldValue, int maxLength, string fieldName)
-        {
-            if (fieldValue.ToString().Length > maxLength)
-            {
-                return _responseServiceRepository.CustomBadRequestResponse($"The characters for {fieldName} are over {maxLength}");
-            }
-
-            return null;
-        }
-
         /// <summary>
         /// Create a Category
         /// </summary>
@@ -144,17 +123,9 @@ namespace MyWebAPI.Controllers
             var categoryEntity = _mapper.Map<Categories>(createCategoryDTO);
             var createdCategoryDTO = _mapper.Map<CategoryDTO>(categoryEntity);
 
-            var categoryNameCheck = CheckFieldLengthAndEmpty(createCategoryDTO.CategoriesName, 100, "category name");
-            if (categoryNameCheck != null) return categoryNameCheck;
-
-            var idCheck = CheckIntField(createdCategoryDTO.Id, 30, "Id");
-            if (idCheck != null) return idCheck;
-
-
             _categoryRepository.AddCategory(categoryEntity);
 
             createdCategoryDTO.Id = categoryEntity.Id;
-
 
             return _responseServiceRepository.CustomCreatedResponse("Category created", createdCategoryDTO);
         }

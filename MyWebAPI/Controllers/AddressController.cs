@@ -9,6 +9,8 @@ using System.Collections.Generic;
 using System.Runtime.Intrinsics.X86;
 using MyWebAPI.Services;
 using Swashbuckle.AspNetCore.SwaggerGen;
+using DataAccessLayer.Helpers;
+using System.ComponentModel.DataAnnotations;
 
 namespace DataAccessLayer.Repository
 {
@@ -20,14 +22,16 @@ namespace DataAccessLayer.Repository
         private readonly IAddressRepository _addressRepository;
         private readonly IMapper _mapper;
         private readonly IResponseServiceRepository _responseServiceRepository;
-        private readonly IStudentRepository _studentRepository;
 
-        public AddressController(IAddressRepository addressRepository, IMapper mapper, IResponseServiceRepository responseServiceRepository, IStudentRepository studentRepository)
+        public AddressController(
+            IAddressRepository addressRepository, 
+            IMapper mapper, 
+            IResponseServiceRepository responseServiceRepository
+            )
         {
             _addressRepository = addressRepository;
             _mapper = mapper;
             _responseServiceRepository = responseServiceRepository;
-            _studentRepository = studentRepository;
         }
 
         /// <summary>
@@ -60,20 +64,6 @@ namespace DataAccessLayer.Repository
             return _responseServiceRepository.CustomOkResponse("Data Loaded Successful!", addressMap);
         }
 
-        private IActionResult CheckFieldLengthAndEmpty(string field, int maxLength, string fieldName)
-        {
-            if (string.IsNullOrEmpty(field))
-            {
-                return _responseServiceRepository.CustomBadRequestResponse($"The {fieldName} cannot be empty");
-            }
-
-            if (field.Length > maxLength)
-            {
-                return _responseServiceRepository.CustomBadRequestResponse($"The characters you type in for {fieldName} are over {maxLength}");
-            }
-
-            return null;
-        }
 
         /// <summary>
         /// Create a Student's Address by new StundentCard
@@ -97,19 +87,6 @@ namespace DataAccessLayer.Repository
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult CreateAddress(string studentCard, [FromBody] AddressDTO addressDTO)
         {
-
-            var address1Check = CheckFieldLengthAndEmpty(addressDTO.Address_1, 100, "Address 1");
-            if (address1Check != null) return address1Check;
-
-            var address2Check = CheckFieldLengthAndEmpty(addressDTO.Address_2, 100, "Address 2");
-            if (address2Check != null) return address2Check;
-
-            var cityCheck = CheckFieldLengthAndEmpty(addressDTO.City, 30, "City");
-            if (cityCheck != null) return cityCheck;
-
-            var zipCodeCheck = CheckFieldLengthAndEmpty(addressDTO.ZipCode, 30, "Zip Code");
-            if (zipCodeCheck != null) return zipCodeCheck;
-
             var addressEntity = _mapper.Map<Addresses>(addressDTO);
 
             _addressRepository.AddAddress(studentCard, addressEntity);

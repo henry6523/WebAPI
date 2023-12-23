@@ -130,32 +130,36 @@ namespace MyWebAPI.Controllers
         /// <response code="200">Successfully deleted User's Role</response>
         [HttpDelete("RemoveRole")]
         [Authorize(Roles = "Editor")]
-        public async Task<ActionResult> RemoveRole(EditRoleDTO editRoleDTO)
+        public async Task<ActionResult> RemoveRole([FromBody] EditRoleDTO editRoleDTO)
         {
             try
             {
-                var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == editRoleDTO.UserId);
-                var role = await _context.Roles.FirstOrDefaultAsync(r => r.Name == editRoleDTO.RoleName);
+                var user = await _context.Users
+                    .Include(u => u.UserRoles)
+                    .ThenInclude(ur => ur.Roles)
+                    .SingleOrDefaultAsync(u => u.Id == editRoleDTO.UserId);
 
-                if (user == null || role == null)
+                if (user == null)
                 {
-                    return BadRequest("User or role not found");
+                    return NotFound($"User with ID {editRoleDTO.UserId} not found.");
                 }
 
-                var userRole = await _context.UserRoles.FirstOrDefaultAsync(ur => ur.UserId == user.Id && ur.RoleId == role.Id);
-                if (userRole != null)
+                var roleToRemove = user.UserRoles.FirstOrDefault(ur => ur.Roles.Name == editRoleDTO.RoleName);
+
+                if (roleToRemove == null)
                 {
-                    return BadRequest("User already has the specified role");
+                    return BadRequest($"User does not have the role '{editRoleDTO.RoleName}'.");
                 }
 
-                _context.UserRoles.Remove(new UserRoles { UserId = user.Id, RoleId = role.Id });
+                user.UserRoles.Remove(roleToRemove);
+
                 await _context.SaveChangesAsync();
 
-                return Ok("Role assigned successfully");
+                return Ok($"Role '{editRoleDTO.RoleName}' removed successfully for user with ID {editRoleDTO.UserId}.");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return StatusCode(500, "Internal server error");
+                return StatusCode(500, $"Internal server error: {ex.Message}");
             }
         }
     }

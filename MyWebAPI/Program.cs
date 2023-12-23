@@ -142,7 +142,12 @@ namespace MyWebAPI
 
 			builder.Services.AddAutoMapper(Assembly.Load("BusinessLogicLayer"));
 
-			builder.Services.AddSingleton<IMapper>(mapper);
+            builder.Services.AddControllers(options =>
+            {
+                options.Filters.Add<CustomValidationResultFilter>();
+            });
+
+            builder.Services.AddSingleton<IMapper>(mapper);
 			builder.Services.AddScoped<ICourseRepository, CourseRepository>();
 			builder.Services.AddScoped<IClassRepository, ClassRepository>();
 			builder.Services.AddScoped<IStudentRepository, StudentRepository>();
@@ -152,6 +157,8 @@ namespace MyWebAPI
             builder.Services.AddScoped<IUserRepository, UserRepository>();
             builder.Services.AddScoped<IAccountRepository, AccountRepository>();
             builder.Services.AddScoped<IResponseServiceRepository, ResponseServiceRepository>();
+
+            builder.Services.AddScoped<Seed>();
 
 			builder.Services.AddDbContext<DataContext>(options =>
 			{
@@ -174,9 +181,23 @@ namespace MyWebAPI
 
             var app = builder.Build();
 
+            if (args.Length == 1 && args[0].ToLower() == "seeddata")
+                SeedData(app);
 
-			// Configure the HTTP request pipeline.
-			if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
+            void SeedData(IHost app)
+            {
+                var scopedFactory = app.Services.GetService<IServiceScopeFactory>();
+
+                using (var scope = scopedFactory.CreateScope())
+                {
+                    var service = scope.ServiceProvider.GetService<Seed>();
+                    service.SeedDataContext();
+                }
+            }
+
+
+            // Configure the HTTP request pipeline.
+            if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
 			{
 				app.UseSwagger();
 				app.UseSwaggerUI(options =>

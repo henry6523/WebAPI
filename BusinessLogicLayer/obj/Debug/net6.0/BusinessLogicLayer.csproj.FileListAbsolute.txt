@@ -194,3 +194,17 @@ D:\Dowloads\VS\WebAPI-master\MOCK\BusinessLogicLayer\obj\Debug\net6.0\refint\Bus
 D:\Dowloads\VS\WebAPI-master\MOCK\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.pdb
 D:\Dowloads\VS\WebAPI-master\MOCK\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.genruntimeconfig.cache
 D:\Dowloads\VS\WebAPI-master\MOCK\BusinessLogicLayer\obj\Debug\net6.0\ref\BusinessLogicLayer.dll
+C:\Users\nly36\Documents\workspace\mywebapi_net\git-repo\henrysource\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.deps.json
+C:\Users\nly36\Documents\workspace\mywebapi_net\git-repo\henrysource\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.runtimeconfig.json
+C:\Users\nly36\Documents\workspace\mywebapi_net\git-repo\henrysource\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.dll
+C:\Users\nly36\Documents\workspace\mywebapi_net\git-repo\henrysource\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.pdb
+C:\Users\nly36\Documents\workspace\mywebapi_net\git-repo\henrysource\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.csproj.AssemblyReference.cache
+C:\Users\nly36\Documents\workspace\mywebapi_net\git-repo\henrysource\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nly36\Documents\workspace\mywebapi_net\git-repo\henrysource\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.AssemblyInfoInputs.cache
+C:\Users\nly36\Documents\workspace\mywebapi_net\git-repo\henrysource\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.AssemblyInfo.cs
+C:\Users\nly36\Documents\workspace\mywebapi_net\git-repo\henrysource\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\nly36\Documents\workspace\mywebapi_net\git-repo\henrysource\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.dll
+C:\Users\nly36\Documents\workspace\mywebapi_net\git-repo\henrysource\BusinessLogicLayer\obj\Debug\net6.0\refint\BusinessLogicLayer.dll
+C:\Users\nly36\Documents\workspace\mywebapi_net\git-repo\henrysource\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.pdb
+C:\Users\nly36\Documents\workspace\mywebapi_net\git-repo\henrysource\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.genruntimeconfig.cache
+C:\Users\nly36\Documents\workspace\mywebapi_net\git-repo\henrysource\BusinessLogicLayer\obj\Debug\net6.0\ref\BusinessLogicLayer.dll

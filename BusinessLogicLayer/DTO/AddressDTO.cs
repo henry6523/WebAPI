@@ -11,14 +11,17 @@ namespace BusinessLogicLayer.DTO
 {
 	public class AddressDTO
 	{
-		
+
+        [Required(ErrorMessage = "Address 1 is required")]
         public string Address_1 { get; set; }
+        public string Address_2 { get; set; }
 
-		public string Address_2 { get; set; }
+        [Required(ErrorMessage = "City is required")]
+        public string City { get; set; }
 
-		public string City { get; set; }
-
-		public string ZipCode { get; set; }
-	}
+        [Required(ErrorMessage = "Zip Code is required")]
+        [RegularExpression(@"^\d{5}(-\d{4})?$", ErrorMessage = "Invalid Zip Code")]
+        public string ZipCode { get; set; }
+    }
 }
 

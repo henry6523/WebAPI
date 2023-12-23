@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using X.PagedList;
 using MyWebAPI.Services;
+using DataAccessLayer.Helpers;
 
 namespace MyWebAPI.Controllers
 {
@@ -21,7 +22,11 @@ namespace MyWebAPI.Controllers
         private readonly IMapper _mapper;
         private readonly IResponseServiceRepository _responseServiceRepository;
 
-        public ClassController(IClassRepository classRepository, IMapper mapper, IResponseServiceRepository responseServiceRepository)
+        public ClassController(
+            IClassRepository classRepository,
+            IMapper mapper,
+            IResponseServiceRepository responseServiceRepository
+            )
         {
             _classRepository = classRepository;
             _mapper = mapper;
@@ -90,31 +95,6 @@ namespace MyWebAPI.Controllers
 
             return _responseServiceRepository.CustomOkResponse("Data loaded successfully", classMap);
         }
-
-        private IActionResult CheckFieldLengthAndEmpty(string field, int maxLength, string fieldName)
-        {
-            if (string.IsNullOrEmpty(field))
-            {
-                return _responseServiceRepository.CustomBadRequestResponse("The characters you type in cannot be empty");
-            }
-
-            if (field.Length > maxLength)
-            {
-                return _responseServiceRepository.CustomBadRequestResponse($"The characters you type in for {fieldName} are over {maxLength}");
-            }
-
-            return null;
-        }
-        private IActionResult CheckIntField(int fieldValue, int maxLength, string fieldName)
-        {
-            if (fieldValue.ToString().Length > maxLength)
-            {
-                return _responseServiceRepository.CustomBadRequestResponse($"The characters for {fieldName} are over {maxLength}");
-            }
-
-            return null;
-        }
-
         /// <summary>
         /// Create a Class
         /// </summary>
@@ -133,13 +113,6 @@ namespace MyWebAPI.Controllers
         {
             var classEntity = _mapper.Map<Classes>(classDTO);
             var createClassDTO = _mapper.Map<ClassDTO>(classEntity);
-
-            var classNameCheck = CheckFieldLengthAndEmpty(classDTO.ClassName, 100, "class name");
-            if (classNameCheck != null) return classNameCheck;
-
-            var idCheck = CheckIntField(createClassDTO.Id, 30, "Id");
-            if (idCheck != null) return idCheck;
-
 
             _classRepository.AddClass(classEntity);
 

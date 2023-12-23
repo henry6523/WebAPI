@@ -1,5 +1,6 @@
 ﻿using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
+using System.ComponentModel.DataAnnotations;
 
 namespace BusinessLogicLayer.DTO
 {
@@ -12,6 +13,8 @@ namespace BusinessLogicLayer.DTO
 
     public class CreateClassDTO
     {
+        [Required(ErrorMessage = "CLass name is required.")]
+        [StringLength(50, ErrorMessage = "Class name cannot exceed 50 characters.")]
         public string ClassName { get; set; }
     }
     public class ClassSchemaFilter : ISchemaFilter
