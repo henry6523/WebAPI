@@ -222,3 +222,4 @@ C:\Assignment\WebAPI\BusinessLogicLayer\obj\Debug\net6.0\refint\BusinessLogicLay
 C:\Assignment\WebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.pdb
 C:\Assignment\WebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.genruntimeconfig.cache
 C:\Assignment\WebAPI\BusinessLogicLayer\obj\Debug\net6.0\ref\BusinessLogicLayer.dll
+C:\Assignment\WebAPI\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.sourcelink.json

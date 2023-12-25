@@ -13,5 +13,6 @@ namespace DataAccessLayer.Interfaces
 		Students GetStudentTrimToUpper(StudentDTO studentCreate);
 		void UpdateStudent(Students studentUpdate);
 		void DeleteStudent(Students studentDelete);
+		bool IsStudentCardExists(string studentCard);
 	}
 }

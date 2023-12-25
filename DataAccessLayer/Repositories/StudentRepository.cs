@@ -60,5 +60,10 @@ namespace DataAccessLayer.Repositories
             _context.Students.Remove(studentDelete);
             _context.SaveChanges();
         }
-    }
+
+		public bool IsStudentCardExists(string studentCard)
+		{
+			return _context.Students.Any(s => s.StudentCard == studentCard);
+		}
+	}
 }
