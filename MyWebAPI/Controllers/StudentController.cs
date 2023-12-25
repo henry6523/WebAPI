@@ -21,18 +21,21 @@ namespace MyWebAPI.Controllers
 	[Authorize]
     public class StudentController : ControllerBase
 	{
+		private readonly ICourseRepository _courseRepository;
 		private readonly IStudentRepository _studentRepository;
 		private readonly IClassRepository _classRepository;
 		private readonly IMapper _mapper;
         private readonly IResponseServiceRepository _responseServiceRepository;
 
 		public StudentController(
+            ICourseRepository courseRepository,
             IStudentRepository studentRepository, 
             IClassRepository classRepository, 
             IMapper mapper, 
             IResponseServiceRepository responseServiceRepository
             )
 		{
+            _courseRepository = courseRepository;
 			_studentRepository = studentRepository;
 			_classRepository = classRepository;
 			_mapper = mapper;
@@ -133,13 +136,32 @@ namespace MyWebAPI.Controllers
         [Authorize(Roles = "Writer")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult CreateStudent(int courseId,int classesId, [FromBody] StudentDTO studentDTO)
+        public IActionResult CreateStudent([Required]int courseId, [Required] int classId, [FromBody] StudentDTO studentDTO)
         {
-            var studentEntity = _mapper.Map<Students>(studentDTO);
+			var courseExists = _courseRepository.GetCourse(courseId);
+			var classExists = _classRepository.GetClass(classId);
+
+			if (courseExists == null)
+			{
+				return _responseServiceRepository.CustomBadRequestResponse("Please enter corect data to Course ID", courseExists);
+			}
+
+			if (classExists == null)
+			{
+				return _responseServiceRepository.CustomBadRequestResponse("Please enter corect data to Class ID", classExists);
+			}
+
+			var isStudentCardExists = _studentRepository.IsStudentCardExists(studentDTO.StudentCard);
+			if (isStudentCardExists)
+			{
+				return _responseServiceRepository.CustomBadRequestResponse("StudentCard already exists", studentDTO.StudentCard);
+			}
+
+			var studentEntity = _mapper.Map<Students>(studentDTO);
 
             _studentRepository.GetStudentTrimToUpper(studentDTO);
 
-            studentEntity.Classes = _classRepository.GetClass(classesId);
+            studentEntity.Classes = _classRepository.GetClass(classId);
 
             _studentRepository.AddStudent(courseId, studentEntity);
 

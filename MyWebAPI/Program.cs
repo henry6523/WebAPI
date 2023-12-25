@@ -62,35 +62,43 @@ namespace MyWebAPI
                 {
                     Version = "v1",
                     Title = "Student Management API",
-                    Description = "**DESCRIPTION** \n" +
-								  "\n" +
-                                  "This project serves as a comprehensive student management system that encompasses various storage " +
-                                  "functionalities and essential operations within the project. It empowers users with the ability to efficiently " +
-                                  "handle student data by providing a wide array of features such as GET, POST, PUT, and DELETE.\n" +
-                                  "\n" +
-								  "**Roles:**\n" +
-                                  "\n" +
-                                  "**Reader**: Accessible to view all information and retrieve data by its unique identifier.\n" +
-                                  "\n" +
-                                  "**Writer**: Permitted to input new information into the system\n" +
-                                  "\n" +
-                                  "**Editor**: Empowered to modify and remove existing information\n" +
-                                  "\n" +
-                                  "This section represents a mock project developed by **Group 1** from class **HCM_23_CPL_NET_08**. " +
-                                  "It stands as a comprehensive collaboration effort, featuring the following team members: \n" +
-								  "\n" +
-                                  "- Ly Nguyen (Leader) \n" +
-                                  "- Tran Quang Hien \n" +
-                                  "- Nguyen Nhat Thanh \n" +
-                                  "- Dong Sy Nhat Thanh",
-                    TermsOfService = new Uri("https://example.com/terms"),
-                    Contact = new OpenApiContact
-                    {
-                        Name = "SwaggerHub Support - Website",
-                        Url = new Uri("https://support.smartbear.com/swaggerhub/message/")
-                    },
+					Description = "**DESCRIPTION**\n" +
+						  "\n" +
+			                  "This Web API is used to manage student's information. " +
+			                  "It consists of endpoints that facilitate tasks: add students, updating their information," +
+			                  " and executing administrative functions, add couses, and accessing a comprehensive list" +
+			                  " of all students and teachers. The API operates around 3 primary objects: teachers, " +
+			                  "students, and courses.\n" +
+							  "\nThere are 3 primary access Roles: **Editor, Writer, Reader.**\n" +
+			                  "\nAdministrators hold complete access to all endpoints, enabling them to perform CRUD " +
+			                  "(Create, Read, Update, Delete) operations across categories like category, class, " +
+			                  "course, student, and teacher namespaces. Furthermore, administrators have the authority " +
+			                  "to manage user roles by adding or removing roles, providing control over user management." +
+			                  ".\n" +
+			                  "\n" +
+							  "**Roles:**\n" +
+			                  "\n" +
+							  "**Reader:** Accessible to view all information and retrieve data by its unique identifier.\n" +
+			                  "\n" +
+							  "**Writer:** Permitted to input new information into the system\n" +
+			                  "\n" +
+							  "**Editor:** Empowered to modify and remove existing information\n" +
+			                  "\n" +
+							  "This section represents a mock project developed by **Group 1** from class **HCM_23_CPL_NET_08.** " +
+			                  "It stands as a comprehensive collaboration effort, featuring the following team members: \n" +
+						                  "\n" +
+			                  "- Ly Nguyen (Leader) \n" +
+			                  "- Tran Quang Hien \n" +
+			                  "- Nguyen Nhat Thanh \n" +
+			                  "- Dong Sy Nhat Thanh",
+					TermsOfService = new Uri("https://example.com/terms"),
+					Contact = new OpenApiContact
+					{
+						Name = "Support - Website",
+						Url = new Uri("https://support.smartbear.com/swaggerhub/message/")
+					},
 
-                });
+				});
 
 
                 options.SchemaFilter<RemoveSchemaFilter<AddressDTO>>();

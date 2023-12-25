@@ -1508,3 +1508,4 @@ C:\Assignment\WebAPI\MyWebAPI\obj\Debug\net6.0\MyWebAPI.xml
 C:\Assignment\WebAPI\MyWebAPI\obj\Debug\net6.0\MyWebAPI.pdb
 C:\Assignment\WebAPI\MyWebAPI\obj\Debug\net6.0\MyWebAPI.genruntimeconfig.cache
 C:\Assignment\WebAPI\MyWebAPI\obj\Debug\net6.0\ref\MyWebAPI.dll
+C:\Assignment\WebAPI\MyWebAPI\obj\Debug\net6.0\MyWebAPI.sourcelink.json

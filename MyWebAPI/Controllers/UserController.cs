@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 using System.Security.Claims;
 using X.PagedList;
 
@@ -74,7 +75,7 @@ namespace MyWebAPI.Controllers
 		/// <response code="500">An error has occurred within the server.</response>
 		[HttpGet("GetRolesByUserId/{userId}")]
 		[Authorize(Roles = "Reader")]
-		public async Task<ActionResult<List<string>>> GetRolesByUserId(string userId)
+		public async Task<ActionResult<List<string>>> GetRolesByUserId([Required]string userId)
 		{
 			try
 			{

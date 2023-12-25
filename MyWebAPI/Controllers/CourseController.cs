@@ -121,7 +121,14 @@ namespace MyWebAPI.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult CreateCourse([FromQuery][Required] int CategoryId, [FromBody] CreateCourseDTO createCourseDTO)
         {
-            var courseEntity = _mapper.Map<Courses>(createCourseDTO);
+			var existingCategory = _categoryRepository.GetCategory(CategoryId);
+
+			if (existingCategory == null)
+			{
+				return _responseServiceRepository.CustomBadRequestResponse("Please enter correct data to the box", existingCategory);
+			}
+
+			var courseEntity = _mapper.Map<Courses>(createCourseDTO);
             var createdCourseDTO = _mapper.Map<CourseDTO>(courseEntity);
 
             _courseRepository.AddCourse(CategoryId, courseEntity);
