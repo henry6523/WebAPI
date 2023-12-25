@@ -31,7 +31,7 @@ namespace DataAccessLayer.Repositories
             courseCreate.Categories = _context.Categories.FirstOrDefault(c => c.Id == categoryId);
 
             _context.Courses.Add(courseCreate);
-            _context.SaveChanges();
+                _context.SaveChanges();
         }
 
         public void UpdateCourse(int id, CreateCourseDTO createCourseDTO)

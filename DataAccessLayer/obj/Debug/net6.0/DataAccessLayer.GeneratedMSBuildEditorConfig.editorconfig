@@ -8,4 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = DataAccessLayer
-build_property.ProjectDir = C:\Users\nly36\Documents\workspace\mywebapi_net\git-repo\henrysource\DataAccessLayer\
+build_property.ProjectDir = C:\Assignment\WebAPI\DataAccessLayer\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

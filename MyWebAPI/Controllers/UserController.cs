@@ -48,13 +48,13 @@ namespace MyWebAPI.Controllers
         }
 
         /// <summary>
-        /// Show list Roles of User
+        /// Show list Roles
         /// </summary>
         /// <returns></returns>
         /// <remarks>
-        /// Returns the list of **Roles** that have been assigned access control on the referenced resource.
+        /// Returns the list of **Roles** that have been access control on the referenced resource.
         /// </remarks>
-        /// <response code="200">Successfully returns a list of User Roles.</response>
+        /// <response code="200">Successfully returns a list of Roles.</response>
         [HttpGet("Roles")]
         [Authorize(Roles = "Reader")]
         public async Task<ActionResult<List<RoleDTO>>> Get()
@@ -63,15 +63,47 @@ namespace MyWebAPI.Controllers
                 .Select(x => new RoleDTO { Name = x.Name }).ToListAsync();
         }
 
-        /// <summary>
-        /// Add Roles into System
-        /// </summary>
-        /// <returns></returns>
-        /// <remarks>
-        /// Add Roles into System
-        /// </remarks>
-        /// <response code="200">Successfully add a role into System.</response>
-        [HttpPost("AddRole")]
+		/// <summary>
+		/// Show list Roles of User
+		/// </summary>
+		/// <returns></returns>
+		/// <remarks>
+		/// Returns the list of **Roles** that have been assigned access control on the referenced resource.
+		/// </remarks>
+		/// <response code="200">Successfully returns a list of User Roles.</response>
+		/// <response code="500">An error has occurred within the server.</response>
+		[HttpGet("GetRolesByUserId/{userId}")]
+		[Authorize(Roles = "Reader")]
+		public async Task<ActionResult<List<string>>> GetRolesByUserId(string userId)
+		{
+			try
+			{
+				var user = await _context.Users.Include(u => u.UserRoles).ThenInclude(ur => ur.Roles)
+												.FirstOrDefaultAsync(u => u.Id == userId);
+
+				if (user == null)
+				{
+					return NotFound($"User with ID {userId} not found");
+				}
+
+				var roles = user.UserRoles.Select(ur => ur.Roles.Name).ToList();
+				return Ok(roles);
+			}
+			catch (Exception)
+			{
+				return StatusCode(500, "Internal server error");
+			}
+		}
+
+		/// <summary>
+		/// Add Roles into System
+		/// </summary>
+		/// <returns></returns>
+		/// <remarks>
+		/// Add Roles into System
+		/// </remarks>
+		/// <response code="200">Successfully add a role into System.</response>
+		[HttpPost("AddRole")]
         [Authorize(Roles = "Writer")]
         public IActionResult AddRole([FromBody] RoleDTO roleDto)
         {

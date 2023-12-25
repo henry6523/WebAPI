@@ -20,7 +20,7 @@ namespace BusinessLogicLayer.DTO
         [Range(typeof(DateTime), "1/1/1900", "1/1/2023", ErrorMessage = "BirthDate should be between 1/1/1900 and 1/1/2023")]
         public DateTime BirthDate { get; set; }
 
-        [RegularExpression(@"^\d{10}$", ErrorMessage = "PhoneNo should be a 10-digit number")]
+        [RegularExpression(@"^\d{9}$", ErrorMessage = "PhoneNo should be a 9-digit number")]
         public int PhoneNo { get; set; }
 
     }

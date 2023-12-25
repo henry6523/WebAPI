@@ -380,6 +380,16 @@
         </member>
         <member name="M:MyWebAPI.Controllers.UsersController.Get">
             <summary>
+            Show list Roles
+            </summary>
+            <returns></returns>
+            <remarks>
+            Returns the list of **Roles** that have been access control on the referenced resource.
+            </remarks>
+            <response code="200">Successfully returns a list of Roles.</response>
+        </member>
+        <member name="M:MyWebAPI.Controllers.UsersController.GetRolesByUserId(System.String)">
+            <summary>
             Show list Roles of User
             </summary>
             <returns></returns>
@@ -387,6 +397,7 @@
             Returns the list of **Roles** that have been assigned access control on the referenced resource.
             </remarks>
             <response code="200">Successfully returns a list of User Roles.</response>
+            <response code="500">An error has occurred within the server.</response>
         </member>
         <member name="M:MyWebAPI.Controllers.UsersController.AddRole(BusinessLogicLayer.DTO.RoleDTO)">
             <summary>
