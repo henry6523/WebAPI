@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Assignment\\WebAPI\\DataAccessLayer\\DataAccessLayer.csproj": {}
+    "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysource\\DataAccessLayer\\DataAccessLayer.csproj": {}
   },
   "projects": {
-    "C:\\Assignment\\WebAPI\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
+    "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysource\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Assignment\\WebAPI\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
+        "projectUniqueName": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysource\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
         "projectName": "BusinessLogicLayer",
-        "projectPath": "C:\\Assignment\\WebAPI\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
-        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Assignment\\WebAPI\\BusinessLogicLayer\\obj\\",
+        "projectPath": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysource\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
+        "packagesPath": "C:\\Users\\nly36\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysource\\BusinessLogicLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nly36\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -101,21 +101,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Assignment\\WebAPI\\DataAccessLayer\\DataAccessLayer.csproj": {
+    "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysource\\DataAccessLayer\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Assignment\\WebAPI\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysource\\DataAccessLayer\\DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "C:\\Assignment\\WebAPI\\DataAccessLayer\\DataAccessLayer.csproj",
-        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Assignment\\WebAPI\\DataAccessLayer\\obj\\",
+        "projectPath": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysource\\DataAccessLayer\\DataAccessLayer.csproj",
+        "packagesPath": "C:\\Users\\nly36\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysource\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nly36\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -129,8 +129,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Assignment\\WebAPI\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
-                "projectPath": "C:\\Assignment\\WebAPI\\BusinessLogicLayer\\BusinessLogicLayer.csproj"
+              "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysource\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
+                "projectPath": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\git-repo\\henrysource\\BusinessLogicLayer\\BusinessLogicLayer.csproj"
               }
             }
           }
@@ -206,7 +206,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

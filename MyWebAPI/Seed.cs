@@ -1,5 +1,6 @@
 ﻿using DataAccessLayer.Data;
 using DataAccessLayer.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace MyWebAPI
 {
@@ -14,6 +15,11 @@ namespace MyWebAPI
 
         public void SeedDataContext()
         {
+            if (_context.Database.GetPendingMigrations().Any())
+            {
+                _context.Database.Migrate();
+            }
+
             if (!_context.Roles.Any())
             {
                 // Seed roles

@@ -8,9 +8,6 @@ namespace DataAccessLayer.Models
         [Key]
         
         public int Id { get; set; }
-        /// <summary>
-		/// description: HelloWorld
-		/// </summary>
         public string Address_1 { get; set; }
         public string Address_2 { get; set; }
         public string City { get; set; }
