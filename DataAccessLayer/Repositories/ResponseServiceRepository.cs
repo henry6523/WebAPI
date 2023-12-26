@@ -44,12 +44,6 @@ namespace DataAccessLayer.Repositories
 
         }
 
-        public IActionResult CustomNoContentResponse()
-        {
-            return new NoContentResult();
-
-        }
-
         public IActionResult CustomBadRequestResponse(string message, object data = null)
         {
             var responseObj = new

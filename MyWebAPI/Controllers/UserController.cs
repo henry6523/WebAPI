@@ -58,10 +58,10 @@ namespace MyWebAPI.Controllers
         /// <response code="200">Successfully returns a list of Roles.</response>
         [HttpGet("Roles")]
         [Authorize(Roles = "Reader")]
-        public async Task<ActionResult<List<RoleDTO>>> Get()
+        public async Task<ActionResult<List<RolesDTO>>> Get()
         {
             return await _context.Roles
-                .Select(x => new RoleDTO { Name = x.Name }).ToListAsync();
+                .Select(x => new RolesDTO { Name = x.Name }).ToListAsync();
         }
 
 		/// <summary>
@@ -106,7 +106,7 @@ namespace MyWebAPI.Controllers
 		/// <response code="200">Successfully add a role into System.</response>
 		[HttpPost("AddRole")]
         [Authorize(Roles = "Writer")]
-        public IActionResult AddRole([FromBody] RoleDTO roleDto)
+        public IActionResult AddRole([FromBody] RolesDTO roleDto)
         {
             var role = new Roles { Name = roleDto.Name };
             _context.Roles.Add(role);
@@ -124,7 +124,7 @@ namespace MyWebAPI.Controllers
         /// <response code="200">Successfully assign role into an User.</response>
         [HttpPost("AssignRole")]
         [Authorize(Roles = "Writer")]
-        public async Task<IActionResult> AssignRole([FromBody] EditRoleDTO editRoleDTO)
+        public async Task<IActionResult> AssignRole([FromBody] EditRolesDTO editRoleDTO)
         {
             try
             {
@@ -163,7 +163,7 @@ namespace MyWebAPI.Controllers
         /// <response code="200">Successfully deleted User's Role</response>
         [HttpDelete("RemoveRole")]
         [Authorize(Roles = "Editor")]
-        public async Task<ActionResult> RemoveRole([FromBody] EditRoleDTO editRoleDTO)
+        public async Task<ActionResult> RemoveRole([FromBody] EditRolesDTO editRoleDTO)
         {
             try
             {

@@ -14,7 +14,6 @@ namespace DataAccessLayer.Interfaces
         IActionResult CustomBadRequestResponse(string message, object data = null);
         IActionResult CustomOkResponse(string message, object data = null);
         IActionResult CustomCreatedResponse(string message, object data = null);
-        IActionResult CustomNoContentResponse();
         IActionResult CustomNotImplementedResponse(string message, object data = null);
     }
 }

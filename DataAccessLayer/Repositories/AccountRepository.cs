@@ -12,6 +12,9 @@ using BCrypt.Net;
 using Microsoft.AspNetCore.Mvc;
 using ModelsLayer.DTO;
 using ModelsLayer.Entity;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 
 namespace DataAccessLayer.Repositories
 {
@@ -19,6 +22,7 @@ namespace DataAccessLayer.Repositories
     {
         private DataContext _context;
         private readonly IMapper _mapper;
+        private readonly IConfiguration _configuration;
 
         public AccountRepository(DataContext context, IMapper mapper)
         {
@@ -35,18 +39,17 @@ namespace DataAccessLayer.Repositories
             return userRoles;
         }
 
-        public void Login(UserInfo model)
+        public void Login(UserInfos model)
         {
             var user = _context.Users.SingleOrDefault(x => x.UserName == model.UserName);
 
-            // validate
             BCrypt.Net.BCrypt.Verify(model.Password, user.PasswordHash);
 
             // authentication successful
-            _mapper.Map<UserDTO>(user);
+            _mapper.Map<UsersDTO>(user);
         }
 
-        public void Register(UserDTO model)
+        public void Register(UsersDTO model)
         {
             // validate
             if (_context.Users.Any(x => x.UserName == model.Email))
@@ -62,6 +65,34 @@ namespace DataAccessLayer.Repositories
             // save user
             _context.Users.Add(user);
             _context.SaveChanges();
+        }
+        public UserTokens BuildToken(UserInfos userInfo, IEnumerable<string> userRoles)
+        {
+            var claims = new List<Claim>();
+
+            claims.Add(new Claim(ClaimTypes.Name, userInfo.UserName));
+
+            foreach (var role in userRoles)
+            {
+                claims.Add(new Claim(ClaimTypes.Role, role));
+            }
+
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
+            var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+            var expiration = DateTime.Now.AddMinutes(15);
+
+            var token = new JwtSecurityToken(
+                _configuration["Jwt:Issuer"],
+                _configuration["Jwt:Audience"],
+                claims,
+                expires: expiration,
+                signingCredentials: credentials);
+
+            return new UserTokens()
+            {
+                Token = new JwtSecurityTokenHandler().WriteToken(token),
+                Expiration = expiration
+            };
         }
 
     }

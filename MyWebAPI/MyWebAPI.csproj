@@ -8,6 +8,7 @@
 	<NoWarn>$(NoWarn);1591</NoWarn>
 	<RuntimeIdentifiers>win10-x64;</RuntimeIdentifiers>
 	<AspNetCoreModuleName>AspNetCoreModuleV2</AspNetCoreModuleName>
+	<UserSecretsId>6e29d1b2-aefd-414a-bfdb-0e069fd84a72</UserSecretsId>
   </PropertyGroup>
 
 

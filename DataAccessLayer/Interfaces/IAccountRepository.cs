@@ -9,9 +9,10 @@ namespace DataAccessLayer.Interfaces
 {
     public interface IAccountRepository
     {
-        void Login(UserInfo model);
-        void Register(UserDTO model);
+        void Login(UserInfos model);
+        void Register(UsersDTO model);
 
         IEnumerable<string> GetUserRoles(string username);
+        UserTokens BuildToken(UserInfos model, IEnumerable<string> userRoles);
     }
 }

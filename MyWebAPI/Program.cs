@@ -16,6 +16,7 @@ using DataAccessLayer.Repositories;
 using ModelsLayer.Entity;
 using Microsoft.AspNetCore.Identity;
 using ModelsLayer.DTO;
+using static IdentityModel.ClaimComparer;
 
 namespace MyWebAPI
 {
@@ -29,10 +30,8 @@ namespace MyWebAPI
 
             schema.Description = "To describe the meaning, " +
                                  "function or detailed information about the Address in that object.";
-            // Kiểm tra xem schema có chứa trường ZipCode không
             if (schema.Properties.ContainsKey("zipCode"))
             {
-                // Thêm mô tả cho trường ZipCode
                 schema.Properties["zipCode"].Description = "Zip Code is a system used to facilitate the delivery of mail.";
             }
         }
@@ -100,8 +99,8 @@ namespace MyWebAPI
 				});
 
 
-                options.SchemaFilter<RemoveSchemaFilter<AddressDTO>>();
-                options.SchemaFilter<CustomSchemaFilter<AddressDTO>>();
+                options.SchemaFilter<RemoveSchemaFilter<AddressesDTO>>();
+                options.SchemaFilter<CustomSchemaFilter<AddressesDTO>>();
                 options.SchemaFilter<CategorySchemaFilter>();
                 options.SchemaFilter<ClassSchemaFilter>();
                 options.SchemaFilter<CourseSchemaFilter>();
@@ -114,9 +113,11 @@ namespace MyWebAPI
             });
 
 
-            builder.Services.AddSwaggerGen(option =>
+            builder.Services.AddSwaggerGen(options =>
             {
-                option.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                options.OperationFilter<AuthResponsesOperationFilter>();
+
+                options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
                     In = ParameterLocation.Header,
                     Description = "Please enter a valid token",
@@ -125,7 +126,7 @@ namespace MyWebAPI
                     BearerFormat = "JWT",
                     Scheme = "Bearer"
                 });
-                option.AddSecurityRequirement(new OpenApiSecurityRequirement
+                options.AddSecurityRequirement(new OpenApiSecurityRequirement
                 {
                     {   
                         new OpenApiSecurityScheme
@@ -154,13 +155,14 @@ namespace MyWebAPI
                 options.Filters.Add<CustomValidationResultFilter>();
             });
 
+
             builder.Services.AddSingleton<IMapper>(mapper);
-			builder.Services.AddScoped<ICourseRepository, CourseRepository>();
-			builder.Services.AddScoped<IClassRepository, ClassRepository>();
-			builder.Services.AddScoped<IStudentRepository, StudentRepository>();
-			builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
-			builder.Services.AddScoped<IAddressRepository, AddressRepository>();
-			builder.Services.AddScoped<ITeacherRepository, TeacherRepository>();
+			builder.Services.AddScoped<ICoursesRepository, CoursesRepository>();
+			builder.Services.AddScoped<IClassesRepository, ClassesRepository>();
+			builder.Services.AddScoped<IStudentsRepository, StudentsRepository>();
+			builder.Services.AddScoped<ICategoriesRepository, CategoriesRepository>();
+			builder.Services.AddScoped<IAddressesRepository, AddressesRepository>();
+			builder.Services.AddScoped<ITeachersRepository, TeachersRepository>();
             builder.Services.AddScoped<IUserRepository, UserRepository>();
             builder.Services.AddScoped<IAccountRepository, AccountRepository>();
             builder.Services.AddScoped<IResponseServiceRepository, ResponseServiceRepository>();

@@ -22,18 +22,12 @@ namespace MyWebAPI.Controllers
     public class AccountController : ControllerBase
     {
         private readonly IAccountRepository _accountRepository;
-        private readonly IConfiguration _configuration;
-        private readonly DataContext _dataContext;
+        private readonly IResponseServiceRepository _responseServiceRepository;
 
-        public AccountController(
-            IConfiguration configuration,
-            IAccountRepository accountRepository,
-            DataContext dataContext
-            )
+        public AccountController(IAccountRepository accountRepository, IResponseServiceRepository responseServiceRepository)
         {
-            _configuration = configuration;
             _accountRepository = accountRepository;
-            _dataContext = dataContext;
+            _responseServiceRepository = responseServiceRepository;
         }
 
         /// <summary>
@@ -45,39 +39,10 @@ namespace MyWebAPI.Controllers
         /// </remarks>
         /// <response code="200">Registered successfully.</response>
         [HttpPost("Register")]
-        public IActionResult Register(UserDTO model)
+        public IActionResult Register(UsersDTO model)
         {
             _accountRepository.Register(model);
             return Ok(new { message = "Registration successful" });
-        }
-
-        private UserToken BuildToken(UserInfo userInfo, IEnumerable<string> userRoles)
-        {
-            var claims = new List<Claim>();
-
-            claims.Add(new Claim(ClaimTypes.Name, userInfo.UserName));
-
-            foreach (var role in userRoles)
-            {
-                claims.Add(new Claim(ClaimTypes.Role, role));
-            }
-
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
-            var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-            var expiration = DateTime.Now.AddMinutes(15);
-
-            var token = new JwtSecurityToken(
-                _configuration["Jwt:Issuer"],
-                _configuration["Jwt:Audience"],
-                claims,
-                expires: expiration,
-                signingCredentials: credentials);
-
-            return new UserToken()
-            {
-                Token = new JwtSecurityTokenHandler().WriteToken(token),
-                Expiration = expiration
-            };
         }
 
 		/// <summary>
@@ -89,12 +54,12 @@ namespace MyWebAPI.Controllers
 		/// </remarks>
 		/// <response code="200">Login successfully.</response>
 		[HttpPost("Login")]
-		public UserToken Login(UserInfo model)
+		public UserTokens Login(UserInfos model)
 		{
 			var userRoles = _accountRepository.GetUserRoles(model.UserName);
 
-			_accountRepository.Login(model);
-			return BuildToken(model, userRoles);
+            _accountRepository.Login(model);
+			return _accountRepository.BuildToken(model, userRoles);
 		}
 	}
 }

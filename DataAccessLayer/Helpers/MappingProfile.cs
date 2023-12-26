@@ -9,15 +9,15 @@ namespace DataAccessLayer.Helpers
 		public MappingProfile()
 		{
 
-			CreateMap<StudentDTO, Students>().ReverseMap(); 
-			CreateMap<Students, StudentDTO>().ReverseMap();
-            CreateMap<TeacherDTO, Teachers>().ReverseMap(); 
-			CreateMap<CourseDTO, Courses>().ReverseMap();   
-			CreateMap<ClassDTO, Classes>().ReverseMap();    
-			CreateMap<CategoryDTO, Categories>().ReverseMap();
-			CreateMap<AddressDTO, Addresses>().ReverseMap();
-			CreateMap<Users, UserDTO>().ReverseMap();
-			CreateMap<RoleDTO, Roles>().ReverseMap();
+			CreateMap<StudentsDTO, Students>().ReverseMap(); 
+			CreateMap<Students, StudentsDTO>().ReverseMap();
+            CreateMap<TeachersDTO, Teachers>().ReverseMap(); 
+			CreateMap<CoursesDTO, Courses>().ReverseMap();   
+			CreateMap<ClassesDTO, Classes>().ReverseMap();    
+			CreateMap<CategoriesDTO, Categories>().ReverseMap();
+			CreateMap<AddressesDTO, Addresses>().ReverseMap();
+			CreateMap<Users, UsersDTO>().ReverseMap();
+			CreateMap<RolesDTO, Roles>().ReverseMap();
             CreateMap<CreateCategoryDTO, Categories>().ReverseMap();
             CreateMap<CreateClassDTO, Classes>().ReverseMap();
             CreateMap<CreateCourseDTO, Courses>().ReverseMap();
