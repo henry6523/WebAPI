@@ -67,6 +67,20 @@ namespace DataAccessLayer.Repository
             return _responseServiceRepository.CustomOkResponse("Data Loaded Successful!", addressMap);
         }
 
+		/// <summary>
+		/// Get an Address by AddressId (Not Implemented)
+		/// </summary>
+		/// <returns>Not Implemented</returns>
+		/// <response code="501">Not Implemented</response>
+		[HttpGet("address")]
+		[Authorize(Roles = "Reader")]
+		[ProducesResponseType(StatusCodes.Status501NotImplemented)]
+		public IActionResult GetAddressByAddressId()
+		{
+			// This method is intentionally not implemented
+			return StatusCode(StatusCodes.Status501NotImplemented, "Method not implemented");
+		}
+
 
 		/// <summary>
 		/// Create a Student's Address by new StundentCard
@@ -133,7 +147,7 @@ namespace DataAccessLayer.Repository
             _mapper.Map(addressDTO, existingAddress);
             _addressRepository.UpdateAddress(existingAddress);
 
-            return _responseServiceRepository.CustomNoContentResponse("Student address deleted", existingAddress);
+            return _responseServiceRepository.CustomNoContentResponse();
         }
 
         /// <summary>
@@ -162,7 +176,7 @@ namespace DataAccessLayer.Repository
 
             _addressRepository.DeleteAddress(existingAddress);
 
-            return _responseServiceRepository.CustomNoContentResponse("Student address deleted", existingAddress);
+            return _responseServiceRepository.CustomNoContentResponse();
         }
     }
 }

@@ -1,15 +1,16 @@
-﻿using BusinessLogicLayer.DTO;
-using DataAccessLayer.Models;
+﻿// ITeacherRepository.cs
+
+using BusinessLogicLayer.DTO;
 using System.Collections.Generic;
 
 namespace DataAccessLayer.Interfaces
 {
 	public interface ITeacherRepository
 	{
-		Teachers GetTeacher(int id);
-		ICollection<Teachers> GetTeachers();
-		void AddTeacher(Teachers teacherCreate);
+		IEnumerable<TeacherDTO> GetTeachers(string filterValue, int page, int pageSize);
+		TeacherDTO GetTeacher(int id);
+		TeacherDTO AddTeacher(CreateTeacherDTO createTeacherDTO);
 		void UpdateTeacher(int id, CreateTeacherDTO createTeacherDTO);
-		void DeleteTeacher(Teachers teacherDelete);
+		void DeleteTeacher(int id);
 	}
 }

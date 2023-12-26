@@ -270,4 +270,3 @@ C:\Assignment\WebAPI\DataAccessLayer\obj\Debug\net6.0\refint\DataAccessLayer.dll
 C:\Assignment\WebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.pdb
 C:\Assignment\WebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.genruntimeconfig.cache
 C:\Assignment\WebAPI\DataAccessLayer\obj\Debug\net6.0\ref\DataAccessLayer.dll
-C:\Assignment\WebAPI\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.sourcelink.json

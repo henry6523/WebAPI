@@ -300,74 +300,6 @@
             <response code="204">Student's Info deleted successfully</response>
             <response code="404">Student Card Not Found!!</response>
         </member>
-        <member name="M:MyWebAPI.Controllers.TeacherController.GetAllTeachers(System.String,System.Nullable{System.Int32},System.Int32)">
-            <summary>
-            Show list of Teacher
-            </summary>
-            <returns></returns>
-            <param name="filterValue">Input the Value you want to filt. Filt by TeacherName.</param>
-            <param name="page">Index starting from 0 to designate the page for retrieval.</param>
-            <param name="pageSize">Number of results per page to return</param>
-            <remarks>
-            Returns the list of **Teacher** that have been assigned access control on the referenced resource.
-            </remarks>
-            <response code="200">Successfully returns a list of Teacher.</response>
-        </member>
-        <member name="M:MyWebAPI.Controllers.TeacherController.GetTeacher(System.Int32)">
-            <summary>
-            Get a Teacher by TeacherId
-            </summary>
-            <param name="id">Input Teacher Id to see **Teacher's info**</param>
-            <returns></returns>
-            <remarks>
-            Retrieve *teacher* by **Teacher Id** and can custom select *any teacher*.
-            
-            **Note**: If you need to find a Teacher but do not know the Teacher's Name,
-            you can search on the System through the **Teacher Id**
-            </remarks>
-            <response code="200">Information of Teacher</response>
-            <response code="404">TeacherId Not Found!!</response>
-        </member>
-        <member name="M:MyWebAPI.Controllers.TeacherController.AddTeacher(BusinessLogicLayer.DTO.CreateTeacherDTO)">
-            <summary>
-            Create a new Teacher
-            </summary>
-            <returns></returns>
-            <remarks>
-            Create a new Teacher by input the information like **Teacher Name**, **Email** and **Phone No**.
-            </remarks>
-            <response code="201">Successfully created a Teacher.</response>
-            <response code="400">Teacher domain is not among the registered SSO 
-            domains for this System!!</response>
-        </member>
-        <member name="M:MyWebAPI.Controllers.TeacherController.UpdateTeacher(System.Int32,BusinessLogicLayer.DTO.CreateTeacherDTO)">
-            <summary>
-            Update a Teacher by TeacherId
-            </summary>
-            <param name="id">Input TeacherId to **update** Teacher's info.</param>
-            <param name="createTeacherDTO"></param>
-            <returns></returns>
-            <remarks>
-            Update the specified _teacher_ to the System by **TeacherId**.
-            </remarks>
-            <response code="204">Teacher's Info updated successfully</response>
-            <response code="400">TeacherId domain is not among the registered SSO 
-            domains for this System!!</response>
-            <response code="404">TeacherId Not Found!!</response>
-        </member>
-        <member name="M:MyWebAPI.Controllers.TeacherController.DeleteTeacher(System.Int32)">
-            <summary>
-            Delete a Teacher's Info by TeacherId
-            </summary>
-            <param name="id">Input TeacherId to **delete** Teacher's info.</param>
-            <returns></returns>
-            <remarks>
-            **Note:** Removes the specified Teacher from the list by **TeacherId**.
-            
-            </remarks>
-            <response code="204">Teacher's Info deleted successfully</response>
-            <response code="404">TeacherId Not Found!!</response>
-        </member>
         <member name="M:MyWebAPI.Controllers.UsersController.GetListUsers">
             <summary>
             Show list of User
@@ -444,6 +376,13 @@
             <response code="200">Data Loaded Successful!</response>
             <response code="404">Student's Address Not Found</response>
         </member>
+        <member name="M:DataAccessLayer.Repository.AddressController.GetAddressByAddressId">
+            <summary>
+            Get an Address by AddressId (Not Implemented)
+            </summary>
+            <returns>Not Implemented</returns>
+            <response code="501">Not Implemented</response>
+        </member>
         <member name="M:DataAccessLayer.Repository.AddressController.CreateAddress(System.String,BusinessLogicLayer.DTO.AddressDTO)">
             <summary>
             Create a Student's Address by new StundentCard
@@ -490,6 +429,60 @@
             </remarks>
             <response code="204">Student's Address deleted successfully</response>
             <response code="404">StudentCard Not Found!!</response>
+        </member>
+        <member name="M:TeacherController.Gets(System.String,System.Nullable{System.Int32},System.Int32)">
+            <summary>
+            Show list of Teacher
+            </summary>
+            <returns></returns>
+            <param name="filterValue">Input the Value you want to filt. Filt by TeacherName.</param>
+            <param name="page">Index starting from 0 to designate the page for retrieval.</param>
+            <param name="pageSize">Number of results per page to return</param>
+            <remarks>
+            Returns the list of **Teacher** that have been assigned access control on the referenced resource.
+            </remarks>
+            <response code="200">Successfully returns a list of Teacher.</response>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:TeacherController.Get(System.Int32)" -->
+        <member name="M:TeacherController.Post(BusinessLogicLayer.DTO.CreateTeacherDTO)">
+            <summary>
+            Create a new Teacher
+            </summary>
+            <returns></returns>
+            <remarks>
+            Create a new Teacher by input the information like **Teacher Name**, **Email** and **Phone No**.
+            </remarks>
+            <response code="201">Successfully created a Teacher.</response>
+            <response code="400">Teacher domain is not among the registered SSO 
+            domains for this System!!</response>
+        </member>
+        <member name="M:TeacherController.Put(System.Int32,BusinessLogicLayer.DTO.CreateTeacherDTO)">
+            <summary>
+            Update a Teacher by TeacherId
+            </summary>
+            <param name="id">Input TeacherId to **update** Teacher's info.</param>
+            <param name="createTeacherDTO"></param>
+            <returns></returns>
+            <remarks>
+            Update the specified _teacher_ to the System by **TeacherId**.
+            </remarks>
+            <response code="204">Teacher's Info updated successfully</response>
+            <response code="400">TeacherId domain is not among the registered SSO 
+            domains for this System!!</response>
+            <response code="404">TeacherId Not Found!!</response>
+        </member>
+        <member name="M:TeacherController.Delete(System.Int32)">
+            <summary>
+            Delete a Teacher's Info by TeacherId
+            </summary>
+            <param name="id">Input TeacherId to **delete** Teacher's info.</param>
+            <returns></returns>
+            <remarks>
+            **Note:** Removes the specified Teacher from the list by **TeacherId**.
+            
+            </remarks>
+            <response code="204">Teacher's Info deleted successfully</response>
+            <response code="404">TeacherId Not Found!!</response>
         </member>
     </members>
 </doc>

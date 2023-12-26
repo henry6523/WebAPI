@@ -5,6 +5,7 @@ using DataAccessLayer.Data;
 using DataAccessLayer.Models;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.AspNetCore.Http;
 
 namespace MyWebAPI.Services
 {
@@ -44,14 +45,8 @@ namespace MyWebAPI.Services
 
         }
 
-        public IActionResult CustomNoContentResponse(string message, object data = null)
+        public IActionResult CustomNoContentResponse()
         {
-            var responseObj = new
-            {
-                status = 204,
-                message = message,
-                data = data
-            };
             return new NoContentResult();
 
         }
@@ -66,5 +61,17 @@ namespace MyWebAPI.Services
             };
             return new BadRequestObjectResult(responseObj);
         }
-    }
+
+		public IActionResult CustomNotImplementedResponse(string message, object data = null)
+		{
+			var responseObj = new
+			{
+				status = 501,
+				message,
+				data
+			};
+			return new StatusCodeResult(StatusCodes.Status501NotImplemented);
+		}
+
+	}
 }
