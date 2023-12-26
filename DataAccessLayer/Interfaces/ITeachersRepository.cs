@@ -1,6 +1,4 @@
-﻿// ITeacherRepository.cs
-
-using ModelsLayer.DTO;
+﻿using ModelsLayer.DTO;
 using System.Collections.Generic;
 
 namespace DataAccessLayer.Interfaces

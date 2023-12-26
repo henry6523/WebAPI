@@ -4,7 +4,7 @@
         <name>MyWebAPI</name>
     </assembly>
     <members>
-        <member name="M:MyWebAPI.Controllers.AccountController.Register(ModelsLayer.DTO.UsersDTO)">
+        <member name="M:MyWebAPI.Controllers.AccountsController.Register(ModelsLayer.DTO.UsersDTO)">
             <summary>
             Register a new User to Login
             </summary>
@@ -14,7 +14,7 @@
             </remarks>
             <response code="200">Registered successfully.</response>
         </member>
-        <member name="M:MyWebAPI.Controllers.AccountController.Login(ModelsLayer.DTO.UserInfos)">
+        <member name="M:MyWebAPI.Controllers.AccountsController.Login(ModelsLayer.DTO.UserInfos)">
             <summary>
             Login to System
             </summary>
@@ -357,7 +357,7 @@
             <response code="204">Student's Info deleted successfully</response>
             <response code="404">Student Card Not Found!!</response>
         </member>
-        <member name="M:MyWebAPI.Controllers.UsersController.GetListUsers">
+        <member name="M:MyWebAPI.Controllers.UsersController.Gets(ModelsLayer.DTO.PaginationDTO)">
             <summary>
             Show list of User
             </summary>
@@ -367,23 +367,13 @@
             </remarks>
             <response code="200">Successfully returns a list of User.</response>
         </member>
-        <member name="M:MyWebAPI.Controllers.UsersController.Get">
-            <summary>
-            Show list Roles
-            </summary>
-            <returns></returns>
-            <remarks>
-            Returns the list of **Roles** that have been access control on the referenced resource.
-            </remarks>
-            <response code="200">Successfully returns a list of Roles.</response>
-        </member>
         <member name="M:MyWebAPI.Controllers.UsersController.GetRolesByUserId(System.String)">
             <summary>
-            Show list Roles of User
+            Show Roles has been assigned to User
             </summary>
             <returns></returns>
             <remarks>
-            Returns the list of **Roles** that have been assigned access control on the referenced resource.
+            Returns the list roles of **User** by **UserId** that have been assigned access control on the referenced resource.
             </remarks>
             <response code="200">Successfully returns a list of User Roles.</response>
             <response code="500">An error has occurred within the server.</response>
@@ -400,21 +390,28 @@
         </member>
         <member name="M:MyWebAPI.Controllers.UsersController.AssignRole(ModelsLayer.DTO.EditRolesDTO)">
             <summary>
-            Assign roles into User
+            Assign roles to User
             </summary>
             <returns></returns>
             <remarks>
             Assign role into an User
             </remarks>
-            <response code="200">Successfully assign role into an User.</response>
+            <response code="200">Successfully assigned role to User.</response>
         </member>
-        <member name="M:MyWebAPI.Controllers.UsersController.RemoveRole(ModelsLayer.DTO.EditRolesDTO)">
+        <member name="M:MyWebAPI.Controllers.UsersController.Update">
+            <summary>
+            Update Roles by RolesId
+            </summary>
+            <returns>Not Implemented</returns>
+            <response code="501">Not Implemented</response>
+        </member>
+        <member name="M:MyWebAPI.Controllers.UsersController.DeleteRole(ModelsLayer.DTO.EditRolesDTO)">
             <summary>
             Delete User's Role
             </summary>
             <returns></returns>
             <remarks>
-            Delete role from an User.
+            Delete role from User.
             </remarks>
             <response code="200">Successfully deleted User's Role</response>
         </member>
@@ -422,6 +419,9 @@
             <summary>
             Show list of Teacher
             </summary>
+            <param name="FilterValue">Input the Value you want to filt. Filt by TeacherName.</param>
+            <param name="PageNum">Index starting from 0 to designate the page for retrieval.</param>
+            <param name="PageSize">Number of results per page to return</param>
             <returns></returns>
             <remarks>
             Returns the list of **Teacher** that have been assigned access control on the referenced resource.

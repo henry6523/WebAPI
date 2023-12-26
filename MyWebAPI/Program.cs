@@ -163,8 +163,8 @@ namespace MyWebAPI
 			builder.Services.AddScoped<ICategoriesRepository, CategoriesRepository>();
 			builder.Services.AddScoped<IAddressesRepository, AddressesRepository>();
 			builder.Services.AddScoped<ITeachersRepository, TeachersRepository>();
-            builder.Services.AddScoped<IUserRepository, UserRepository>();
-            builder.Services.AddScoped<IAccountRepository, AccountRepository>();
+            builder.Services.AddScoped<IUsersRepository, UsersRepository>();
+            builder.Services.AddScoped<IAccountsRepository, AccountsRepository>();
             builder.Services.AddScoped<IResponseServiceRepository, ResponseServiceRepository>();
 
             builder.Services.AddScoped<Seed>();

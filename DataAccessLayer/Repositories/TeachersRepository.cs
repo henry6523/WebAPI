@@ -1,6 +1,4 @@
-﻿// TeacherRepository.cs
-
-using AutoMapper;
+﻿using AutoMapper;
 using DataAccessLayer.Data;
 using DataAccessLayer.Helpers;
 using DataAccessLayer.Interfaces;
@@ -34,9 +32,6 @@ namespace DataAccessLayer.Repositories
             var paged = query.Paginate(paginationDTO);
             return _mapper.Map<IEnumerable<TeachersDTO>>(paged);
         }
-
-
-
 
 		public TeachersDTO Get(int id)
 		{

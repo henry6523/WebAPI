@@ -16,7 +16,7 @@ namespace DataAccessLayer.Helpers
 			CreateMap<ClassesDTO, Classes>().ReverseMap();    
 			CreateMap<CategoriesDTO, Categories>().ReverseMap();
 			CreateMap<AddressesDTO, Addresses>().ReverseMap();
-			CreateMap<Users, UsersDTO>().ReverseMap();
+			CreateMap<Users, UsersDTO>().ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id)).ReverseMap();
 			CreateMap<RolesDTO, Roles>().ReverseMap();
             CreateMap<CreateCategoryDTO, Categories>().ReverseMap();
             CreateMap<CreateClassDTO, Classes>().ReverseMap();

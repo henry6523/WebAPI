@@ -2940,19 +2940,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nly36\\.nuget\\packages\\": {}
+    "C:\\Users\\USER\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\Mock\\BusinessLogicLayer\\ModelsLayer.csproj",
+      "projectUniqueName": "C:\\Assignment\\WebAPI\\BusinessLogicLayer\\ModelsLayer.csproj",
       "projectName": "ModelsLayer",
-      "projectPath": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\Mock\\BusinessLogicLayer\\ModelsLayer.csproj",
-      "packagesPath": "C:\\Users\\nly36\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\Mock\\BusinessLogicLayer\\obj\\",
+      "projectPath": "C:\\Assignment\\WebAPI\\BusinessLogicLayer\\ModelsLayer.csproj",
+      "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+      "outputPath": "C:\\Assignment\\WebAPI\\BusinessLogicLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\nly36\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3039,7 +3039,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

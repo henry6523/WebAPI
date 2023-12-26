@@ -9,7 +9,9 @@ namespace ModelsLayer.DTO
 {
     public class UsersDTO
     {
-        [Required(ErrorMessage = "Username is required")]
+		public string Id { get; set; }
+
+		[Required(ErrorMessage = "Username is required")]
         public string UserName { get; set; }
 
         [Required(ErrorMessage = "Email is required")]
