@@ -1,10 +1,10 @@
-﻿using BusinessLogicLayer.DTO;
-using DataAccessLayer.Models;
+﻿using ModelsLayer.DTO;
+using ModelsLayer.Entity;
 using System.Collections.Generic;
 
 namespace DataAccessLayer.Interfaces
 {
-	public interface IClassRepository
+    public interface IClassRepository
 	{
 		Classes GetClass(int id);
 		ICollection<Classes> GetClasses();

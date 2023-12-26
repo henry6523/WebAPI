@@ -2,15 +2,15 @@
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System.ComponentModel.DataAnnotations;
 
-namespace BusinessLogicLayer.DTO
+namespace ModelsLayer.DTO
 {
-	public class TeacherDTO
-	{
-		public int Id { get; set; }
-		public string TeacherName { get; set; }
-		public string Email { get; set; }
-		public int PhoneNo { get; set; }
-	}
+    public class TeacherDTO
+    {
+        public int Id { get; set; }
+        public string TeacherName { get; set; }
+        public string Email { get; set; }
+        public int PhoneNo { get; set; }
+    }
     public class CreateTeacherDTO
     {
         [Required(ErrorMessage = "Teacher name is required.")]

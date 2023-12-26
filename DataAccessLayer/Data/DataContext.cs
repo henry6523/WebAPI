@@ -1,11 +1,11 @@
-﻿using BusinessLogicLayer.DTO;
-using DataAccessLayer.Models;
+﻿using ModelsLayer.DTO;
 using Microsoft.EntityFrameworkCore;
+using ModelsLayer.Entity;
 using System.Net;
 
 namespace DataAccessLayer.Data
 {
-    #pragma warning disable CS1591
+#pragma warning disable CS1591
     public class DataContext : DbContext
     {
         public DataContext(DbContextOptions<DataContext> options) : base(options)

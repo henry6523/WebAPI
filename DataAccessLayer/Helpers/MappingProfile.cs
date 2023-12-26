@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
-using DataAccessLayer.Models;
-using BusinessLogicLayer.DTO;
+using ModelsLayer.DTO;
+using ModelsLayer.Entity;
 
 namespace DataAccessLayer.Helpers
 {
-	public class MappingProfile : Profile
+    public class MappingProfile : Profile
 	{
 		public MappingProfile()
 		{

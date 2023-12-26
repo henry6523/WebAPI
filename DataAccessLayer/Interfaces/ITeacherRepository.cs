@@ -1,11 +1,11 @@
 ﻿// ITeacherRepository.cs
 
-using BusinessLogicLayer.DTO;
+using ModelsLayer.DTO;
 using System.Collections.Generic;
 
 namespace DataAccessLayer.Interfaces
 {
-	public interface ITeacherRepository
+    public interface ITeacherRepository
 	{
 		IEnumerable<TeacherDTO> GetTeachers(string filterValue, int page, int pageSize);
 		TeacherDTO GetTeacher(int id);

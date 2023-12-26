@@ -7,10 +7,10 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
 using System.Security.Cryptography.X509Certificates;
 
-namespace BusinessLogicLayer.DTO
+namespace ModelsLayer.DTO
 {
-	public class AddressDTO
-	{
+    public class AddressDTO
+    {
 
         [Required(ErrorMessage = "Address 1 is required")]
         public string Address_1 { get; set; }

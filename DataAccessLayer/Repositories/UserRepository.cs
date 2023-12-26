@@ -1,7 +1,6 @@
-﻿using BusinessLogicLayer.DTO;
+﻿using ModelsLayer.DTO;
 using DataAccessLayer.Data;
 using DataAccessLayer.Interfaces;
-using DataAccessLayer.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;

@@ -1,10 +1,10 @@
-﻿using BusinessLogicLayer.DTO;
-using DataAccessLayer.Models;
+﻿using ModelsLayer.DTO;
+using ModelsLayer.Entity;
 using System.Collections.Generic;
 
 namespace DataAccessLayer.Interfaces
 {
-	public interface IAddressRepository
+    public interface IAddressRepository
 	{
 		Addresses GetAddressByStudentCard(string studentCard);
 		void AddAddress(string studentCard, Addresses addressCreate);

@@ -1,7 +1,7 @@
-﻿using BusinessLogicLayer.DTO;
+﻿using ModelsLayer.Entity;
 using DataAccessLayer.Data;
 using DataAccessLayer.Interfaces;
-using DataAccessLayer.Models;
+using ModelsLayer.DTO;
 using System.Collections.Generic;
 using System.Linq;
 

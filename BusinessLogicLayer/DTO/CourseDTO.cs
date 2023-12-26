@@ -3,14 +3,14 @@ using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System.ComponentModel.DataAnnotations;
 
-namespace BusinessLogicLayer.DTO
+namespace ModelsLayer.DTO
 {
-	public class CourseDTO
-	{
-		public int Id { get; set; }
-		public string CourseName { get; set; }
+    public class CourseDTO
+    {
+        public int Id { get; set; }
+        public string CourseName { get; set; }
 
-	}
+    }
     public class CreateCourseDTO
     {
         [Required(ErrorMessage = "Course name is required.")]
@@ -24,7 +24,7 @@ namespace BusinessLogicLayer.DTO
             if (context.Type == typeof(CourseDTO))
             {
                 schema.Description = "Shows the Course Id structure and Course names";
-                
+
             }
         }
     }

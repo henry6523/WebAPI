@@ -1,13 +1,12 @@
 ﻿using DataAccessLayer.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using BusinessLogicLayer.DTO;
+using ModelsLayer.DTO;
 using DataAccessLayer.Data;
-using DataAccessLayer.Models;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Http;
 
-namespace MyWebAPI.Services
+namespace DataAccessLayer.Repositories
 {
     public class ResponseServiceRepository : IResponseServiceRepository
     {
@@ -16,8 +15,8 @@ namespace MyWebAPI.Services
             var responseObj = new
             {
                 status = 404,
-                message = message,
-                data = data
+                message,
+                data
             };
             return new NotFoundObjectResult(responseObj);
         }
@@ -27,8 +26,8 @@ namespace MyWebAPI.Services
             var successResponse = new
             {
                 status = 200,
-                message = message,
-                data = data
+                message,
+                data
             };
             return new OkObjectResult(successResponse);
         }
@@ -38,8 +37,8 @@ namespace MyWebAPI.Services
             var responseObj = new
             {
                 status = 201,
-                message = message,
-                data = data
+                message,
+                data
             };
             return new ObjectResult(responseObj) { StatusCode = 201 };
 
@@ -56,22 +55,22 @@ namespace MyWebAPI.Services
             var responseObj = new
             {
                 status = 400,
-                message = message,
-                data = data
+                message,
+                data
             };
             return new BadRequestObjectResult(responseObj);
         }
 
-		public IActionResult CustomNotImplementedResponse(string message, object data = null)
-		{
-			var responseObj = new
-			{
-				status = 501,
-				message,
-				data
-			};
-			return new StatusCodeResult(StatusCodes.Status501NotImplemented);
-		}
+        public IActionResult CustomNotImplementedResponse(string message, object data = null)
+        {
+            var responseObj = new
+            {
+                status = 501,
+                message,
+                data
+            };
+            return new StatusCodeResult(StatusCodes.Status501NotImplemented);
+        }
 
-	}
+    }
 }

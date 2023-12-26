@@ -1,7 +1,5 @@
 ﻿using AutoMapper;
-using BusinessLogicLayer.DTO;
 using DataAccessLayer.Interfaces;
-using DataAccessLayer.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -10,13 +8,14 @@ using X.PagedList;
 using System;
 using System.ComponentModel;
 using System.Reflection;
-using MyWebAPI.Services;
 using DataAccessLayer.Helpers;
 using System.ComponentModel.DataAnnotations;
+using ModelsLayer.Entity;
+using ModelsLayer.DTO;
 
 namespace MyWebAPI.Controllers
 {
-	[Route("api/[controller]")]
+    [Route("api/[controller]")]
 	[ApiController]
 	[Authorize]
     public class StudentController : ControllerBase

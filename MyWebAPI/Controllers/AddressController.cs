@@ -1,38 +1,37 @@
 ﻿using AutoMapper;
-using BusinessLogicLayer.DTO;
 using DataAccessLayer.Interfaces;
-using DataAccessLayer.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Runtime.Intrinsics.X86;
-using MyWebAPI.Services;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using DataAccessLayer.Helpers;
 using System.ComponentModel.DataAnnotations;
+using ModelsLayer.Entity;
+using ModelsLayer.DTO;
 
-namespace DataAccessLayer.Repository
+namespace MyWebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     [Authorize]
     public class AddressController : ControllerBase
     {
-		private readonly IStudentRepository _studentRepository;
-		private readonly IAddressRepository _addressRepository;
+        private readonly IStudentRepository _studentRepository;
+        private readonly IAddressRepository _addressRepository;
         private readonly IMapper _mapper;
         private readonly IResponseServiceRepository _responseServiceRepository;
 
         public AddressController(
-			IStudentRepository studentRepository,
-			IAddressRepository addressRepository, 
-            IMapper mapper, 
+            IStudentRepository studentRepository,
+            IAddressRepository addressRepository,
+            IMapper mapper,
             IResponseServiceRepository responseServiceRepository
             )
         {
-			_studentRepository = studentRepository;
-			_addressRepository = addressRepository;
+            _studentRepository = studentRepository;
+            _addressRepository = addressRepository;
             _mapper = mapper;
             _responseServiceRepository = responseServiceRepository;
         }
@@ -67,73 +66,72 @@ namespace DataAccessLayer.Repository
             return _responseServiceRepository.CustomOkResponse("Data Loaded Successful!", addressMap);
         }
 
-		/// <summary>
-		/// Get an Address by AddressId (Not Implemented)
-		/// </summary>
-		/// <returns>Not Implemented</returns>
-		/// <response code="501">Not Implemented</response>
-		[HttpGet("address")]
-		[Authorize(Roles = "Reader")]
-		[ProducesResponseType(StatusCodes.Status501NotImplemented)]
-		public IActionResult GetAddressByAddressId()
-		{
-			// This method is intentionally not implemented
-			return StatusCode(StatusCodes.Status501NotImplemented, "Method not implemented");
-		}
+        /// <summary>
+        /// Get an Address by AddressId
+        /// </summary>
+        /// <returns>Not Implemented</returns>
+        /// <response code="501">Not Implemented</response>
+        [HttpGet("address")]
+        [Authorize(Roles = "Reader")]
+        [ProducesResponseType(StatusCodes.Status501NotImplemented)]
+        public IActionResult GetAddressByAddressId()
+        {
+            return StatusCode(StatusCodes.Status501NotImplemented, "Method not implemented");
+        }
 
 
-		/// <summary>
-		/// Create a Student's Address by new StundentCard
-		/// </summary>
-		/// <param name="studentCard">Input Student Card to **create** new Student address's info.</param>
-		/// <param name="addressDTO"></param>
-		/// <returns></returns>
-		/// <remarks>
-		/// Create the specified _address_ to the System by **Student Card**.
-		/// 
-		/// 
-		/// **Note**: If the System uses *Single Sign-On* (SSO) and is configured to block external (non-SSO) users from joining,
-		/// you can only invite **Student Card** from the domains associated with this System.
-		/// </remarks>
-		/// <response code="201">Student's Address created successfully</response>
-		/// <response code="400">Student Card domain is not among the registered SSO 
-		/// domains for this System!!</response>
-		[HttpPost("{studentCard}")]
-		[Authorize(Roles = "Writer")]
-		[ProducesResponseType(StatusCodes.Status201Created, Type = typeof(AddressDTO))]
-		[ProducesResponseType(StatusCodes.Status400BadRequest)]
-		public IActionResult CreateAddress([Required]string studentCard, [FromBody] AddressDTO addressDTO)
-		{
+        /// <summary>
+        /// Create a Student's Address by new StundentCard
+        /// </summary>
+        /// <param name="studentCard">Input Student Card to **create** new Student address's info.</param>
+        /// <param name="addressDTO"></param>
+        /// <returns></returns>
+        /// <remarks>
+        /// Create the specified _address_ to the System by **Student Card**.
+        /// 
+        /// 
+        /// **Note**: If the System uses *Single Sign-On* (SSO) and is configured to block external (non-SSO) users from joining,
+        /// you can only invite **Student Card** from the domains associated with this System.
+        /// </remarks>
+        /// <response code="201">Student's Address created successfully</response>
+        /// <response code="400">Student Card domain is not among the registered SSO 
+        /// domains for this System!!</response>
+        [HttpPost("{studentCard}")]
+        [Authorize(Roles = "Writer")]
+        [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(AddressDTO))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public IActionResult CreateAddress([Required] string studentCard, [FromBody] AddressDTO addressDTO)
+        {
 
-			var existingStudent = _studentRepository.GetStudentByCard(studentCard);
+            var existingStudent = _studentRepository.GetStudentByCard(studentCard);
 
-			if (existingStudent == null)
-			{
-				return _responseServiceRepository.CustomBadRequestResponse("Please enter correct data to the box", existingStudent);
-			}
+            if (existingStudent == null)
+            {
+                return _responseServiceRepository.CustomBadRequestResponse("Please enter correct data to the box", existingStudent);
+            }
 
-			var addressEntity = _mapper.Map<Addresses>(addressDTO);
+            var addressEntity = _mapper.Map<Addresses>(addressDTO);
 
-			_addressRepository.AddAddress(studentCard, addressEntity);
+            _addressRepository.AddAddress(studentCard, addressEntity);
 
-			var createdAddressMap = _mapper.Map<AddressDTO>(addressEntity);
-			return _responseServiceRepository.CustomCreatedResponse("Student address created", createdAddressMap);
-		}
+            var createdAddressMap = _mapper.Map<AddressDTO>(addressEntity);
+            return _responseServiceRepository.CustomCreatedResponse("Student address created", createdAddressMap);
+        }
 
-		/// <summary>
-		/// Update a Student's Address by StundentCard
-		/// </summary>
-		/// <param name="studentCard">Input Student Card to **update** new Student address's info.</param>
-		/// <param name="addressDTO"></param>
-		/// <returns></returns>
-		/// <remarks>
-		/// Update the specified _address_ to the System by **Student Card**.
-		/// </remarks>
-		/// <response code="204">Student's Address updated successfully</response>
-		/// <response code="400">Student Card domain is not among the registered SSO 
-		/// domains for this System!!</response>
-		/// <response code="404">StudentCard Not Found!!</response>
-		[HttpPut("{studentCard}")]
+        /// <summary>
+        /// Update a Student's Address by StundentCard
+        /// </summary>
+        /// <param name="studentCard">Input Student Card to **update** new Student address's info.</param>
+        /// <param name="addressDTO"></param>
+        /// <returns></returns>
+        /// <remarks>
+        /// Update the specified _address_ to the System by **Student Card**.
+        /// </remarks>
+        /// <response code="204">Student's Address updated successfully</response>
+        /// <response code="400">Student Card domain is not among the registered SSO 
+        /// domains for this System!!</response>
+        /// <response code="404">StudentCard Not Found!!</response>
+        [HttpPut("{studentCard}")]
         [Authorize(Roles = "Editor")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]

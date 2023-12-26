@@ -1,9 +1,8 @@
-﻿using BusinessLogicLayer.DTO;
-using DataAccessLayer.Interfaces;
-using DataAccessLayer.Models;
+﻿using DataAccessLayer.Interfaces;
+using ModelsLayer.Entity;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using MyWebAPI.Services;
+using ModelsLayer.DTO;
 
 [Route("api/[controller]")]
 [ApiController]
@@ -46,7 +45,7 @@ public class TeacherController : ControllerBase
 		return _responseServiceRepository.CustomOkResponse("Data loaded successfully", teachers);
 	}
 
-	// <summary>
+	/// <summary>
 	/// Get a Teacher by TeacherId
 	/// </summary>
 	/// <param name="id">Input Teacher Id to see **Teacher's info**</param>

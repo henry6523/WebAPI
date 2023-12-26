@@ -11,13 +11,13 @@
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "BCrypt.Net-Next": "4.0.2",
-          "BusinessLogicLayer": "1.0.0",
           "IdentityServer4": "4.1.2",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.25",
           "Microsoft.EntityFrameworkCore": "6.0.25",
           "Microsoft.EntityFrameworkCore.Design": "6.0.25",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.25",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.25",
+          "ModelsLayer": "1.0.0",
           "Swashbuckle.AspNetCore": "6.5.0"
         },
         "runtime": {
@@ -646,7 +646,7 @@
           }
         }
       },
-      "BusinessLogicLayer/1.0.0": {
+      "ModelsLayer/1.0.0": {
         "dependencies": {
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
@@ -658,7 +658,7 @@
           "Swashbuckle.AspNetCore": "6.5.0"
         },
         "runtime": {
-          "BusinessLogicLayer.dll": {}
+          "ModelsLayer.dll": {}
         }
       }
     }
@@ -1110,7 +1110,7 @@
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
     },
-    "BusinessLogicLayer/1.0.0": {
+    "ModelsLayer/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,17 +1,17 @@
 ﻿// TeacherRepository.cs
 
 using AutoMapper;
-using BusinessLogicLayer.DTO;
 using DataAccessLayer.Data;
 using DataAccessLayer.Interfaces;
-using DataAccessLayer.Models;
 using Microsoft.EntityFrameworkCore;
+using ModelsLayer.DTO;
+using ModelsLayer.Entity;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace DataAccessLayer.Repositories
 {
-	public class TeacherRepository : ITeacherRepository
+    public class TeacherRepository : ITeacherRepository
 	{
 		private readonly DataContext _context;
 		private readonly IMapper _mapper;

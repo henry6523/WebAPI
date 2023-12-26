@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessLogicLayer.DTO
+namespace ModelsLayer.DTO
 {
     public class EditRoleDTO
     {

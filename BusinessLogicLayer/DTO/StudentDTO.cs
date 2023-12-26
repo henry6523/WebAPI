@@ -1,13 +1,12 @@
-﻿
-using Microsoft.OpenApi.Models;
+﻿using Microsoft.OpenApi.Models;
 using Microsoft.VisualBasic;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System.ComponentModel.DataAnnotations;
 
-namespace BusinessLogicLayer.DTO
+namespace ModelsLayer.DTO
 {
-	public class StudentDTO
-	{
+    public class StudentDTO
+    {
         [Required(ErrorMessage = "StudentCard is required")]
         public string StudentCard { get; set; }
 

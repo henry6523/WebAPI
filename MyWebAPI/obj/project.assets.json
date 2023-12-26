@@ -1139,26 +1139,6 @@
           "lib/net6.0/X.PagedList.dll": {}
         }
       },
-      "BusinessLogicLayer/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "AutoMapper": "12.0.1",
-          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
-          "BCrypt.Net-Next": "4.0.2",
-          "IdentityServer4": "4.1.2",
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.25",
-          "Microsoft.EntityFrameworkCore": "6.0.25",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.25",
-          "Swashbuckle.AspNetCore": "6.5.0"
-        },
-        "compile": {
-          "bin/placeholder/BusinessLogicLayer.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/BusinessLogicLayer.dll": {}
-        }
-      },
       "DataAccessLayer/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -1166,11 +1146,11 @@
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "BCrypt.Net-Next": "4.0.2",
-          "BusinessLogicLayer": "1.0.0",
           "IdentityServer4": "4.1.2",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.25",
           "Microsoft.EntityFrameworkCore": "6.0.25",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.25",
+          "ModelsLayer": "1.0.0",
           "Swashbuckle.AspNetCore": "6.5.0"
         },
         "compile": {
@@ -1178,6 +1158,26 @@
         },
         "runtime": {
           "bin/placeholder/DataAccessLayer.dll": {}
+        }
+      },
+      "ModelsLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "AutoMapper": "12.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
+          "BCrypt.Net-Next": "4.0.2",
+          "IdentityServer4": "4.1.2",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.25",
+          "Microsoft.EntityFrameworkCore": "6.0.25",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.25",
+          "Swashbuckle.AspNetCore": "6.5.0"
+        },
+        "compile": {
+          "bin/placeholder/ModelsLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ModelsLayer.dll": {}
         }
       }
     },
@@ -2224,26 +2224,6 @@
           "lib/net6.0/X.PagedList.dll": {}
         }
       },
-      "BusinessLogicLayer/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "AutoMapper": "12.0.1",
-          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
-          "BCrypt.Net-Next": "4.0.2",
-          "IdentityServer4": "4.1.2",
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.25",
-          "Microsoft.EntityFrameworkCore": "6.0.25",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.25",
-          "Swashbuckle.AspNetCore": "6.5.0"
-        },
-        "compile": {
-          "bin/placeholder/BusinessLogicLayer.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/BusinessLogicLayer.dll": {}
-        }
-      },
       "DataAccessLayer/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -2251,11 +2231,11 @@
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "BCrypt.Net-Next": "4.0.2",
-          "BusinessLogicLayer": "1.0.0",
           "IdentityServer4": "4.1.2",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.25",
           "Microsoft.EntityFrameworkCore": "6.0.25",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.25",
+          "ModelsLayer": "1.0.0",
           "Swashbuckle.AspNetCore": "6.5.0"
         },
         "compile": {
@@ -2263,6 +2243,26 @@
         },
         "runtime": {
           "bin/placeholder/DataAccessLayer.dll": {}
+        }
+      },
+      "ModelsLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "AutoMapper": "12.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
+          "BCrypt.Net-Next": "4.0.2",
+          "IdentityServer4": "4.1.2",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.25",
+          "Microsoft.EntityFrameworkCore": "6.0.25",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.25",
+          "Swashbuckle.AspNetCore": "6.5.0"
+        },
+        "compile": {
+          "bin/placeholder/ModelsLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ModelsLayer.dll": {}
         }
       }
     }
@@ -4158,15 +4158,15 @@
         "x.pagedlist.nuspec"
       ]
     },
-    "BusinessLogicLayer/1.0.0": {
-      "type": "project",
-      "path": "../BusinessLogicLayer/BusinessLogicLayer.csproj",
-      "msbuildProject": "../BusinessLogicLayer/BusinessLogicLayer.csproj"
-    },
     "DataAccessLayer/1.0.0": {
       "type": "project",
       "path": "../DataAccessLayer/DataAccessLayer.csproj",
       "msbuildProject": "../DataAccessLayer/DataAccessLayer.csproj"
+    },
+    "ModelsLayer/1.0.0": {
+      "type": "project",
+      "path": "../BusinessLogicLayer/ModelsLayer.csproj",
+      "msbuildProject": "../BusinessLogicLayer/ModelsLayer.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4174,7 +4174,6 @@
       "AutoMapper >= 12.0.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
       "BCrypt.Net-Next >= 4.0.2",
-      "BusinessLogicLayer >= 1.0.0",
       "DataAccessLayer >= 1.0.0",
       "IdentityServer4 >= 4.1.2",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.25",
@@ -4183,24 +4182,25 @@
       "Microsoft.EntityFrameworkCore.Design >= 6.0.25",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.25",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.25",
+      "ModelsLayer >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0",
       "X.PagedList >= 8.4.7"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\USER\\.nuget\\packages\\": {}
+    "C:\\Users\\nly36\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Assignment\\WebAPI\\MyWebAPI\\MyWebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\Mock\\MyWebAPI\\MyWebAPI.csproj",
       "projectName": "MyWebAPI",
-      "projectPath": "C:\\Assignment\\WebAPI\\MyWebAPI\\MyWebAPI.csproj",
-      "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "C:\\Assignment\\WebAPI\\MyWebAPI\\obj\\",
+      "projectPath": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\Mock\\MyWebAPI\\MyWebAPI.csproj",
+      "packagesPath": "C:\\Users\\nly36\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\Mock\\MyWebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nly36\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4214,11 +4214,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Assignment\\WebAPI\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
-              "projectPath": "C:\\Assignment\\WebAPI\\BusinessLogicLayer\\BusinessLogicLayer.csproj"
+            "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\Mock\\BusinessLogicLayer\\ModelsLayer.csproj": {
+              "projectPath": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\Mock\\BusinessLogicLayer\\ModelsLayer.csproj"
             },
-            "C:\\Assignment\\WebAPI\\DataAccessLayer\\DataAccessLayer.csproj": {
-              "projectPath": "C:\\Assignment\\WebAPI\\DataAccessLayer\\DataAccessLayer.csproj"
+            "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\Mock\\DataAccessLayer\\DataAccessLayer.csproj": {
+              "projectPath": "C:\\Users\\nly36\\Documents\\workspace\\mywebapi_net\\Mock\\DataAccessLayer\\DataAccessLayer.csproj"
             }
           }
         }
@@ -4300,15 +4300,15 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-            "version": "[6.0.25, 6.0.25]"
+            "version": "[6.0.23, 6.0.23]"
           },
           {
             "name": "Microsoft.NETCore.App.Runtime.win-x64",
-            "version": "[6.0.25, 6.0.25]"
+            "version": "[6.0.23, 6.0.23]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-            "version": "[6.0.25, 6.0.25]"
+            "version": "[6.0.23, 6.0.23]"
           }
         ],
         "frameworkReferences": {
@@ -4319,7 +4319,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

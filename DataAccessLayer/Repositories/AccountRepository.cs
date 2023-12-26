@@ -1,8 +1,6 @@
 ﻿using AutoMapper;
-using BusinessLogicLayer.DTO;
 using DataAccessLayer.Data;
 using DataAccessLayer.Interfaces;
-using DataAccessLayer.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -12,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using BCrypt.Net;
 using Microsoft.AspNetCore.Mvc;
+using ModelsLayer.DTO;
+using ModelsLayer.Entity;
 
 namespace DataAccessLayer.Repositories
 {

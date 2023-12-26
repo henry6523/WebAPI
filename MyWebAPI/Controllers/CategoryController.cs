@@ -2,18 +2,17 @@
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
 using System.Collections.Generic;
-using BusinessLogicLayer.DTO;
 using DataAccessLayer.Interfaces;
-using DataAccessLayer.Models;
 using X.PagedList;
 using Microsoft.AspNetCore.Authorization;
 using DataAccessLayer.Repositories;
-using MyWebAPI.Services;
 using DataAccessLayer.Helpers;
+using ModelsLayer.DTO;
+using ModelsLayer.Entity;
 
 namespace MyWebAPI.Controllers
 {
-	[Route("api/[controller]")]
+    [Route("api/[controller]")]
 	[ApiController]
     [Authorize]
     public class CategoryController : ControllerBase
@@ -54,7 +53,7 @@ namespace MyWebAPI.Controllers
         [Authorize(Roles = "Reader")]
         public IActionResult GetAllCategories(string? filterValue, int? page = 0, int pageSize = 10)
         {
-            IEnumerable<DataAccessLayer.Models.Categories> categories = _categoryRepository.GetCategories();
+            IEnumerable<Categories> categories = _categoryRepository.GetCategories();
 
             if (page < 1)
             {

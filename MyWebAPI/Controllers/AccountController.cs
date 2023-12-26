@@ -1,18 +1,18 @@
 ﻿using DataAccessLayer.Data;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using BusinessLogicLayer.DTO;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using Microsoft.AspNetCore.Authorization;
-using DataAccessLayer.Models;
+using ModelsLayer.Entity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using DataAccessLayer.Interfaces;
 using System.Security.Cryptography;
 using System.Data;
+using ModelsLayer.DTO;
 
 namespace MyWebAPI.Controllers
 {

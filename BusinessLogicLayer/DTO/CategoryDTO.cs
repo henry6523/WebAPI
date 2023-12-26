@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 using System.Text.Json.Serialization;
 using System.ComponentModel.DataAnnotations;
 
-namespace BusinessLogicLayer.DTO
+namespace ModelsLayer.DTO
 {
-	public class CategoryDTO
-	{
+    public class CategoryDTO
+    {
         public int Id { get; set; }
         public string CategoriesName { get; set; }
-	}
+    }
 
     public class CreateCategoryDTO
     {
@@ -30,7 +30,7 @@ namespace BusinessLogicLayer.DTO
             {
                 schema.Description = "Displays the category Id and name of the Category";
                 // Các cấu hình khác nếu cần thiết
-                
+
             }
         }
     }

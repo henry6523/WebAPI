@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
-using BusinessLogicLayer.DTO;
 using DataAccessLayer.Data;
-using DataAccessLayer.Models;
+using ModelsLayer.Entity;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using ModelsLayer.DTO;
 using System.ComponentModel.DataAnnotations;
 using System.Security.Claims;
 using X.PagedList;

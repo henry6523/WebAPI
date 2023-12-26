@@ -1,11 +1,11 @@
 ﻿// IStudentRepository.cs
-using BusinessLogicLayer.DTO;
-using DataAccessLayer.Models;
+using ModelsLayer.DTO;
+using ModelsLayer.Entity;
 using System.Collections.Generic;
 
 namespace DataAccessLayer.Interfaces
 {
-	public interface IStudentRepository
+    public interface IStudentRepository
 	{
 		ICollection<Students> GetStudents();
 		Students GetStudentByCard(string studentCard);

@@ -2,14 +2,14 @@
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System.ComponentModel.DataAnnotations;
 
-namespace BusinessLogicLayer.DTO
+namespace ModelsLayer.DTO
 {
-	public class ClassDTO
-	{
-		public int Id { get; set; }
+    public class ClassDTO
+    {
+        public int Id { get; set; }
 
-		public string ClassName { get; set; }
-	}
+        public string ClassName { get; set; }
+    }
 
     public class CreateClassDTO
     {

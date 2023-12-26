@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace DataAccessLayer.Models
+namespace ModelsLayer.Entity
 {
     public class StudentCourses
     {

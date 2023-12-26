@@ -7,16 +7,15 @@ using DataAccessLayer.Helpers;
 using DataAccessLayer.Interfaces;
 using System.Reflection;
 using Microsoft.OpenApi.Models;
-using BusinessLogicLayer.DTO;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.Extensions.Options;
 using DataAccessLayer.Repositories;
-using DataAccessLayer.Models;
+using ModelsLayer.Entity;
 using Microsoft.AspNetCore.Identity;
-using MyWebAPI.Services;
+using ModelsLayer.DTO;
 
 namespace MyWebAPI
 {
@@ -148,7 +147,7 @@ namespace MyWebAPI
 			});
 			var mapper = new Mapper(mapperConfiguration);
 
-			builder.Services.AddAutoMapper(Assembly.Load("BusinessLogicLayer"));
+			builder.Services.AddAutoMapper(Assembly.Load("ModelsLayer"));
 
             builder.Services.AddControllers(options =>
             {

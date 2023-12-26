@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyWebAPI.Services
+namespace DataAccessLayer.Interfaces
 {
     public interface IResponseServiceRepository
     {
@@ -15,6 +15,6 @@ namespace MyWebAPI.Services
         IActionResult CustomOkResponse(string message, object data = null);
         IActionResult CustomCreatedResponse(string message, object data = null);
         IActionResult CustomNoContentResponse();
-		IActionResult CustomNotImplementedResponse(string message, object data = null);
-	}
+        IActionResult CustomNotImplementedResponse(string message, object data = null);
+    }
 }

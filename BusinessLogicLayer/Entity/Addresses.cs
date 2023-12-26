@@ -1,12 +1,12 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace DataAccessLayer.Models
+namespace ModelsLayer.Entity
 {
     public class Addresses
     {
         [Key]
-        
+
         public int Id { get; set; }
         public string Address_1 { get; set; }
         public string Address_2 { get; set; }

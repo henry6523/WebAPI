@@ -1,15 +1,14 @@
 ﻿using AutoMapper;
-using BusinessLogicLayer.DTO;
 using DataAccessLayer.Interfaces;
-using DataAccessLayer.Models;
 using DataAccessLayer.Repositories;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using X.PagedList;
-using MyWebAPI.Services;
 using DataAccessLayer.Helpers;
+using ModelsLayer.DTO;
+using ModelsLayer.Entity;
 
 namespace MyWebAPI.Controllers
 {
@@ -53,7 +52,7 @@ namespace MyWebAPI.Controllers
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<ClassDTO>))]
         public IActionResult GetAllClasses(string? filterValue = "", int? page = 0, int pageSize = 10)
         {
-            IEnumerable<DataAccessLayer.Models.Classes> classes = _classRepository.GetClasses();
+            IEnumerable<Classes> classes = _classRepository.GetClasses();
 
             if (!string.IsNullOrEmpty(filterValue))
             {

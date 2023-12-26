@@ -1,6 +1,7 @@
 ﻿using DataAccessLayer.Data;
-using DataAccessLayer.Models;
+using ModelsLayer.Entity;
 using Microsoft.EntityFrameworkCore;
+using ModelsLayer.Entity;
 
 namespace MyWebAPI
 {

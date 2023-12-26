@@ -1,0 +1,14 @@
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\BusinessLogicLayer\bin\Debug\net6.0\ModelsLayer.deps.json
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\BusinessLogicLayer\bin\Debug\net6.0\ModelsLayer.runtimeconfig.json
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\BusinessLogicLayer\bin\Debug\net6.0\ModelsLayer.dll
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\BusinessLogicLayer\bin\Debug\net6.0\ModelsLayer.pdb
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\BusinessLogicLayer\obj\Debug\net6.0\ModelsLayer.csproj.AssemblyReference.cache
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\BusinessLogicLayer\obj\Debug\net6.0\ModelsLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\BusinessLogicLayer\obj\Debug\net6.0\ModelsLayer.AssemblyInfoInputs.cache
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\BusinessLogicLayer\obj\Debug\net6.0\ModelsLayer.AssemblyInfo.cs
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\BusinessLogicLayer\obj\Debug\net6.0\ModelsLayer.csproj.CoreCompileInputs.cache
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\BusinessLogicLayer\obj\Debug\net6.0\ModelsLayer.dll
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\BusinessLogicLayer\obj\Debug\net6.0\refint\ModelsLayer.dll
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\BusinessLogicLayer\obj\Debug\net6.0\ModelsLayer.pdb
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\BusinessLogicLayer\obj\Debug\net6.0\ModelsLayer.genruntimeconfig.cache
+C:\Users\nly36\Documents\workspace\mywebapi_net\Mock\BusinessLogicLayer\obj\Debug\net6.0\ref\ModelsLayer.dll
