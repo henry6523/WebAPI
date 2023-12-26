@@ -22,7 +22,7 @@ namespace BusinessLogicLayer.DTO
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Phone number is required.")]
-        [RegularExpression(@"^\d{10}$", ErrorMessage = "Invalid phone number. It must be a 10-digit number.")]
+        [RegularExpression(@"^\d{9}$", ErrorMessage = "Invalid phone number. It must be a 9-digit number.")]
         public int PhoneNo { get; set; }
     }
     public class TeacherSchemaFilter : ISchemaFilter
