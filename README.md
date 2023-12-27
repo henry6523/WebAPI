@@ -7,7 +7,7 @@
 Connect with your database and run command:
 <b>Update-Database</b> to create new database.</br>
 Open CMD and go to .\MyWebAPI path (Make sure that Seed.cs is included), run command: <b>dotnet run seeddata</b></br>
-Admin account will be added, </br>
-Username: admin</br>
-Password: admin</br>
+Admin account will be added: </br>
+    Username: admin</br>
+    Password: admin</br>
 
